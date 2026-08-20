@@ -24,11 +24,6 @@
   color: #171717;
 }
 
-
-/* =========================================================
-   HERO
-========================================================= */
-
 .about-hero {
   width: min(1180px, 90vw);
   margin: 0 auto;
@@ -61,11 +56,6 @@
   font-size: 15px;
   line-height: 1.9;
 }
-
-
-/* =========================================================
-   PORTRAIT + INTRODUCTION
-========================================================= */
 
 .about-introduction {
   width: min(1180px, 90vw);
@@ -135,11 +125,6 @@
 
   line-height: 1.9;
 }
-
-
-/* =========================================================
-   CREATIVE INTERESTS
-========================================================= */
 
 .about-interests {
   width: min(1180px, 90vw);
@@ -235,107 +220,6 @@
   font-size: 20px;
 }
 
-
-/* =========================================================
-   LARGE STATEMENT
-========================================================= */
-
-.about-statement {
-  width: min(1180px, 90vw);
-  margin: 0 auto;
-
-  padding: 125px 0 135px;
-}
-
-.about-statement-inner {
-  max-width: 1000px;
-}
-
-.about-statement blockquote {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(42px, 6vw, 78px);
-
-  line-height: 1.02;
-
-  letter-spacing: -.06em;
-
-  font-weight: 500;
-}
-
-.about-statement blockquote em {
-  color: #c87952;
-  font-style: italic;
-}
-
-.about-statement-caption {
-  margin-top: 35px;
-
-  max-width: 430px;
-
-  color: #777;
-
-  font-size: 13px;
-
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   PERSONAL
-========================================================= */
-
-.about-personal {
-  width: min(1180px, 90vw);
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-
-  padding-bottom: 130px;
-}
-
-.about-personal-heading h2 {
-  margin: 15px 0 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(42px, 5vw, 65px);
-
-  line-height: .96;
-
-  font-weight: 500;
-
-  letter-spacing: -.055em;
-}
-
-.about-personal-heading h2 em {
-  color: #c87952;
-  font-style: italic;
-}
-
-.about-personal-text {
-  align-self: end;
-
-  max-width: 500px;
-
-  color: #6f6f6f;
-
-  font-size: 14px;
-
-  line-height: 1.95;
-}
-
-
-/* =========================================================
-   NEXT IN THE PORTFOLIO
-========================================================= */
-
 .next-portfolio {
   width: min(1200px, 90vw);
   margin: 30px auto 130px;
@@ -415,14 +299,8 @@
 
 .next-portfolio a:hover {
   background: white;
-
   color: #171717;
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 760px) {
 
@@ -436,15 +314,12 @@
 
   .about-introduction {
     grid-template-columns: 1fr;
-
     gap: 50px;
-
     padding-bottom: 90px;
   }
 
   .about-photo {
     max-width: 500px;
-
     margin: 0 auto;
   }
 
@@ -454,24 +329,11 @@
 
   .interest {
     grid-template-columns: 45px 1fr auto;
-
     gap: 15px;
   }
 
   .interest-detail {
     display: none;
-  }
-
-  .about-statement {
-    padding: 90px 0 100px;
-  }
-
-  .about-personal {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    padding-bottom: 90px;
   }
 
   .next-portfolio {
@@ -503,29 +365,17 @@
   <nav>
 
 ```
-<a href="index.html">
-  Home
-</a>
+<a href="index.html">Home</a>
 
-<a class="active" href="about.html">
-  About
-</a>
+<a class="active" href="about.html">About</a>
 
-<a href="3d-modelling.html">
-  3D Modelling
-</a>
+<a href="3d-modelling.html">3D Modelling</a>
 
-<a href="illustration.html">
-  Illustration
-</a>
+<a href="illustration.html">Illustration</a>
 
-<a href="infographics.html">
-  Infographics
-</a>
+<a href="infographics.html">Infographics</a>
 
-<a class="nav-contact" href="contact.html">
-  Contact
-</a>
+<a class="nav-contact" href="contact.html">Contact</a>
 ```
 
   </nav>
@@ -680,70 +530,6 @@
   </span>
 
 </a>
-```
-
-  </div>
-
-</section>
-
-<section class="about-statement">
-
-  <div class="about-statement-inner">
-
-```
-<p class="eyebrow">
-  WHY I CREATE
-</p>
-
-<blockquote>
-  “Curiosity is usually where
-  the work <em>starts.</em>”
-</blockquote>
-
-<p class="about-statement-caption">
-  I like experimenting with an idea instead of
-  immediately deciding what it should become.
-  Sometimes the process of figuring it out is
-  just as interesting as the final result.
-</p>
-```
-
-  </div>
-
-</section>
-
-<section class="about-personal">
-
-  <div class="about-personal-heading">
-
-```
-<p class="eyebrow">
-  BEYOND THE WORK
-</p>
-
-<h2>
-  Still figuring things
-  <em>out.</em>
-</h2>
-```
-
-  </div>
-
-  <div class="about-personal-text">
-
-```
-<p>
-  I'm interested in learning by doing. Each project
-  gives me something new to experiment with, whether
-  that's a different visual style, a new technique or
-  simply another way of communicating an idea.
-</p>
-
-<p>
-  This portfolio is a snapshot of that process —
-  the things I'm making, the things I'm learning,
-  and the direction I'm continuing to explore.
-</p>
 ```
 
   </div>
