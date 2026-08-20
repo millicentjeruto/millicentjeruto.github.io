@@ -1,21 +1,452 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+  name="description"
+  content="Contact Millicent Jeruto — creative designer working across 3D modelling, illustration and infographics."
+>
+
 <title>Contact | Millicent Jeruto</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+  rel="stylesheet"
+>
+
 <link rel="stylesheet" href="style.css">
+
+
+<style>
+
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+
+.contact-page {
+  background: #f5f4ef;
+  color: #171717;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.contact-hero {
+  width: min(1180px, 90vw);
+
+  min-height: calc(100vh - 170px);
+
+  margin: 0 auto;
+
+  padding: 110px 0 120px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.contact-hero h1 {
+  max-width: 1000px;
+
+  margin: 22px 0 30px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(60px, 9vw, 120px);
+
+  line-height: .9;
+
+  font-weight: 500;
+
+  letter-spacing: -.065em;
+}
+
+.contact-hero h1 em {
+  color: #c87952;
+
+  font-style: italic;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.contact-lead {
+  max-width: 560px;
+
+  margin: 0 0 65px;
+
+  color: #6f6f6f;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =====================================================
+   CONTACT LINKS
+===================================================== */
+
+.contact-links {
+  border-top: 1px solid #d5d4ce;
+
+  max-width: 850px;
+}
+
+.contact-link {
+  display: grid;
+
+  grid-template-columns: 150px 1fr auto;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 27px 0;
+
+  border-bottom: 1px solid #d5d4ce;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  transition:
+    padding .25s ease,
+    background .25s ease;
+}
+
+.contact-link:hover {
+  padding-left: 15px;
+
+  padding-right: 15px;
+
+  background: rgba(255,255,255,.35);
+}
+
+.contact-link-label {
+  color: #c87952;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+
+  text-transform: uppercase;
+}
+
+.contact-link-value {
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+.contact-link-arrow {
+  font-size: 20px;
+
+  transition: transform .25s ease;
+}
+
+.contact-link:hover .contact-link-arrow {
+  transform: translate(5px, -5px);
+}
+
+
+/* =====================================================
+   BOTTOM NOTE
+===================================================== */
+
+.contact-note {
+  margin-top: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #777;
+
+  font-size: 11px;
+
+  letter-spacing: .1em;
+
+  text-transform: uppercase;
+}
+
+.contact-note::before {
+  content: "";
+
+  width: 28px;
+
+  height: 1px;
+
+  background: #171717;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.contact-page footer {
+  width: min(1180px, 90vw);
+
+  margin: auto;
+
+  padding: 25px 0;
+
+  border-top: 1px solid #d5d4ce;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 760px) {
+
+  .contact-hero {
+    min-height: auto;
+
+    padding: 75px 0 90px;
+  }
+
+  .contact-hero h1 {
+    font-size: 62px;
+  }
+
+  .contact-lead {
+    font-size: 14px;
+
+    margin-bottom: 50px;
+  }
+
+  .contact-link {
+    grid-template-columns: 1fr auto;
+
+    gap: 12px;
+  }
+
+  .contact-link-label {
+    grid-column: 1 / -1;
+  }
+
+  .contact-link-value {
+    font-size: 14px;
+  }
+
+  .contact-note {
+    margin-top: 45px;
+  }
+
+  .contact-page footer {
+    width: 88vw;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}
+
+</style>
+
 </head>
-<body>
-<header class="nav"><a class="brand" href="index.html">MJ<span>.</span></a><button class="menu-toggle" aria-label="Open menu">☰</button><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="3d-modelling.html">3D Modelling</a><a href="illustration.html">Illustration</a><a href="infographics.html">Infographics</a><a class="nav-contact active" href="contact.html">Contact</a></nav></header>
+
+
+<body class="contact-page">
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="nav">
+
+  <a class="brand" href="index.html">
+    MJ<span>.</span>
+  </a>
+
+  <button
+    class="menu-toggle"
+    aria-label="Open menu">
+    ☰
+  </button>
+
+  <nav>
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
+    <a href="3d-modelling.html">
+      3D Modelling
+    </a>
+
+    <a href="illustration.html">
+      Illustration
+    </a>
+
+    <a href="infographics.html">
+      Infographics
+    </a>
+
+    <a
+      class="nav-contact active"
+      href="contact.html">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+
 <main>
-<section class="contact-hero section"><p class="eyebrow">CONTACT</p><h1>Let’s make something <em>great.</em></h1><p class="lead">Have a project, idea or opportunity in mind? I’d love to hear from you.</p>
-<div class="contact-links">
-<a href="mailto:your-email@example.com"><span>Email</span><strong>your-email@example.com ↗</strong></a>
-<a href="#" aria-label="Add your LinkedIn link"><span>LinkedIn</span><strong>Add your profile ↗</strong></a>
-</div></section>
+
+
+<!-- =====================================================
+     CONTACT HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+  <p class="eyebrow">
+    CONTACT
+  </p>
+
+
+  <h1>
+    Let's make something
+    <em>great.</em>
+  </h1>
+
+
+  <p class="contact-lead">
+    Have a project, idea or opportunity in mind?
+    I'd love to hear from you.
+  </p>
+
+
+  <div class="contact-links">
+
+
+    <!-- EMAIL -->
+
+    <a
+      class="contact-link"
+      href="mailto:your-email@example.com"
+    >
+
+      <span class="contact-link-label">
+        EMAIL
+      </span>
+
+      <span class="contact-link-value">
+        your-email@example.com
+      </span>
+
+      <span class="contact-link-arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+    <!-- LINKEDIN -->
+
+    <a
+      class="contact-link"
+      href="#"
+    >
+
+      <span class="contact-link-label">
+        LINKEDIN
+      </span>
+
+      <span class="contact-link-value">
+        Add your profile
+      </span>
+
+      <span class="contact-link-arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+  </div>
+
+
+  <div class="contact-note">
+    Open to creative opportunities & collaborations
+  </div>
+
+
+</section>
+
+
 </main>
-<footer><span>© 2026 Millicent Jeruto</span><span>Let's connect</span></footer>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <span>
+    © 2026 Millicent Jeruto
+  </span>
+
+  <span>
+    Let's connect
+  </span>
+
+</footer>
+
+
 <script src="script.js"></script>
-</body></html>
+
+</body>
+
+</html>
+```
