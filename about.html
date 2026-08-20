@@ -5,25 +5,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="About Millicent Jeruto — creative designer working across illustration, 3D modelling and infographics.">
+<meta name="description" content="About Millicent Jeruto — creative designer working across illustration, 3D modelling and infographics.">
 
 <title>About | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
-
 <style>
 
-/* =====================================================
-   PAGE
-===================================================== */
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
 
 .about-page {
   background: #f5f4ef;
@@ -31,90 +28,85 @@ rel="stylesheet">
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .about-hero {
-  width: min(1200px, 90vw);
+  width: min(1180px, 90vw);
+  margin: 0 auto;
 
-  margin: auto;
-
-  padding: 105px 0 100px;
+  padding: 95px 0 90px;
 
   text-align: center;
 }
 
+.about-hero .eyebrow {
+  margin-bottom: 25px;
+}
+
 .about-hero h1 {
-  margin: 20px 0 0;
+  margin: 0;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(65px, 9vw, 120px);
+  font-size: clamp(70px, 10vw, 135px);
 
-  line-height: .9;
+  line-height: .88;
 
   font-weight: 500;
 
-  letter-spacing: -.06em;
+  letter-spacing: -.065em;
 }
 
 .about-hero h1 em {
   color: #c87952;
-
   font-style: italic;
 }
 
-.about-hero > p:last-child {
-  max-width: 620px;
+.about-hero .intro {
+  max-width: 570px;
 
-  margin: 30px auto 0;
+  margin: 35px auto 0;
 
-  color: #707070;
+  color: #6f6f6f;
 
-  font-size: 14px;
+  font-size: 15px;
 
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 
-/* =====================================================
-   INTRO
-===================================================== */
+/* =========================================================
+   PORTRAIT + INTRODUCTION
+========================================================= */
 
-.about-intro {
-  width: min(1200px, 90vw);
-
-  margin: auto;
+.about-introduction {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(300px, 460px) minmax(300px, 1fr);
 
-  gap: 90px;
+  gap: clamp(55px, 9vw, 130px);
 
   align-items: center;
 
-  padding-bottom: 130px;
+  padding-bottom: 125px;
 }
 
 
-/* =====================================================
-   PORTRAIT
-===================================================== */
+/* PHOTO */
 
 .about-photo {
-  position: relative;
-
-  width: min(100%, 470px);
+  width: 100%;
 
   aspect-ratio: 4 / 5;
 
-  margin: auto;
-
   overflow: hidden;
 
-  background: #dddcd6;
+  background: #deddd7;
 }
 
 .about-photo img {
@@ -126,71 +118,42 @@ rel="stylesheet">
   object-fit: cover;
 
   object-position: center;
-
-  transition: transform .6s ease;
-}
-
-.about-photo:hover img {
-  transform: scale(1.025);
 }
 
 
-/* little label */
+/* TEXT */
 
-.about-photo-label {
-  position: absolute;
-
-  left: 20px;
-  bottom: 20px;
-
-  z-index: 2;
-
-  padding: 10px 14px;
-
-  background: rgba(255,255,255,.88);
-
-  backdrop-filter: blur(8px);
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .12em;
+.about-introduction-text {
+  max-width: 560px;
 }
 
-
-/* =====================================================
-   INTRO TEXT
-===================================================== */
-
-.about-copy {
-  max-width: 520px;
+.about-introduction-text .eyebrow {
+  margin-bottom: 18px;
 }
 
-.about-copy h2 {
-  margin: 18px 0 25px;
+.about-introduction-text h2 {
+  margin: 0 0 28px;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(42px, 5vw, 65px);
+  font-size: clamp(38px, 5vw, 64px);
 
   line-height: .98;
 
   font-weight: 500;
 
-  letter-spacing: -.05em;
+  letter-spacing: -.055em;
 }
 
-.about-copy h2 em {
+.about-introduction-text h2 em {
   color: #c87952;
-
   font-style: italic;
 }
 
-.about-copy p {
-  margin: 0 0 22px;
+.about-introduction-text p {
+  margin: 0 0 20px;
 
-  color: #707070;
+  color: #6d6d6d;
 
   font-size: 14px;
 
@@ -198,184 +161,147 @@ rel="stylesheet">
 }
 
 
-/* =====================================================
-   STATEMENT
-===================================================== */
+/* =========================================================
+   CREATIVE INTERESTS
+========================================================= */
 
-.about-statement {
-  width: min(1200px, 90vw);
+.about-interests {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
 
-  margin: auto;
-
-  padding: 100px 0;
+  padding: 95px 0 120px;
 
   border-top: 1px solid #d5d4ce;
-
-  border-bottom: 1px solid #d5d4ce;
 }
 
-.about-statement p {
-  margin: 0;
+.about-interests-heading {
+  max-width: 700px;
 
-  max-width: 1000px;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(38px, 5vw, 70px);
-
-  line-height: 1.02;
-
-  letter-spacing: -.05em;
+  margin-bottom: 65px;
 }
 
-.about-statement em {
-  color: #c87952;
-
-  font-style: italic;
-}
-
-
-/* =====================================================
-   DISCIPLINES
-===================================================== */
-
-.about-disciplines {
-  width: min(1200px, 90vw);
-
-  margin: auto;
-
-  padding: 120px 0;
-}
-
-.about-disciplines-header {
-  margin-bottom: 55px;
-}
-
-.about-disciplines-header h2 {
+.about-interests-heading h2 {
   margin: 15px 0 0;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(42px, 5vw, 65px);
+  font-size: clamp(45px, 6vw, 76px);
 
-  line-height: .95;
+  line-height: .94;
 
   font-weight: 500;
 
-  letter-spacing: -.05em;
+  letter-spacing: -.06em;
 }
 
-.about-disciplines-header h2 em {
+.about-interests-heading h2 em {
   color: #c87952;
-
   font-style: italic;
 }
 
 
-/* =====================================================
-   DISCIPLINE CARDS
-===================================================== */
+/* INTEREST LIST */
 
-.discipline-grid {
+.interest-list {
+  border-top: 1px solid #d5d4ce;
+}
+
+.interest {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: 70px 1fr auto;
 
-  border-top: 1px solid #d5d4ce;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 28px 0;
 
   border-bottom: 1px solid #d5d4ce;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  transition: padding .25s ease;
 }
 
-.discipline {
-  min-height: 280px;
-
-  padding: 30px;
-
-  border-right: 1px solid #d5d4ce;
+.interest:hover {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.discipline:last-child {
-  border-right: none;
-}
-
-.discipline-number {
+.interest-number {
   color: #c87952;
 
   font-size: 11px;
 
   font-weight: 700;
 
-  letter-spacing: .15em;
+  letter-spacing: .12em;
 }
 
-.discipline h3 {
-  margin: 65px 0 15px;
-
+.interest-name {
   font-family: "Playfair Display", serif;
 
-  font-size: 30px;
+  font-size: clamp(27px, 3vw, 40px);
 
   font-weight: 500;
 }
 
-.discipline p {
-  max-width: 280px;
-
-  margin: 0;
-
+.interest-detail {
   color: #777;
 
-  font-size: 12px;
+  font-size: 11px;
 
-  line-height: 1.8;
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+}
+
+.interest-arrow {
+  font-size: 20px;
 }
 
 
-/* =====================================================
-   CREATIVE APPROACH
-===================================================== */
+/* =========================================================
+   LARGE STATEMENT
+========================================================= */
 
-.about-process {
-  width: min(1200px, 90vw);
+.about-statement {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
 
-  margin: auto;
-
-  padding-bottom: 130px;
+  padding: 125px 0 135px;
 }
 
-.about-process-header {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-
-  margin-bottom: 50px;
+.about-statement-inner {
+  max-width: 1000px;
 }
 
-.about-process-header h2 {
-  margin: 15px 0 0;
+.about-statement blockquote {
+  margin: 0;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(42px, 5vw, 65px);
+  font-size: clamp(42px, 6vw, 78px);
 
-  line-height: .95;
+  line-height: 1.02;
+
+  letter-spacing: -.06em;
 
   font-weight: 500;
-
-  letter-spacing: -.05em;
 }
 
-.about-process-header h2 em {
+.about-statement blockquote em {
   color: #c87952;
-
   font-style: italic;
 }
 
-.about-process-header > div:last-child {
-  align-self: end;
+.about-statement-caption {
+  margin-top: 35px;
+
+  max-width: 430px;
 
   color: #777;
 
@@ -385,73 +311,68 @@ rel="stylesheet">
 }
 
 
-/* =====================================================
-   PROCESS STEPS
-===================================================== */
+/* =========================================================
+   PERSONAL SECTION
+========================================================= */
 
-.process-list {
-  border-top: 1px solid #d5d4ce;
-}
+.about-personal {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
 
-.process-row {
   display: grid;
 
-  grid-template-columns: 80px 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
-  gap: 30px;
-
-  padding: 30px 0;
-
-  border-bottom: 1px solid #d5d4ce;
-
-  align-items: center;
-}
-
-.process-row-number {
-  color: #c87952;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: .15em;
-}
-
-.process-row h3 {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 28px;
-
-  font-weight: 500;
-}
-
-.process-row p {
-  margin: 0;
-
-  color: #777;
-
-  font-size: 12px;
-
-  line-height: 1.7;
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.about-cta {
-  width: min(1200px, 90vw);
-
-  margin: auto;
+  gap: 80px;
 
   padding-bottom: 130px;
 }
 
+.about-personal-heading h2 {
+  margin: 15px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: .96;
+
+  font-weight: 500;
+
+  letter-spacing: -.055em;
+}
+
+.about-personal-heading h2 em {
+  color: #c87952;
+  font-style: italic;
+}
+
+.about-personal-text {
+  align-self: end;
+
+  max-width: 500px;
+
+  color: #6f6f6f;
+
+  font-size: 14px;
+
+  line-height: 1.95;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.about-cta {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+
+  padding-bottom: 120px;
+}
+
 .about-cta-inner {
-  padding: 95px 30px;
+  padding: 80px 30px;
 
   background: #171717;
 
@@ -460,38 +381,41 @@ rel="stylesheet">
   text-align: center;
 }
 
-.about-cta h2 {
-  margin: 20px auto 30px;
+.about-cta-inner .eyebrow {
+  color: #aaa;
+}
 
-  max-width: 750px;
+.about-cta-inner h2 {
+  max-width: 760px;
+
+  margin: 20px auto 32px;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(48px, 6vw, 75px);
+  font-size: clamp(45px, 6vw, 75px);
 
   line-height: .95;
 
   font-weight: 500;
 
-  letter-spacing: -.05em;
+  letter-spacing: -.06em;
 }
 
-.about-cta h2 em {
-  color: #d79b7d;
-
+.about-cta-inner h2 em {
+  color: #d49a7b;
   font-style: italic;
 }
 
-.about-cta a {
+.about-cta-button {
   display: inline-flex;
 
   align-items: center;
 
   gap: 10px;
 
-  padding: 14px 23px;
+  padding: 14px 22px;
 
-  border: 1px solid white;
+  border: 1px solid rgba(255,255,255,.7);
 
   border-radius: 100px;
 
@@ -503,86 +427,66 @@ rel="stylesheet">
 
   font-weight: 600;
 
-  transition:
-    background .25s ease,
-    color .25s ease;
+  transition: all .25s ease;
 }
 
-.about-cta a:hover {
+.about-cta-button:hover {
   background: white;
-
   color: #171717;
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
 
   .about-hero {
-    padding: 75px 0 70px;
+    padding: 70px 0 70px;
   }
 
   .about-hero h1 {
-    font-size: 60px;
+    font-size: 65px;
   }
 
-  .about-intro {
+  .about-introduction {
     grid-template-columns: 1fr;
 
-    gap: 55px;
+    gap: 50px;
 
     padding-bottom: 90px;
   }
 
   .about-photo {
-    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
-  .about-statement {
-    padding: 75px 0;
+  .about-interests {
+    padding: 75px 0 90px;
   }
 
-  .about-disciplines {
-    padding: 90px 0;
-  }
-
-  .discipline-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .discipline {
-    min-height: auto;
-
-    border-right: none;
-
-    border-bottom: 1px solid #d5d4ce;
-  }
-
-  .discipline:last-child {
-    border-bottom: none;
-  }
-
-  .about-process {
-    padding-bottom: 90px;
-  }
-
-  .about-process-header {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-  }
-
-  .process-row {
-    grid-template-columns: 45px 1fr;
+  .interest {
+    grid-template-columns: 45px 1fr auto;
 
     gap: 15px;
   }
 
-  .process-row p {
-    grid-column: 2;
+  .interest-detail {
+    display: none;
+  }
+
+  .about-statement {
+    padding: 90px 0 100px;
+  }
+
+  .about-personal {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding-bottom: 90px;
   }
 
   .about-cta {
@@ -590,7 +494,7 @@ rel="stylesheet">
   }
 
   .about-cta-inner {
-    padding: 70px 20px;
+    padding: 65px 20px;
   }
 
 }
@@ -603,9 +507,9 @@ rel="stylesheet">
 <body class="about-page">
 
 
-<!-- =====================================================
+<!-- =========================================================
      NAVIGATION
-===================================================== -->
+========================================================= -->
 
 <header class="nav">
 
@@ -621,29 +525,17 @@ rel="stylesheet">
 
   <nav>
 
-    <a href="index.html">
-      Home
-    </a>
+    <a href="index.html">Home</a>
 
-    <a class="active" href="about.html">
-      About
-    </a>
+    <a class="active" href="about.html">About</a>
 
-    <a href="3d-modelling.html">
-      3D Modelling
-    </a>
+    <a href="3d-modelling.html">3D Modelling</a>
 
-    <a href="illustration.html">
-      Illustration
-    </a>
+    <a href="illustration.html">Illustration</a>
 
-    <a href="infographics.html">
-      Infographics
-    </a>
+    <a href="infographics.html">Infographics</a>
 
-    <a class="nav-contact" href="contact.html">
-      Contact
-    </a>
+    <a class="nav-contact" href="contact.html">Contact</a>
 
   </nav>
 
@@ -653,9 +545,9 @@ rel="stylesheet">
 <main>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- =========================================================
+     INTRO
+========================================================= -->
 
 <section class="about-hero">
 
@@ -664,22 +556,22 @@ rel="stylesheet">
   </p>
 
   <h1>
-    Hi, I'm <em>Millicent.</em>
+    I'm <em>Millicent.</em>
   </h1>
 
-  <p>
-    I'm a creative designer who enjoys turning ideas
-    into visuals that are clear, engaging and memorable.
+  <p class="intro">
+    I enjoy turning ideas into visuals — exploring
+    illustration, 3D and information through design.
   </p>
 
 </section>
 
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
+<!-- =========================================================
+     PHOTO + INTRODUCTION
+========================================================= -->
 
-<section class="about-intro">
+<section class="about-introduction">
 
 
   <div class="about-photo">
@@ -688,42 +580,37 @@ rel="stylesheet">
       src="pfp.png"
       alt="Portrait of Millicent Jeruto">
 
-    <div class="about-photo-label">
-      MILLICENT JERUTO
-    </div>
-
   </div>
 
 
-  <div class="about-copy">
+  <div class="about-introduction-text">
 
     <p class="eyebrow">
-      MY APPROACH
+      A LITTLE ABOUT ME
     </p>
 
     <h2>
-      Curious, creative<br>
-      and always <em>learning.</em>
+      I like making ideas
+      <em>visible.</em>
     </h2>
 
     <p>
-      I enjoy exploring different ways of communicating
-      an idea visually. For me, design is about finding
-      the right balance between creativity, clarity and
-      purpose.
+      I'm interested in what happens when an idea
+      moves from something abstract into something
+      you can actually see.
     </p>
 
     <p>
-      Whether I'm creating an illustration, developing
-      a 3D concept or simplifying information into a
-      visual format, I like experimenting with different
-      approaches until the idea feels right.
+      My work gives me a chance to explore that in
+      different ways — from drawing and illustration
+      to building forms in 3D and finding creative
+      ways to present information.
     </p>
 
     <p>
-      This portfolio brings together some of the work
-      I've created while developing my skills and
-      discovering my creative direction.
+      I'm still learning, experimenting and developing
+      my style, which is one of the things I enjoy most
+      about creating.
     </p>
 
   </div>
@@ -732,215 +619,189 @@ rel="stylesheet">
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
+     CREATIVE INTERESTS
+========================================================= -->
+
+<section class="about-interests">
+
+  <div class="about-interests-heading">
+
+    <p class="eyebrow">
+      WHAT I'M EXPLORING
+    </p>
+
+    <h2>
+      Different tools.<br>
+      One love for <em>visuals.</em>
+    </h2>
+
+  </div>
+
+
+  <div class="interest-list">
+
+
+    <a class="interest" href="illustration.html">
+
+      <span class="interest-number">
+        01
+      </span>
+
+      <span class="interest-name">
+        Illustration
+      </span>
+
+      <span class="interest-detail">
+        Medical · Roofing · Construction
+      </span>
+
+      <span class="interest-arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+    <a class="interest" href="3d-modelling.html">
+
+      <span class="interest-number">
+        02
+      </span>
+
+      <span class="interest-name">
+        3D Modelling
+      </span>
+
+      <span class="interest-detail">
+        Exploring
+      </span>
+
+      <span class="interest-arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+    <a class="interest" href="infographics.html">
+
+      <span class="interest-number">
+        03
+      </span>
+
+      <span class="interest-name">
+        Infographics
+      </span>
+
+      <span class="interest-detail">
+        Exploring
+      </span>
+
+      <span class="interest-arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
      STATEMENT
-===================================================== -->
+========================================================= -->
 
 <section class="about-statement">
 
-  <p>
-    I believe good design doesn't just
-    <em>look interesting.</em>
-    It should make an idea easier to
-    understand, remember and connect with.
-  </p>
+  <div class="about-statement-inner">
+
+    <p class="eyebrow">
+      WHY I CREATE
+    </p>
+
+    <blockquote>
+      “Curiosity is usually where
+      the work <em>starts.</em>”
+    </blockquote>
+
+    <p class="about-statement-caption">
+      I like experimenting with an idea instead of
+      immediately deciding what it should become.
+      Sometimes the process of figuring it out is
+      just as interesting as the final result.
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-     DISCIPLINES
-===================================================== -->
+<!-- =========================================================
+     PERSONAL
+========================================================= -->
 
-<section class="about-disciplines">
+<section class="about-personal">
 
-  <div class="about-disciplines-header">
+
+  <div class="about-personal-heading">
 
     <p class="eyebrow">
-      WHAT I CREATE
+      BEYOND THE WORK
     </p>
 
     <h2>
-      Three ways of<br>
-      making ideas <em>visual.</em>
+      Still figuring things
+      <em>out.</em>
     </h2>
 
   </div>
 
 
-  <div class="discipline-grid">
+  <div class="about-personal-text">
 
+    <p>
+      I'm interested in learning by doing. Each project
+      gives me something new to experiment with, whether
+      that's a different visual style, a new technique or
+      simply another way of communicating an idea.
+    </p>
 
-    <article class="discipline">
-
-      <span class="discipline-number">
-        01
-      </span>
-
-      <h3>
-        Illustration
-      </h3>
-
-      <p>
-        Creating expressive visuals to communicate
-        subjects, concepts and ideas through imagery.
-      </p>
-
-    </article>
-
-
-    <article class="discipline">
-
-      <span class="discipline-number">
-        02
-      </span>
-
-      <h3>
-        3D Modelling
-      </h3>
-
-      <p>
-        Exploring form, structure, materials and
-        three-dimensional visualisation.
-      </p>
-
-    </article>
-
-
-    <article class="discipline">
-
-      <span class="discipline-number">
-        03
-      </span>
-
-      <h3>
-        Infographics
-      </h3>
-
-      <p>
-        Turning information into clear visual stories
-        that are easier to understand and remember.
-      </p>
-
-    </article>
-
+    <p>
+      This portfolio is a snapshot of that process —
+      the things I'm making, the things I'm learning,
+      and the direction I'm continuing to explore.
+    </p>
 
   </div>
+
 
 </section>
 
 
-<!-- =====================================================
-     CREATIVE PROCESS
-===================================================== -->
-
-<section class="about-process">
-
-  <div class="about-process-header">
-
-    <div>
-
-      <p class="eyebrow">
-        HOW I WORK
-      </p>
-
-      <h2>
-        From a simple idea<br>
-        to something <em>visual.</em>
-      </h2>
-
-    </div>
-
-    <div>
-      I approach each project as an opportunity to
-      explore, experiment and find a visual solution
-      that communicates the idea effectively.
-    </div>
-
-  </div>
-
-
-  <div class="process-list">
-
-
-    <div class="process-row">
-
-      <span class="process-row-number">
-        01
-      </span>
-
-      <h3>
-        Explore
-      </h3>
-
-      <p>
-        Understanding the idea, purpose and visual
-        direction before beginning the design.
-      </p>
-
-    </div>
-
-
-    <div class="process-row">
-
-      <span class="process-row-number">
-        02
-      </span>
-
-      <h3>
-        Develop
-      </h3>
-
-      <p>
-        Experimenting with composition, form, imagery
-        and different visual approaches.
-      </p>
-
-    </div>
-
-
-    <div class="process-row">
-
-      <span class="process-row-number">
-        03
-      </span>
-
-      <h3>
-        Refine
-      </h3>
-
-      <p>
-        Removing unnecessary elements and refining
-        the details until the visual feels intentional.
-      </p>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
+<!-- =========================================================
      CTA
-===================================================== -->
+========================================================= -->
 
 <section class="about-cta">
 
   <div class="about-cta-inner">
 
     <p class="eyebrow">
-      LET'S CREATE
+      KEEP EXPLORING
     </p>
 
     <h2>
-      Have an idea?
-      <em>Let's bring it to life.</em>
+      See what I've
+      <em>made.</em>
     </h2>
 
-    <a href="contact.html">
-      Get in touch ↗
+    <a
+      class="about-cta-button"
+      href="illustration.html">
+      Explore the work ↗
     </a>
 
   </div>
@@ -951,9 +812,9 @@ rel="stylesheet">
 </main>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
