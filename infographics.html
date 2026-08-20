@@ -5,385 +5,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Infographics portfolio by Millicent Jeruto.">
-
 <title>Infographics | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* =====================================================
-   PAGE
-===================================================== */
+.coming-soon {
+  width: min(900px, 90vw);
 
-.infographic-page {
-  background: #f5f4ef;
-  color: #171717;
-}
+  margin: 0 auto;
 
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.info-hero {
-  width: min(1200px, 90vw);
-  margin: auto;
-
-  padding: 105px 0 90px;
+  padding: 80px 0 150px;
 
   text-align: center;
 }
 
-.info-hero h1 {
-  margin: 20px 0 0;
+.coming-soon-line {
+  width: 100%;
+
+  height: 1px;
+
+  background: #d5d4ce;
+
+  margin-bottom: 80px;
+}
+
+.coming-soon h2 {
+  margin: 0 auto 25px;
+
+  max-width: 800px;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(65px, 9vw, 120px);
+  font-size: clamp(45px, 7vw, 85px);
 
-  line-height: .9;
+  line-height: .95;
 
   font-weight: 500;
 
   letter-spacing: -.06em;
 }
 
-.info-hero h1 em {
-  color: #c87952;
-  font-style: italic;
-}
-
-.info-hero > p:last-child {
-  max-width: 650px;
-
-  margin: 30px auto 0;
-
-  color: #707070;
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
-
-
-/* =====================================================
-   FEATURE
-===================================================== */
-
-.info-feature {
-  width: min(1200px, 90vw);
-  margin: auto;
-}
-
-
-/* =====================================================
-   ABSTRACT INFOGRAPHIC VISUAL
-===================================================== */
-
-.info-visual {
-  position: relative;
-
-  min-height: 520px;
-
-  overflow: hidden;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  background: #deddd7;
-}
-
-
-/* grid */
-
-.info-visual::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,.55) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.55) 1px,
-      transparent 1px
-    );
-
-  background-size: 55px 55px;
-
-  opacity: .6;
-}
-
-
-/* =====================================================
-   INFOGRAPHIC MOCKUP
-===================================================== */
-
-.info-sheet {
-  position: relative;
-
-  z-index: 2;
-
-  width: 280px;
-  height: 360px;
-
-  padding: 28px;
-
-  background: #f8f7f2;
-
-  box-shadow:
-    25px 30px 45px rgba(0,0,0,.16);
-
-  transform: rotate(-5deg);
-
-  border-radius: 3px;
-}
-
-
-/* heading */
-
-.info-sheet-title {
-  width: 150px;
-
-  height: 12px;
-
-  margin-bottom: 12px;
-
-  background: #171717;
-}
-
-.info-sheet-subtitle {
-  width: 105px;
-
-  height: 6px;
-
-  margin-bottom: 35px;
-
-  background: #c87952;
-}
-
-
-/* chart */
-
-.info-chart {
-  display: flex;
-
-  align-items: flex-end;
-
-  gap: 12px;
-
-  height: 130px;
-
-  margin-bottom: 28px;
-
-  border-bottom: 1px solid #bdbcb6;
-}
-
-.info-bar {
-  width: 28px;
-
-  background: #b5b4ae;
-}
-
-.info-bar:nth-child(1) {
-  height: 45%;
-}
-
-.info-bar:nth-child(2) {
-  height: 75%;
-}
-
-.info-bar:nth-child(3) {
-  height: 58%;
-}
-
-.info-bar:nth-child(4) {
-  height: 92%;
-
-  background: #c87952;
-}
-
-.info-bar:nth-child(5) {
-  height: 67%;
-}
-
-
-/* text lines */
-
-.info-lines {
-  display: grid;
-
-  gap: 8px;
-}
-
-.info-line {
-  height: 5px;
-
-  background: #d0cfca;
-}
-
-.info-line:nth-child(1) {
-  width: 90%;
-}
-
-.info-line:nth-child(2) {
-  width: 72%;
-}
-
-.info-line:nth-child(3) {
-  width: 82%;
-}
-
-
-/* floating circle */
-
-.info-circle {
-  position: absolute;
-
-  z-index: 3;
-
-  width: 120px;
-  height: 120px;
-
-  right: 19%;
-  top: 23%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #c87952;
-
-  color: white;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 24px;
-
-  transform: rotate(8deg);
-
-  box-shadow:
-    15px 20px 30px rgba(0,0,0,.12);
-}
-
-
-/* =====================================================
-   VISUAL LABEL
-===================================================== */
-
-.info-label {
-  position: absolute;
-
-  top: 25px;
-  left: 25px;
-
-  z-index: 5;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .16em;
-}
-
-.info-label span {
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #c87952;
-}
-
-
-/* status */
-
-.info-status {
-  position: absolute;
-
-  right: 25px;
-  bottom: 25px;
-
-  z-index: 5;
-
-  padding: 10px 15px;
-
-  border: 1px solid rgba(0,0,0,.15);
-
-  border-radius: 100px;
-
-  background: rgba(255,255,255,.55);
-
-  backdrop-filter: blur(8px);
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .1em;
-}
-
-
-/* =====================================================
-   DESCRIPTION
-===================================================== */
-
-.info-description {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 80px;
-
-  padding: 80px 0 110px;
-}
-
-.info-description h2 {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(42px, 5vw, 65px);
-
-  line-height: .98;
-
-  font-weight: 500;
-
-  letter-spacing: -.05em;
-}
-
-.info-description h2 em {
+.coming-soon h2 em {
   color: #c87952;
 
   font-style: italic;
 }
 
-.info-description-text {
+.coming-soon p {
+  max-width: 520px;
+
+  margin: 0 auto;
+
   color: #707070;
 
   font-size: 14px;
@@ -391,258 +70,16 @@ rel="stylesheet">
   line-height: 1.9;
 }
 
-.info-description-text p {
-  margin: 0 0 25px;
-}
+.coming-soon-label {
+  margin-top: 45px;
 
-
-/* =====================================================
-   AREAS
-===================================================== */
-
-.info-areas {
-  width: min(1200px, 90vw);
-
-  margin: auto;
-
-  padding-bottom: 120px;
-}
-
-.info-areas-header {
-  margin-bottom: 45px;
-}
-
-.info-areas-header h2 {
-  margin: 15px 0 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(42px, 5vw, 65px);
-
-  line-height: .95;
-
-  font-weight: 500;
-
-  letter-spacing: -.05em;
-}
-
-.info-areas-header h2 em {
-  color: #c87952;
-
-  font-style: italic;
-}
-
-
-/* cards */
-
-.info-area-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  border-top: 1px solid #d4d3cd;
-
-  border-bottom: 1px solid #d4d3cd;
-}
-
-.info-area {
-  min-height: 250px;
-
-  padding: 30px;
-
-  border-right: 1px solid #d4d3cd;
-}
-
-.info-area:last-child {
-  border-right: none;
-}
-
-.info-area-number {
-  color: #c87952;
-
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 700;
 
-  letter-spacing: .15em;
-}
+  letter-spacing: .16em;
 
-.info-area h3 {
-  margin: 60px 0 15px;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 28px;
-
-  font-weight: 500;
-}
-
-.info-area p {
-  max-width: 270px;
-
-  margin: 0;
-
-  color: #777;
-
-  font-size: 12px;
-
-  line-height: 1.8;
-}
-
-
-/* =====================================================
-   COMING SOON
-===================================================== */
-
-.info-coming {
-  width: min(1200px, 90vw);
-
-  margin: auto;
-
-  padding-bottom: 130px;
-}
-
-.info-coming-inner {
-  padding: 90px 30px;
-
-  border: 1px solid #d5d4ce;
-
-  text-align: center;
-}
-
-.info-coming h2 {
-  margin: 20px 0 25px;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(48px, 6vw, 75px);
-
-  line-height: .95;
-
-  font-weight: 500;
-
-  letter-spacing: -.05em;
-}
-
-.info-coming h2 em {
   color: #c87952;
-
-  font-style: italic;
-}
-
-.info-coming p {
-  max-width: 520px;
-
-  margin: auto;
-
-  color: #777;
-
-  font-size: 13px;
-
-  line-height: 1.8;
-}
-
-.info-coming a {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  margin-top: 35px;
-
-  padding: 14px 23px;
-
-  border: 1px solid #171717;
-
-  border-radius: 100px;
-
-  color: #171717;
-
-  text-decoration: none;
-
-  font-size: 12px;
-
-  font-weight: 600;
-
-  transition:
-    background .25s ease,
-    color .25s ease;
-}
-
-.info-coming a:hover {
-  background: #171717;
-
-  color: white;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 700px) {
-
-  .info-hero {
-    padding: 75px 0 70px;
-  }
-
-  .info-hero h1 {
-    font-size: 60px;
-  }
-
-  .info-visual {
-    min-height: 390px;
-  }
-
-  .info-sheet {
-    width: 220px;
-    height: 290px;
-
-    padding: 22px;
-  }
-
-  .info-circle {
-    width: 85px;
-    height: 85px;
-
-    right: 8%;
-    top: 24%;
-
-    font-size: 18px;
-  }
-
-  .info-description {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    padding-top: 60px;
-  }
-
-  .info-area-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-area {
-    border-right: none;
-
-    border-bottom: 1px solid #d4d3cd;
-  }
-
-  .info-area:last-child {
-    border-bottom: none;
-  }
-
-  .info-coming {
-    padding-bottom: 80px;
-  }
-
-  .info-coming-inner {
-    padding: 65px 20px;
-  }
-
 }
 
 </style>
@@ -650,12 +87,7 @@ rel="stylesheet">
 </head>
 
 
-<body class="infographic-page">
-
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<body>
 
 <header class="nav">
 
@@ -663,9 +95,7 @@ rel="stylesheet">
     MJ<span>.</span>
   </a>
 
-  <button
-    class="menu-toggle"
-    aria-label="Open menu">
+  <button class="menu-toggle" aria-label="Open menu">
     ☰
   </button>
 
@@ -703,22 +133,19 @@ rel="stylesheet">
 <main>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- PAGE INTRO -->
 
-<section class="info-hero">
+<section class="page-hero section">
 
   <p class="eyebrow">
     03 / 03
   </p>
 
   <h1>
-    <em>Information</em><br>
-    made visual.
+    Infographics.
   </h1>
 
-  <p>
+  <p class="lead">
     Exploring the relationship between information,
     illustration and visual communication to make ideas
     clearer, more engaging and easier to understand.
@@ -727,203 +154,25 @@ rel="stylesheet">
 </section>
 
 
-<!-- =====================================================
-     FEATURE
-===================================================== -->
+<!-- COMING SOON -->
 
-<section class="info-feature">
+<section class="coming-soon">
 
-  <div class="info-visual">
+  <div class="coming-soon-line"></div>
 
-    <div class="info-label">
-      <span></span>
-      INFORMATION DESIGN
-    </div>
+  <h2>
+    Information is
+    <em>coming to life.</em>
+  </h2>
 
+  <p>
+    This collection is currently in development.
+    New infographic work will be added here as the
+    portfolio continues to grow.
+  </p>
 
-    <div class="info-sheet">
-
-      <div class="info-sheet-title"></div>
-
-      <div class="info-sheet-subtitle"></div>
-
-      <div class="info-chart">
-
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-
-      </div>
-
-
-      <div class="info-lines">
-
-        <div class="info-line"></div>
-        <div class="info-line"></div>
-        <div class="info-line"></div>
-
-      </div>
-
-    </div>
-
-
-    <div class="info-circle">
-      DATA
-    </div>
-
-
-    <div class="info-status">
-      WORK IN PROGRESS
-    </div>
-
-  </div>
-
-
-  <div class="info-description">
-
-    <h2>
-      Making information<br>
-      <em>easier to see.</em>
-    </h2>
-
-    <div class="info-description-text">
-
-      <p>
-        Infographics combine design, information and
-        visual storytelling to communicate ideas in a
-        way that feels simple and engaging.
-      </p>
-
-      <p>
-        I am interested in how typography, illustration,
-        layout and visual hierarchy can transform
-        information into something people can understand
-        quickly.
-      </p>
-
-      <p>
-        This section will grow as new infographic projects
-        are developed and added to the portfolio.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     AREAS
-===================================================== -->
-
-<section class="info-areas">
-
-  <div class="info-areas-header">
-
-    <p class="eyebrow">
-      AREAS OF EXPLORATION
-    </p>
-
-    <h2>
-      Ideas become clearer<br>
-      when they're <em>visual.</em>
-    </h2>
-
-  </div>
-
-
-  <div class="info-area-grid">
-
-
-    <article class="info-area">
-
-      <span class="info-area-number">
-        01
-      </span>
-
-      <h3>
-        Information
-      </h3>
-
-      <p>
-        Organising information into clear visual
-        structures that are easy to follow and understand.
-      </p>
-
-    </article>
-
-
-    <article class="info-area">
-
-      <span class="info-area-number">
-        02
-      </span>
-
-      <h3>
-        Illustration
-      </h3>
-
-      <p>
-        Using visual elements to explain subjects,
-        concepts and processes in a more engaging way.
-      </p>
-
-    </article>
-
-
-    <article class="info-area">
-
-      <span class="info-area-number">
-        03
-      </span>
-
-      <h3>
-        Storytelling
-      </h3>
-
-      <p>
-        Creating a visual flow that helps information
-        communicate an idea from beginning to end.
-      </p>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     COMING SOON
-===================================================== -->
-
-<section class="info-coming">
-
-  <div class="info-coming-inner">
-
-    <p class="eyebrow">
-      CURRENTLY DEVELOPING
-    </p>
-
-    <h2>
-      More infographics<br>
-      <em>coming soon.</em>
-    </h2>
-
-    <p>
-      New infographic projects will be added here as
-      the collection develops. For now, explore the
-      illustration work in the portfolio.
-    </p>
-
-    <a href="illustration.html">
-      Explore Illustration ↗
-    </a>
-
+  <div class="coming-soon-label">
+    COLLECTION IN DEVELOPMENT
   </div>
 
 </section>
@@ -931,10 +180,6 @@ rel="stylesheet">
 
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
@@ -952,5 +197,4 @@ rel="stylesheet">
 <script src="script.js"></script>
 
 </body>
-
 </html>
