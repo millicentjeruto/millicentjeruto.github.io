@@ -5,27 +5,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="description"
-  content="3D Modelling portfolio by Millicent Jeruto."
->
+<meta name="description"
+content="3D Modelling portfolio by Millicent Jeruto.">
 
 <title>3D Modelling | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-  rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
 /* =====================================================
-   3D MODELLING PAGE
+   PAGE
 ===================================================== */
 
 .model-page {
@@ -39,102 +35,414 @@
 ===================================================== */
 
 .model-hero {
-  width: min(1250px, 90vw);
-  margin: 0 auto;
-  padding: 110px 0 100px;
+  width: min(1200px, 90vw);
+  margin: auto;
+
+  padding: 105px 0 90px;
+
   text-align: center;
 }
 
-.model-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-
-  margin-bottom: 25px;
-
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .2em;
-
-  color: #737373;
-}
-
-.model-label::before,
-.model-label::after {
-  content: "";
-  width: 35px;
-  height: 1px;
-  background: #171717;
-}
-
 .model-hero h1 {
-  margin: 0;
+  margin: 20px 0 0;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(65px, 9vw, 125px);
+  font-size: clamp(65px, 9vw, 120px);
 
-  line-height: .88;
-
-  letter-spacing: -.065em;
+  line-height: .9;
 
   font-weight: 500;
+
+  letter-spacing: -.06em;
 }
 
 .model-hero h1 em {
   color: #c87952;
+
   font-style: italic;
 }
 
-.model-hero p {
-  max-width: 600px;
+.model-hero > p:last-child {
+  max-width: 650px;
 
-  margin: 35px auto 0;
+  margin: 30px auto 0;
 
-  color: #6d6d6d;
+  color: #707070;
 
-  font-size: 15px;
+  font-size: 14px;
 
   line-height: 1.8;
 }
 
 
 /* =====================================================
-   INTRO STRIP
+   FEATURE SECTION
 ===================================================== */
 
-.model-intro {
-  width: min(1250px, 90vw);
+.model-feature {
+  width: min(1200px, 90vw);
 
-  margin: 0 auto;
+  margin: auto;
 
+  padding: 0 0 120px;
+}
+
+
+/* =====================================================
+   LARGE VISUAL
+===================================================== */
+
+.model-visual {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #dddcd5 0%,
+      #c9c8c1 30%,
+      #aaa9a2 70%,
+      #92918b 100%
+    );
+}
+
+
+/* subtle grid */
+
+.model-visual::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .28;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.35) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.35) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+}
+
+
+/* abstract 3D object */
+
+.model-object {
+  position: relative;
+
+  z-index: 2;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 38px;
+
+  transform:
+    rotate(-18deg)
+    skewY(5deg);
+
+  background:
+    linear-gradient(
+      135deg,
+      #eeeeeb 0%,
+      #c9c8c2 42%,
+      #888780 100%
+    );
+
+  box-shadow:
+    35px 35px 45px rgba(0,0,0,.18),
+    inset -15px -15px 25px rgba(0,0,0,.08),
+    inset 15px 15px 25px rgba(255,255,255,.5);
+}
+
+
+/* object detail */
+
+.model-object::before {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(18deg);
+
+  border-radius: 50%;
+
+  background: #aaa9a2;
+
+  box-shadow:
+    inset 10px 10px 18px rgba(255,255,255,.3),
+    inset -10px -10px 18px rgba(0,0,0,.12);
+}
+
+
+/* object side */
+
+.model-object::after {
+  content: "";
+
+  position: absolute;
+
+  right: -35px;
+  bottom: -20px;
+
+  width: 220px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: rgba(0,0,0,.12);
+
+  filter: blur(15px);
+
+  transform: rotate(-8deg);
+}
+
+
+/* =====================================================
+   VISUAL LABEL
+===================================================== */
+
+.model-label {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  z-index: 4;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #292929;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+}
+
+.model-label span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #c87952;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.model-status {
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 4;
+
+  padding: 10px 15px;
+
+  border: 1px solid rgba(0,0,0,.15);
+
+  border-radius: 100px;
+
+  background: rgba(255,255,255,.55);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .1em;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.model-description {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 50px;
+  gap: 80px;
 
-  padding: 35px 0;
-
-  border-top: 1px solid #d9d8d2;
-  border-bottom: 1px solid #d9d8d2;
+  padding: 80px 0 0;
 }
 
-.model-intro strong {
+.model-description h2 {
+  margin: 0;
+
   font-family: "Playfair Display", serif;
 
-  font-size: 28px;
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: .98;
+
+  font-weight: 500;
+
+  letter-spacing: -.05em;
+}
+
+.model-description h2 em {
+  color: #c87952;
+
+  font-style: italic;
+}
+
+.model-description-text {
+  color: #707070;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.model-description-text p {
+  margin: 0 0 25px;
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.model-process {
+  width: min(1200px, 90vw);
+
+  margin: auto;
+
+  padding: 100px 0;
+}
+
+.process-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 45px;
+}
+
+.process-header h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  font-weight: 500;
+
+  letter-spacing: -.05em;
+}
+
+.process-header h2 em {
+  font-style: italic;
+
+  color: #c87952;
+}
+
+.process-header p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   PROCESS CARDS
+===================================================== */
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid #d4d3cd;
+
+  border-bottom: 1px solid #d4d3cd;
+}
+
+.process-card {
+  min-height: 260px;
+
+  padding: 30px;
+
+  border-right: 1px solid #d4d3cd;
+}
+
+.process-card:last-child {
+  border-right: none;
+}
+
+.process-number {
+  color: #c87952;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .15em;
+}
+
+.process-card h3 {
+  margin: 65px 0 15px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 30px;
 
   font-weight: 500;
 }
 
-.model-intro p {
-  max-width: 450px;
-
+.process-card p {
   margin: 0;
 
-  color: #737373;
+  max-width: 280px;
+
+  color: #777;
 
   font-size: 12px;
 
@@ -143,360 +451,77 @@
 
 
 /* =====================================================
-   PROJECT SECTION
+   COMING SOON
 ===================================================== */
 
-.model-projects {
-  width: min(1250px, 90vw);
+.coming-soon {
+  width: min(1200px, 90vw);
 
-  margin: 0 auto;
+  margin: auto;
 
   padding: 100px 0 130px;
+
+  text-align: center;
 }
 
-.section-heading {
-  display: flex;
+.coming-soon-inner {
+  max-width: 800px;
 
-  justify-content: space-between;
+  margin: auto;
 
-  align-items: end;
+  padding: 80px 30px;
 
-  margin-bottom: 45px;
+  border: 1px solid #d5d4ce;
 }
 
-.section-heading-left {
-  display: flex;
-
-  align-items: center;
-
-  gap: 15px;
-}
-
-.section-heading-number {
-  color: #c87952;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: .1em;
-}
-
-.section-heading h2 {
-  margin: 0;
+.coming-soon h2 {
+  margin: 20px 0 25px;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(40px, 5vw, 65px);
+  font-size: clamp(48px, 6vw, 75px);
 
   line-height: .95;
 
   font-weight: 500;
 
-  letter-spacing: -.045em;
+  letter-spacing: -.05em;
 }
 
-.section-heading h2 em {
+.coming-soon h2 em {
+  color: #c87952;
+
   font-style: italic;
 }
 
-.project-count {
-  color: #888;
+.coming-soon p {
+  max-width: 520px;
 
-  font-size: 10px;
-
-  letter-spacing: .12em;
-
-  text-transform: uppercase;
-}
-
-
-/* =====================================================
-   PROJECT GRID
-===================================================== */
-
-.model-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 75px 35px;
-}
-
-
-/* =====================================================
-   PROJECT
-===================================================== */
-
-.model-project {
-  margin: 0;
-}
-
-.model-project:nth-child(3n) {
-  margin-top: 45px;
-}
-
-
-/* First project spans full width */
-
-.model-project.featured {
-  grid-column: 1 / -1;
-
-  margin-top: 0;
-}
-
-.model-project.featured .model-image {
-  aspect-ratio: 16 / 8;
-}
-
-
-/* =====================================================
-   IMAGE
-===================================================== */
-
-.model-image {
-  position: relative;
-
-  width: 100%;
-
-  aspect-ratio: 4 / 3;
-
-  overflow: hidden;
-
-  display: block;
-
-  padding: 0;
-
-  border: none;
-
-  background: #e7e5df;
-
-  cursor: pointer;
-}
-
-.model-image img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition:
-    transform .6s cubic-bezier(.2,.7,.2,1),
-    filter .4s ease;
-}
-
-.model-image:hover img {
-  transform: scale(1.045);
-
-  filter: brightness(.88);
-}
-
-
-/* =====================================================
-   IMAGE OVERLAY
-===================================================== */
-
-.model-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-end;
-
-  padding: 20px;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.58),
-      transparent 45%
-    );
-
-  opacity: 0;
-
-  transition: opacity .35s ease;
-
-  pointer-events: none;
-}
-
-.model-image:hover .model-overlay {
-  opacity: 1;
-}
-
-.model-overlay-label {
-  color: white;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .12em;
-}
-
-.model-zoom {
-  width: 40px;
-  height: 40px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: white;
-
-  color: #171717;
-
-  font-size: 17px;
-}
-
-
-/* =====================================================
-   PROJECT INFO
-===================================================== */
-
-.model-info {
-  padding-top: 18px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 20px;
-}
-
-.model-info-left {
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 15px;
-}
-
-.model-number {
-  color: #c87952;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .1em;
-
-  padding-top: 5px;
-}
-
-.model-title {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 25px;
-
-  line-height: 1.1;
-
-  font-weight: 500;
-}
-
-.model-subtitle {
-  margin: 6px 0 0;
-
-  color: #888;
-
-  font-size: 10px;
-
-  letter-spacing: .12em;
-
-  text-transform: uppercase;
-}
-
-.model-arrow {
-  font-size: 20px;
+  margin: auto;
 
   color: #777;
 
-  transition:
-    transform .3s ease,
-    color .3s ease;
+  font-size: 13px;
+
+  line-height: 1.8;
 }
 
-.model-project:hover .model-arrow {
-  transform: translate(4px, -4px);
-
-  color: #c87952;
-}
-
-
-/* =====================================================
-   BOTTOM CTA
-===================================================== */
-
-.model-cta {
-  width: min(900px, 90vw);
-
-  margin: 0 auto 140px;
-
-  padding: 100px 30px;
-
-  text-align: center;
-
-  background: #171717;
-
-  color: white;
-}
-
-.model-cta small {
-  color: #aaa;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .2em;
-}
-
-.model-cta h2 {
-  max-width: 750px;
-
-  margin: 25px auto 35px;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(45px, 6vw, 75px);
-
-  line-height: .98;
-
-  letter-spacing: -.05em;
-
-  font-weight: 500;
-}
-
-.model-cta h2 em {
-  color: #d79b7d;
-
-  font-style: italic;
-}
-
-.model-cta a {
+.coming-soon a {
   display: inline-flex;
+
+  margin-top: 35px;
 
   align-items: center;
 
   gap: 10px;
 
-  padding: 14px 22px;
+  padding: 14px 23px;
 
-  border: 1px solid white;
+  border: 1px solid #171717;
 
   border-radius: 100px;
 
-  color: white;
+  color: #171717;
 
   text-decoration: none;
 
@@ -509,83 +534,10 @@
     color .25s ease;
 }
 
-.model-cta a:hover {
-  background: white;
-
-  color: #171717;
-}
-
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
-
-.lightbox {
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 100;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 30px;
-
-  background: rgba(0,0,0,.94);
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  transition:
-    opacity .3s ease,
-    visibility .3s ease;
-}
-
-.lightbox.open {
-  opacity: 1;
-
-  visibility: visible;
-}
-
-.lightbox img {
-  max-width: 92vw;
-
-  max-height: 88vh;
-
-  object-fit: contain;
-
-  display: block;
-}
-
-.lightbox-close {
-  position: absolute;
-
-  top: 25px;
-
-  right: 30px;
-
-  width: 45px;
-
-  height: 45px;
-
-  border: 1px solid rgba(255,255,255,.35);
-
-  border-radius: 50%;
-
-  background: transparent;
+.coming-soon a:hover {
+  background: #171717;
 
   color: white;
-
-  font-size: 27px;
-
-  cursor: pointer;
-
-  line-height: 1;
 }
 
 
@@ -600,86 +552,60 @@
   }
 
   .model-hero h1 {
-    font-size: 62px;
+    font-size: 60px;
   }
 
-  .model-intro {
+  .model-visual {
+    min-height: 380px;
+  }
+
+  .model-object {
+    width: 170px;
+    height: 170px;
+  }
+
+  .model-description {
     grid-template-columns: 1fr;
 
-    gap: 15px;
+    gap: 35px;
 
-    text-align: center;
+    padding-top: 60px;
   }
 
-  .model-intro p {
-    margin: auto;
-  }
-
-  .model-projects {
-    padding: 70px 0 90px;
-  }
-
-  .section-heading {
+  .process-header {
     display: block;
-
-    text-align: center;
   }
 
-  .section-heading-left {
-    justify-content: center;
+  .process-header p {
+    margin-top: 20px;
   }
 
-  .project-count {
-    margin-top: 15px;
-  }
-
-  .model-grid {
+  .process-grid {
     grid-template-columns: 1fr;
-
-    gap: 55px;
   }
 
-  .model-project:nth-child(3n) {
-    margin-top: 0;
+  .process-card {
+    min-height: auto;
+
+    border-right: none;
+
+    border-bottom: 1px solid #d4d3cd;
   }
 
-  .model-project.featured {
-    grid-column: auto;
+  .process-card:last-child {
+    border-bottom: none;
   }
 
-  .model-project.featured .model-image {
-    aspect-ratio: 4 / 3;
+  .process-card h3 {
+    margin-top: 45px;
   }
 
-  .model-title {
-    font-size: 22px;
+  .coming-soon {
+    padding-bottom: 80px;
   }
 
-  .model-cta {
-    margin-bottom: 90px;
-
-    padding: 75px 25px;
-  }
-
-}
-
-
-/* =====================================================
-   SMALL PHONES
-===================================================== */
-
-@media (max-width: 430px) {
-
-  .model-hero h1 {
-    font-size: 53px;
-  }
-
-  .model-intro strong {
-    font-size: 24px;
-  }
-
-  .section-heading h2 {
-    font-size: 43px;
+  .coming-soon-inner {
+    padding: 60px 20px;
   }
 
 }
@@ -704,8 +630,7 @@
 
   <button
     class="menu-toggle"
-    aria-label="Open menu"
-  >
+    aria-label="Open menu">
     ☰
   </button>
 
@@ -719,10 +644,7 @@
       About
     </a>
 
-    <a
-      class="active"
-      href="3d-modelling.html"
-    >
+    <a class="active" href="3d-modelling.html">
       3D Modelling
     </a>
 
@@ -734,10 +656,7 @@
       Infographics
     </a>
 
-    <a
-      class="nav-contact"
-      href="contact.html"
-    >
+    <a class="nav-contact" href="contact.html">
       Contact
     </a>
 
@@ -755,619 +674,161 @@
 
 <section class="model-hero">
 
-  <div class="model-label">
-    02 / 03
-  </div>
+  <p class="eyebrow">
+    01 / 03
+  </p>
 
   <h1>
-    3D <em>Modelling</em>
+    <em>3D</em> Modelling.
   </h1>
 
   <p>
-    Exploring form, shape, materials and space
-    through three-dimensional design.
+    Exploring form, structure, materials and space
+    through digital 3D design. A new collection of
+    work is currently in development.
   </p>
 
 </section>
 
 
 <!-- =====================================================
-     INTRO
+     FEATURE VISUAL
 ===================================================== -->
 
-<section class="model-intro">
+<section class="model-feature">
 
-  <strong>
-    From concept<br>
-    to dimension.
-  </strong>
+  <div class="model-visual">
 
-  <p>
-    A selection of 3D modelling work focused on
-    transforming ideas into structured,
-    dimensional forms.
-  </p>
+    <div class="model-label">
+      <span></span>
+      3D STUDIES
+    </div>
+
+    <div class="model-object"></div>
+
+    <div class="model-status">
+      WORK IN PROGRESS
+    </div>
+
+  </div>
+
+
+  <div class="model-description">
+
+    <h2>
+      Building ideas<br>
+      in <em>three dimensions.</em>
+    </h2>
+
+    <div class="model-description-text">
+
+      <p>
+        3D modelling is an area of my creative practice
+        focused on transforming concepts into digital
+        forms.
+      </p>
+
+      <p>
+        I explore how shape, proportion, structure,
+        materials and lighting can work together to
+        communicate an idea.
+      </p>
+
+      <p>
+        This section of the portfolio will continue to
+        grow as new projects are developed.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
 
 <!-- =====================================================
-     PROJECTS
+     PROCESS
 ===================================================== -->
 
-<section class="model-projects">
+<section class="model-process">
 
+  <div class="process-header">
 
-  <div class="section-heading">
+    <div>
 
-    <div class="section-heading-left">
-
-      <span class="section-heading-number">
-        01
-      </span>
+      <p class="eyebrow">
+        THE PROCESS
+      </p>
 
       <h2>
-        Selected <em>Work</em>
+        From idea<br>
+        to <em>form.</em>
       </h2>
 
     </div>
 
-    <span class="project-count">
-      10 Projects
-    </span>
+    <p>
+      A simple creative process helps turn an initial
+      concept into something structured, considered
+      and visually clear.
+    </p>
 
   </div>
 
 
-  <div class="model-grid">
+  <div class="process-grid">
 
 
-    <!-- PROJECT 01 -->
+    <article class="process-card">
 
-    <article class="model-project featured">
+      <span class="process-number">
+        01
+      </span>
 
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-01.jpg"
-        aria-label="Open 3D modelling project 1"
-      >
+      <h3>
+        Concept
+      </h3>
 
-        <img
-          src="assets/3d-01.jpg"
-          alt="3D modelling project 1"
-        >
-
-        <div class="model-overlay">
-
-          <span class="model-overlay-label">
-            3D MODELLING · 01
-          </span>
-
-          <span class="model-zoom">
-            ↗
-          </span>
-
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            01 / 10
-          </span>
-
-          <div>
-
-            <h3 class="model-title">
-              3D Project 01
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-
-          </div>
-
-        </div>
-
-        <span class="model-arrow">
-          ↗
-        </span>
-
-      </div>
+      <p>
+        Understanding the idea, purpose and visual
+        direction before creating the form.
+      </p>
 
     </article>
 
 
-    <!-- PROJECT 02 -->
+    <article class="process-card">
 
-    <article class="model-project">
+      <span class="process-number">
+        02
+      </span>
 
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-02.jpg"
-        aria-label="Open 3D modelling project 2"
-      >
+      <h3>
+        Form
+      </h3>
 
-        <img
-          src="assets/3d-02.jpg"
-          alt="3D modelling project 2"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 02
-          </span>
-
-          <span class="model-zoom">
-            ↗
-          </span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            02 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 02
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
+      <p>
+        Developing shapes, proportions and structures
+        to create a convincing three-dimensional object.
+      </p>
 
     </article>
 
 
-    <!-- PROJECT 03 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-03.jpg"
-        aria-label="Open 3D modelling project 3"
-      >
-
-        <img
-          src="assets/3d-03.jpg"
-          alt="3D modelling project 3"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 03
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            03 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 03
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 04 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-04.jpg"
-        aria-label="Open 3D modelling project 4"
-      >
-
-        <img
-          src="assets/3d-04.jpg"
-          alt="3D modelling project 4"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 04
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            04 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 04
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 05 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-05.jpg"
-        aria-label="Open 3D modelling project 5"
-      >
-
-        <img
-          src="assets/3d-05.jpg"
-          alt="3D modelling project 5"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 05
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            05 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 05
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 06 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-06.jpg"
-        aria-label="Open 3D modelling project 6"
-      >
-
-        <img
-          src="assets/3d-06.jpg"
-          alt="3D modelling project 6"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 06
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            06 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 06
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 07 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-07.jpg"
-        aria-label="Open 3D modelling project 7"
-      >
-
-        <img
-          src="assets/3d-07.jpg"
-          alt="3D modelling project 7"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 07
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            07 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 07
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 08 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-08.jpg"
-        aria-label="Open 3D modelling project 8"
-      >
-
-        <img
-          src="assets/3d-08.jpg"
-          alt="3D modelling project 8"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 08
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            08 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 08
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 09 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-09.jpg"
-        aria-label="Open 3D modelling project 9"
-      >
-
-        <img
-          src="assets/3d-09.jpg"
-          alt="3D modelling project 9"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 09
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            09 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 09
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 10 -->
-
-    <article class="model-project">
-
-      <button
-        class="model-image gallery-item"
-        type="button"
-        data-full="assets/3d-10.jpg"
-        aria-label="Open 3D modelling project 10"
-      >
-
-        <img
-          src="assets/3d-10.jpg"
-          alt="3D modelling project 10"
-        >
-
-        <div class="model-overlay">
-          <span class="model-overlay-label">
-            3D MODELLING · 10
-          </span>
-
-          <span class="model-zoom">↗</span>
-        </div>
-
-      </button>
-
-
-      <div class="model-info">
-
-        <div class="model-info-left">
-
-          <span class="model-number">
-            10 / 10
-          </span>
-
-          <div>
-            <h3 class="model-title">
-              3D Project 10
-            </h3>
-
-            <p class="model-subtitle">
-              3D Modelling
-            </p>
-          </div>
-
-        </div>
-
-        <span class="model-arrow">↗</span>
-
-      </div>
+    <article class="process-card">
+
+      <span class="process-number">
+        03
+      </span>
+
+      <h3>
+        Detail
+      </h3>
+
+      <p>
+        Refining materials, surfaces, lighting and
+        presentation to complete the visual experience.
+      </p>
 
     </article>
 
@@ -1378,52 +839,38 @@
 
 
 <!-- =====================================================
-     CTA
+     COMING SOON
 ===================================================== -->
 
-<section class="model-cta">
+<section class="coming-soon">
 
-  <small>
-    NEXT IN THE PORTFOLIO
-  </small>
+  <div class="coming-soon-inner">
 
-  <h2>
-    Information made
-    <em>visual.</em>
-  </h2>
+    <p class="eyebrow">
+      CURRENTLY DEVELOPING
+    </p>
 
-  <a href="infographics.html">
-    Explore Infographics ↗
-  </a>
+    <h2>
+      More work is<br>
+      <em>coming soon.</em>
+    </h2>
+
+    <p>
+      New 3D modelling projects will be added here as
+      the collection develops. In the meantime, explore
+      my illustration work.
+    </p>
+
+    <a href="illustration.html">
+      Explore Illustration ↗
+    </a>
+
+  </div>
 
 </section>
 
 
 </main>
-
-
-<!-- =====================================================
-     LIGHTBOX
-===================================================== -->
-
-<div
-  class="lightbox"
-  aria-hidden="true"
->
-
-  <button
-    class="lightbox-close"
-    aria-label="Close image"
-  >
-    ×
-  </button>
-
-  <img
-    src=""
-    alt=""
-  >
-
-</div>
 
 
 <!-- =====================================================
@@ -1444,106 +891,6 @@
 
 
 <script src="script.js"></script>
-
-
-<script>
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
-
-const galleryItems =
-  document.querySelectorAll(".gallery-item");
-
-const lightbox =
-  document.querySelector(".lightbox");
-
-const lightboxImage =
-  lightbox.querySelector("img");
-
-const closeButton =
-  document.querySelector(".lightbox-close");
-
-
-galleryItems.forEach(item => {
-
-  item.addEventListener("click", () => {
-
-    const image =
-      item.getAttribute("data-full");
-
-    const alt =
-      item.querySelector("img")?.alt ||
-      "3D modelling project";
-
-    lightboxImage.src = image;
-
-    lightboxImage.alt = alt;
-
-    lightbox.classList.add("open");
-
-    lightbox.setAttribute(
-      "aria-hidden",
-      "false"
-    );
-
-    document.body.style.overflow = "hidden";
-
-  });
-
-});
-
-
-function closeLightbox() {
-
-  lightbox.classList.remove("open");
-
-  lightbox.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-  lightboxImage.src = "";
-
-  document.body.style.overflow = "";
-
-}
-
-
-closeButton.addEventListener(
-  "click",
-  closeLightbox
-);
-
-
-lightbox.addEventListener(
-  "click",
-  event => {
-
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-
-  }
-);
-
-
-document.addEventListener(
-  "keydown",
-  event => {
-
-    if (
-      event.key === "Escape" &&
-      lightbox.classList.contains("open")
-    ) {
-      closeLightbox();
-    }
-
-  }
-);
-
-</script>
-
 
 </body>
 </html>
