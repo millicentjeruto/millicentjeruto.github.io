@@ -5,17 +5,331 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description"
+content="Illustration portfolio by Millicent Jeruto featuring medical, roofing and construction illustrations.">
+
 <title>Illustration | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+.illustration-page {
+  background: #f5f4ef;
+  color: #171717;
+}
+
+.illustration-hero {
+  width: min(1200px, 90vw);
+  margin: auto;
+  padding: 105px 0 95px;
+  text-align: center;
+}
+
+.illustration-hero h1 {
+  margin: 20px 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(65px, 9vw, 120px);
+  line-height: .9;
+  font-weight: 500;
+  letter-spacing: -.06em;
+}
+
+.illustration-hero h1 em {
+  color: #c87952;
+  font-style: italic;
+}
+
+.illustration-hero > p:last-child {
+  max-width: 620px;
+  margin: 30px auto 0;
+  color: #707070;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.illustration-section {
+  width: min(1200px, 90vw);
+  margin: auto;
+  padding: 90px 0 120px;
+  border-top: 1px solid #d8d7d1;
+}
+
+.category-header {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.category-number {
+  padding-top: 9px;
+  color: #c87952;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.category-content h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(50px, 6vw, 76px);
+  line-height: .95;
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+
+.category-content h2 em {
+  font-style: italic;
+}
+
+.category-content p {
+  max-width: 580px;
+  margin: 22px 0 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.illustration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: left;
+}
+
+.gallery-item.featured {
+  grid-column: 1 / -1;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition:
+    transform .6s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.018);
+  filter: brightness(.84);
+}
+
+.image-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.95);
+  color: #171717;
+  font-size: 10px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 18px;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.42),
+      transparent 45%
+    );
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: #171717;
+  font-size: 18px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(0,0,0,.94);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  display: block;
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.illustration-contact {
+  width: min(900px, 90vw);
+  margin: 30px auto 130px;
+  padding: 90px 30px;
+  background: #171717;
+  color: white;
+  text-align: center;
+}
+
+.illustration-contact h2 {
+  max-width: 650px;
+  margin: 20px auto 30px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(45px, 6vw, 70px);
+  line-height: .98;
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+
+.illustration-contact h2 em {
+  color: #d79b7d;
+  font-style: italic;
+}
+
+.illustration-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 23px;
+  border: 1px solid white;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+.illustration-contact a:hover {
+  background: white;
+  color: #171717;
+}
+
+@media (max-width: 700px) {
+
+  .illustration-hero {
+    padding: 75px 0 70px;
+  }
+
+  .illustration-hero h1 {
+    font-size: 60px;
+  }
+
+  .illustration-section {
+    padding: 70px 0 85px;
+  }
+
+  .category-header {
+    display: block;
+    text-align: center;
+  }
+
+  .category-number {
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  .category-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .illustration-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .gallery-item,
+  .gallery-item.featured {
+    grid-column: 1;
+  }
+
+  .illustration-contact {
+    margin-bottom: 80px;
+    padding: 70px 25px;
+  }
+
+}
+
+</style>
+
 </head>
 
-<body>
+
+<body class="illustration-page">
+
 
 <header class="nav">
 
@@ -28,12 +342,25 @@
   </button>
 
   <nav>
+
     <a href="index.html">Home</a>
+
     <a href="about.html">About</a>
+
     <a href="3d-modelling.html">3D Modelling</a>
-    <a class="active" href="illustration.html">Illustration</a>
-    <a href="infographics.html">Infographics</a>
-    <a class="nav-contact" href="contact.html">Contact</a>
+
+    <a class="active" href="illustration.html">
+      Illustration
+    </a>
+
+    <a href="infographics.html">
+      Infographics
+    </a>
+
+    <a class="nav-contact" href="contact.html">
+      Contact
+    </a>
+
   </nav>
 
 </header>
@@ -41,558 +368,367 @@
 
 <main>
 
-  <!-- PAGE INTRO -->
 
-  <section class="page-hero section">
+<section class="illustration-hero">
 
-    <p class="eyebrow">
-      02 / 03
-    </p>
+  <p class="eyebrow">
+    02 / 03
+  </p>
 
-    <h1>
-      Illustration.
-    </h1>
+  <h1>
+    <em>Illustration.</em>
+  </h1>
 
-    <p class="lead">
-      Exploring visual storytelling through medical subjects,
-      roofing, construction and practical visual communication.
-    </p>
+  <p>
+    Exploring visual storytelling through medical subjects,
+    roofing, construction and practical visual communication.
+  </p>
 
-  </section>
+</section>
 
 
-  <!-- ILLUSTRATION COLLECTION -->
+<section class="illustration-section">
 
-  <section class="portfolio-grid section">
+  <div class="category-header">
 
+    <div class="category-number">
+      01
+    </div>
 
-    <!-- =========================
-         MEDICAL
-    ========================== -->
+    <div class="category-content">
 
-    <div class="portfolio-category">
+      <h2>
+        <em>Medical</em>
+      </h2>
 
-      <div class="category-intro">
-
-        <span class="category-number">
-          01
-        </span>
-
-        <div>
-          <h2>Medical</h2>
-
-          <p>
-            Visual interpretations of medical and anatomical
-            subjects, created to make complex ideas easier
-            to understand.
-          </p>
-        </div>
-
-      </div>
-
-
-      <div class="category-grid">
-
-
-        <!-- MEDICAL 01 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="2.png"
-            aria-label="Open medical illustration 1">
-
-            <img
-              src="2.png"
-              alt="Medical illustration 1"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 01
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 02 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="10.png"
-            aria-label="Open medical illustration 2">
-
-            <img
-              src="10.png"
-              alt="Medical illustration 2"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 02
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 03 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="11.png"
-            aria-label="Open medical illustration 3">
-
-            <img
-              src="11.png"
-              alt="Medical illustration 3"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 03
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 04 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="12.png"
-            aria-label="Open medical illustration 4">
-
-            <img
-              src="12.png"
-              alt="Medical illustration 4"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 04
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 05 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="13.png"
-            aria-label="Open medical illustration 5">
-
-            <img
-              src="13.png"
-              alt="Medical illustration 5"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 05
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 06 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="14.png"
-            aria-label="Open medical illustration 6">
-
-            <img
-              src="14.png"
-              alt="Medical illustration 6"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 06
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 07 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="15.png"
-            aria-label="Open medical illustration 7">
-
-            <img
-              src="15.png"
-              alt="Medical illustration 7"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 07
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 08 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="16.png"
-            aria-label="Open medical illustration 8">
-
-            <img
-              src="16.png"
-              alt="Medical illustration 8"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 08
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 09 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="30.png"
-            aria-label="Open medical illustration 9">
-
-            <img
-              src="30.png"
-              alt="Medical illustration 9"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 09
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-
-        <!-- MEDICAL 10 -->
-
-        <article class="project">
-
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="31.png"
-            aria-label="Open medical illustration 10">
-
-            <img
-              src="31.png"
-              alt="Medical illustration 10"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
-
-            <span class="fallback-label">
-              MEDICAL · 10
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
-
-      </div>
+      <p>
+        Visual interpretations of medical and anatomical
+        subjects, created to make complex ideas easier
+        to understand.
+      </p>
 
     </div>
 
-
-    <!-- =========================
-         ROOFING
-    ========================== -->
-
-    <div class="portfolio-category">
-
-      <div class="category-intro">
-
-        <span class="category-number">
-          02
-        </span>
-
-        <div>
-          <h2>Roofing</h2>
-
-          <p>
-            Illustration work focused on roofing,
-            structures and practical visual communication.
-          </p>
-        </div>
-
-      </div>
+  </div>
 
 
-      <div class="category-grid">
+  <div class="illustration-grid">
+
+    <button class="gallery-item featured" type="button"
+      data-full="2.png"
+      aria-label="Open medical illustration 1">
+
+      <img src="2.png" alt="Medical illustration 1">
+
+      <span class="image-number">01</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
 
 
-        <!-- ROOFING 01 -->
+    <button class="gallery-item" type="button"
+      data-full="10.png"
+      aria-label="Open medical illustration 2">
 
-        <article class="project">
+      <img src="10.png" alt="Medical illustration 2">
 
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="26.png"
-            aria-label="Open roofing illustration 1">
+      <span class="image-number">02</span>
 
-            <img
-              src="26.png"
-              alt="Roofing illustration 1"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-            <span class="fallback-label">
-              ROOFING · 01
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
+    </button>
 
 
-        <!-- ROOFING 02 -->
+    <button class="gallery-item" type="button"
+      data-full="11.png"
+      aria-label="Open medical illustration 3">
 
-        <article class="project">
+      <img src="11.png" alt="Medical illustration 3">
 
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="29.png"
-            aria-label="Open roofing illustration 2">
+      <span class="image-number">03</span>
 
-            <img
-              src="29.png"
-              alt="Roofing illustration 2"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-            <span class="fallback-label">
-              ROOFING · 02
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
+    </button>
 
 
-        <!-- ROOFING 03 -->
+    <button class="gallery-item" type="button"
+      data-full="12.png"
+      aria-label="Open medical illustration 4">
 
-        <article class="project">
+      <img src="12.png" alt="Medical illustration 4">
 
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="25.png"
-            aria-label="Open roofing illustration 3">
+      <span class="image-number">04</span>
 
-            <img
-              src="25.png"
-              alt="Roofing illustration 3"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-            <span class="fallback-label">
-              ROOFING · 03
-            </span>
+    </button>
 
-            <span class="zoom">
-              ↗
-            </span>
 
-          </button>
+    <button class="gallery-item" type="button"
+      data-full="13.png"
+      aria-label="Open medical illustration 5">
 
-        </article>
+      <img src="13.png" alt="Medical illustration 5">
 
-      </div>
+      <span class="image-number">05</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+
+    <button class="gallery-item" type="button"
+      data-full="14.png"
+      aria-label="Open medical illustration 6">
+
+      <img src="14.png" alt="Medical illustration 6">
+
+      <span class="image-number">06</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+
+    <button class="gallery-item" type="button"
+      data-full="15.png"
+      aria-label="Open medical illustration 7">
+
+      <img src="15.png" alt="Medical illustration 7">
+
+      <span class="image-number">07</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+
+    <button class="gallery-item" type="button"
+      data-full="16.png"
+      aria-label="Open medical illustration 8">
+
+      <img src="16.png" alt="Medical illustration 8">
+
+      <span class="image-number">08</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+
+    <button class="gallery-item" type="button"
+      data-full="30.png"
+      aria-label="Open medical illustration 9">
+
+      <img src="30.png" alt="Medical illustration 9">
+
+      <span class="image-number">09</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+
+    <button class="gallery-item" type="button"
+      data-full="31.png"
+      aria-label="Open medical illustration 10">
+
+      <img src="31.png" alt="Medical illustration 10">
+
+      <span class="image-number">10</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<section class="illustration-section">
+
+  <div class="category-header">
+
+    <div class="category-number">
+      02
+    </div>
+
+    <div class="category-content">
+
+      <h2>
+        <em>Roofing</em>
+      </h2>
+
+      <p>
+        Illustration work focused on roofing,
+        structures and practical visual communication.
+      </p>
 
     </div>
 
-
-    <!-- =========================
-         CONSTRUCTION
-    ========================== -->
-
-    <div class="portfolio-category">
-
-      <div class="category-intro">
-
-        <span class="category-number">
-          03
-        </span>
-
-        <div>
-          <h2>Construction</h2>
-
-          <p>
-            Visual work exploring construction,
-            structure and physical form.
-          </p>
-
-        </div>
-
-      </div>
+  </div>
 
 
-      <div class="category-grid">
+  <div class="illustration-grid">
+
+    <button class="gallery-item featured" type="button"
+      data-full="26.png"
+      aria-label="Open roofing illustration 1">
+
+      <img src="26.png" alt="Roofing illustration 1">
+
+      <span class="image-number">01</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
 
 
-        <!-- CONSTRUCTION 01 -->
+    <button class="gallery-item" type="button"
+      data-full="29.png"
+      aria-label="Open roofing illustration 2">
 
-        <article class="project">
+      <img src="29.png" alt="Roofing illustration 2">
 
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="Upper body stretch.png"
-            aria-label="Open construction illustration 1">
+      <span class="image-number">02</span>
 
-            <img
-              src="Upper body stretch.png"
-              alt="Construction illustration 1"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-            <span class="fallback-label">
-              CONSTRUCTION · 01
-            </span>
-
-            <span class="zoom">
-              ↗
-            </span>
-
-          </button>
-
-        </article>
+    </button>
 
 
-        <!-- CONSTRUCTION 02 -->
+    <button class="gallery-item" type="button"
+      data-full="25.png"
+      aria-label="Open roofing illustration 3">
 
-        <article class="project">
+      <img src="25.png" alt="Roofing illustration 3">
 
-          <button
-            class="gallery-item"
-            type="button"
-            data-full="32.png"
-            aria-label="Open construction illustration 2">
+      <span class="image-number">03</span>
 
-            <img
-              src="32.png"
-              alt="Construction illustration 2"
-              onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-            <span class="fallback-label">
-              CONSTRUCTION · 02
-            </span>
+    </button>
 
-            <span class="zoom">
-              ↗
-            </span>
+  </div>
 
-          </button>
+</section>
 
-        </article>
 
-      </div>
+<section class="illustration-section">
+
+  <div class="category-header">
+
+    <div class="category-number">
+      03
+    </div>
+
+    <div class="category-content">
+
+      <h2>
+        <em>Construction</em>
+      </h2>
+
+      <p>
+        Visual work exploring construction,
+        structure and physical form.
+      </p>
 
     </div>
 
+  </div>
 
-  </section>
+
+  <div class="illustration-grid">
+
+    <button class="gallery-item featured" type="button"
+      data-full="Upper%20body%20stretch.png"
+      aria-label="Open construction illustration 1">
+
+      <img
+        src="Upper%20body%20stretch.png"
+        alt="Construction illustration 1">
+
+      <span class="image-number">01</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+
+    <button class="gallery-item" type="button"
+      data-full="32.png"
+      aria-label="Open construction illustration 2">
+
+      <img src="32.png" alt="Construction illustration 2">
+
+      <span class="image-number">02</span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<section class="illustration-contact">
+
+  <p class="eyebrow">
+    HAVE A PROJECT IN MIND?
+  </p>
+
+  <h2>
+    Let's create something
+    <em>meaningful.</em>
+  </h2>
+
+  <a href="contact.html">
+    Get in touch ↗
+  </a>
+
+</section>
+
 
 </main>
 
 
-<!-- LIGHTBOX -->
-
 <div class="lightbox" aria-hidden="true">
 
-  <button
-    class="lightbox-close"
-    aria-label="Close image">
+  <button class="lightbox-close" aria-label="Close image">
     ×
   </button>
 
@@ -615,6 +751,94 @@
 
 
 <script src="script.js"></script>
+
+<script>
+
+const galleryItems =
+  document.querySelectorAll(".gallery-item");
+
+const lightbox =
+  document.querySelector(".lightbox");
+
+const lightboxImage =
+  lightbox.querySelector("img");
+
+const closeButton =
+  document.querySelector(".lightbox-close");
+
+galleryItems.forEach(item => {
+
+  item.addEventListener("click", () => {
+
+    const image =
+      item.getAttribute("data-full");
+
+    lightboxImage.src = image;
+
+    lightboxImage.alt =
+      item.querySelector("img").alt;
+
+    lightbox.classList.add("open");
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    document.body.style.overflow = "hidden";
+
+  });
+
+});
+
+function closeLightbox() {
+
+  lightbox.classList.remove("open");
+
+  lightbox.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  lightboxImage.src = "";
+
+  document.body.style.overflow = "";
+
+}
+
+closeButton.addEventListener(
+  "click",
+  closeLightbox
+);
+
+lightbox.addEventListener(
+  "click",
+  event => {
+
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+
+  }
+);
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape" &&
+      lightbox.classList.contains("open")
+    ) {
+
+      closeLightbox();
+
+    }
+
+  }
+);
+
+</script>
 
 </body>
 </html>
