@@ -20,10 +20,6 @@ rel="stylesheet">
 
 <style>
 
-/* =====================================================
-   PAGE
-===================================================== */
-
 .illustration-page {
   background: #f5f4ef;
   color: #171717;
@@ -36,45 +32,30 @@ rel="stylesheet">
 
 .illustration-hero {
   width: min(1200px, 90vw);
-
   margin: auto;
-
   padding: 105px 0 95px;
-
   text-align: center;
 }
 
 .illustration-hero h1 {
   margin: 20px 0 0;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(65px, 9vw, 120px);
-
   line-height: .9;
-
   font-weight: 500;
-
   letter-spacing: -.06em;
-
-  color: #171717;
 }
 
 .illustration-hero h1 em {
   color: #171717;
-
   font-style: italic;
 }
 
 .illustration-hero > p:last-child {
   max-width: 620px;
-
   margin: 30px auto 0;
-
   color: #707070;
-
   font-size: 14px;
-
   line-height: 1.8;
 }
 
@@ -85,72 +66,44 @@ rel="stylesheet">
 
 .illustration-section {
   width: min(1200px, 90vw);
-
   margin: auto;
-
   padding: 90px 0 120px;
-
   border-top: 1px solid #d8d7d1;
 }
 
-
-/* =====================================================
-   CATEGORY HEADER
-===================================================== */
-
 .category-header {
   display: grid;
-
   grid-template-columns: 80px 1fr;
-
   gap: 30px;
-
   margin-bottom: 55px;
 }
 
 .category-number {
   padding-top: 9px;
-
   color: #c87952;
-
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: .15em;
 }
 
 .category-content h2 {
   margin: 0;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(50px, 6vw, 76px);
-
   line-height: .95;
-
   font-weight: 500;
-
   letter-spacing: -.05em;
-
-  color: #171717;
 }
 
 .category-content h2 em {
-  color: #171717;
-
   font-style: italic;
 }
 
 .category-content p {
   max-width: 580px;
-
   margin: 22px 0 0;
-
   color: #777;
-
   font-size: 13px;
-
   line-height: 1.8;
 }
 
@@ -161,30 +114,19 @@ rel="stylesheet">
 
 .illustration-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
-
   align-items: start;
 }
 
 .gallery-item {
   position: relative;
-
   width: 100%;
-
   padding: 0;
-
   border: none;
-
   background: transparent;
-
   cursor: pointer;
-
   overflow: hidden;
-
   text-align: left;
 }
 
@@ -194,13 +136,9 @@ rel="stylesheet">
 
 .gallery-item img {
   display: block;
-
   width: 100%;
-
   height: auto;
-
   max-width: 100%;
-
   object-fit: contain;
 
   transition:
@@ -210,70 +148,49 @@ rel="stylesheet">
 
 .gallery-item:hover img {
   transform: scale(1.018);
-
   filter: brightness(.84);
 }
 
-
-/* =====================================================
-   IMAGE NUMBER
-===================================================== */
-
 .image-number {
   position: absolute;
-
   top: 18px;
   left: 18px;
-
   z-index: 3;
 
   width: 36px;
   height: 36px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
   background: rgba(255,255,255,.95);
-
   color: #171717;
 
   font-size: 10px;
-
   font-weight: 700;
 
-  box-shadow:
-    0 4px 15px rgba(0,0,0,.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
-
-
-/* =====================================================
-   IMAGE OVERLAY
-===================================================== */
 
 .image-overlay {
   position: absolute;
-
   inset: 0;
-
   z-index: 2;
 
   display: flex;
-
   align-items: flex-end;
   justify-content: flex-end;
 
   padding: 18px;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.42),
-      transparent 45%
-    );
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.42),
+    transparent 45%
+  );
 
   opacity: 0;
 
@@ -291,14 +208,12 @@ rel="stylesheet">
   height: 42px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
   background: white;
-
   color: #171717;
 
   font-size: 18px;
@@ -311,13 +226,10 @@ rel="stylesheet">
 
 .lightbox {
   position: fixed;
-
   inset: 0;
-
   z-index: 1000;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -326,7 +238,6 @@ rel="stylesheet">
   background: rgba(0,0,0,.94);
 
   opacity: 0;
-
   visibility: hidden;
 
   transition:
@@ -336,7 +247,6 @@ rel="stylesheet">
 
 .lightbox.open {
   opacity: 1;
-
   visibility: visible;
 }
 
@@ -344,11 +254,9 @@ rel="stylesheet">
   display: block;
 
   max-width: 92vw;
-
   max-height: 88vh;
 
   width: auto;
-
   height: auto;
 
   object-fit: contain;
@@ -364,11 +272,9 @@ rel="stylesheet">
   height: 45px;
 
   border: 1px solid rgba(255,255,255,.35);
-
   border-radius: 50%;
 
   background: transparent;
-
   color: white;
 
   font-size: 28px;
@@ -378,12 +284,11 @@ rel="stylesheet">
 
 
 /* =====================================================
-   NEXT IN PORTFOLIO
+   NEXT IN THE PORTFOLIO
 ===================================================== */
 
 .illustration-coming {
   width: min(1200px, 90vw);
-
   margin: 30px auto 130px;
 }
 
@@ -395,6 +300,10 @@ rel="stylesheet">
   color: white;
 
   text-align: center;
+}
+
+.illustration-coming .eyebrow {
+  color: white;
 }
 
 .illustration-coming h2 {
@@ -411,20 +320,22 @@ rel="stylesheet">
   font-weight: 500;
 
   letter-spacing: -.05em;
+
+  color: white;
 }
 
+/* Infographics is deliberately NOT italic */
 .illustration-coming h2 em {
-  color: #d79b7d;
-
-  font-style: italic;
+  font-style: normal;
+  color: white;
 }
 
-.illustration-coming p {
-  max-width: 520px;
+.illustration-coming p:not(.eyebrow) {
+  max-width: 600px;
 
   margin: auto;
 
-  color: #bdbdbd;
+  color: white;
 
   font-size: 13px;
 
@@ -435,15 +346,12 @@ rel="stylesheet">
   display: inline-flex;
 
   align-items: center;
-
   gap: 10px;
 
   margin-top: 35px;
-
   padding: 14px 23px;
 
   border: 1px solid white;
-
   border-radius: 100px;
 
   color: white;
@@ -451,7 +359,6 @@ rel="stylesheet">
   text-decoration: none;
 
   font-size: 12px;
-
   font-weight: 600;
 
   transition:
@@ -461,7 +368,6 @@ rel="stylesheet">
 
 .illustration-coming a:hover {
   background: white;
-
   color: #171717;
 }
 
@@ -486,25 +392,21 @@ rel="stylesheet">
 
   .category-header {
     display: block;
-
     text-align: center;
   }
 
   .category-number {
     padding: 0;
-
     margin-bottom: 12px;
   }
 
   .category-content p {
     margin-left: auto;
-
     margin-right: auto;
   }
 
   .illustration-grid {
     grid-template-columns: 1fr;
-
     gap: 22px;
   }
 
@@ -541,25 +443,17 @@ rel="stylesheet">
     MJ<span>.</span>
   </a>
 
-  <button
-    class="menu-toggle"
-    aria-label="Open menu">
+  <button class="menu-toggle" aria-label="Open menu">
     ☰
   </button>
 
   <nav>
 
-    <a href="index.html">
-      Home
-    </a>
+    <a href="index.html">Home</a>
 
-    <a href="about.html">
-      About
-    </a>
+    <a href="about.html">About</a>
 
-    <a href="3d-modelling.html">
-      3D Modelling
-    </a>
+    <a href="3d-modelling.html">3D Modelling</a>
 
     <a class="active" href="illustration.html">
       Illustration
@@ -634,7 +528,6 @@ rel="stylesheet">
 
 
   <div class="illustration-grid">
-
 
     <button
       class="gallery-item featured"
@@ -865,7 +758,6 @@ rel="stylesheet">
 
     </button>
 
-
   </div>
 
 </section>
@@ -900,7 +792,6 @@ rel="stylesheet">
 
 
   <div class="illustration-grid">
-
 
     <button
       class="gallery-item featured"
@@ -970,7 +861,6 @@ rel="stylesheet">
 
     </button>
 
-
   </div>
 
 </section>
@@ -1005,7 +895,6 @@ rel="stylesheet">
 
 
   <div class="illustration-grid">
-
 
     <button
       class="gallery-item featured"
@@ -1052,14 +941,13 @@ rel="stylesheet">
 
     </button>
 
-
   </div>
 
 </section>
 
 
 <!-- =====================================================
-     NEXT IN PORTFOLIO
+     NEXT IN THE PORTFOLIO
 ===================================================== -->
 
 <section class="illustration-coming">
@@ -1071,13 +959,12 @@ rel="stylesheet">
     </p>
 
     <h2>
-      <em>Infographics.</em>
+      Infographics.
     </h2>
 
     <p>
-      Exploring information, visual storytelling and
-      clear communication through thoughtfully designed
-      infographics.
+      Exploring information, visual storytelling and clear
+      communication through thoughtfully designed infographics.
     </p>
 
     <a href="infographics.html">
@@ -1134,12 +1021,7 @@ rel="stylesheet">
 
 <script src="script.js"></script>
 
-
 <script>
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
 
 const galleryItems =
   document.querySelectorAll(".gallery-item");
@@ -1233,7 +1115,6 @@ document.addEventListener(
 );
 
 </script>
-
 
 </body>
 </html>
