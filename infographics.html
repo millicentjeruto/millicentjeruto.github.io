@@ -42,7 +42,7 @@ rel="stylesheet">
 }
 
 .info-hero h1 em {
-  color: #c87952;
+  color: #171717;
   font-style: italic;
 }
 
@@ -73,6 +73,7 @@ rel="stylesheet">
   content: "";
   position: absolute;
   inset: 0;
+
   background-image:
     linear-gradient(
       rgba(255,255,255,.55) 1px,
@@ -83,6 +84,7 @@ rel="stylesheet">
       rgba(255,255,255,.55) 1px,
       transparent 1px
     );
+
   background-size: 55px 55px;
   opacity: .6;
 }
@@ -94,8 +96,7 @@ rel="stylesheet">
   height: 360px;
   padding: 28px;
   background: #f8f7f2;
-  box-shadow:
-    25px 30px 45px rgba(0,0,0,.16);
+  box-shadow: 25px 30px 45px rgba(0,0,0,.16);
   transform: rotate(-5deg);
   border-radius: 3px;
 }
@@ -169,8 +170,7 @@ rel="stylesheet">
   font-family: "Playfair Display", serif;
   font-size: 24px;
   transform: rotate(8deg);
-  box-shadow:
-    15px 20px 30px rgba(0,0,0,.12);
+  box-shadow: 15px 20px 30px rgba(0,0,0,.12);
 }
 
 .info-label {
@@ -302,6 +302,11 @@ rel="stylesheet">
   line-height: 1.8;
 }
 
+
+/* =====================================================
+   BOTTOM CTA
+===================================================== */
+
 .info-coming {
   width: min(1200px, 90vw);
   margin: auto;
@@ -310,7 +315,8 @@ rel="stylesheet">
 
 .info-coming-inner {
   padding: 90px 30px;
-  border: 1px solid #d5d4ce;
+  background: #171717;
+  color: white;
   text-align: center;
 }
 
@@ -324,14 +330,14 @@ rel="stylesheet">
 }
 
 .info-coming h2 em {
-  color: #c87952;
+  color: #d79b7d;
   font-style: italic;
 }
 
 .info-coming p {
   max-width: 520px;
   margin: auto;
-  color: #777;
+  color: #bdbdbd;
   font-size: 13px;
   line-height: 1.8;
 }
@@ -342,9 +348,9 @@ rel="stylesheet">
   gap: 10px;
   margin-top: 35px;
   padding: 14px 23px;
-  border: 1px solid #171717;
+  border: 1px solid white;
   border-radius: 100px;
-  color: #171717;
+  color: white;
   text-decoration: none;
   font-size: 12px;
   font-weight: 600;
@@ -354,9 +360,10 @@ rel="stylesheet">
 }
 
 .info-coming a:hover {
-  background: #171717;
-  color: white;
+  background: white;
+  color: #171717;
 }
+
 
 @media (max-width: 700px) {
 
@@ -419,7 +426,9 @@ rel="stylesheet">
 
 </head>
 
+
 <body class="infographic-page">
+
 
 <header class="nav">
 
@@ -453,7 +462,9 @@ rel="stylesheet">
 
 </header>
 
+
 <main>
+
 
 <section class="info-hero">
 
@@ -462,13 +473,14 @@ rel="stylesheet">
   </p>
 
   <h1>
-    <em>Infographics.</em>
+    <em>Information</em><br>
+    made visual.
   </h1>
 
   <p>
-    Exploring information, illustration and visual
-    communication to make ideas clearer, more engaging
-    and easier to understand.
+    Exploring the relationship between information,
+    illustration and visual communication to make ideas
+    clearer, more engaging and easier to understand.
   </p>
 
 </section>
@@ -565,6 +577,7 @@ rel="stylesheet">
 
   </div>
 
+
   <div class="info-area-grid">
 
     <article class="info-area">
@@ -584,6 +597,7 @@ rel="stylesheet">
 
     </article>
 
+
     <article class="info-area">
 
       <span class="info-area-number">
@@ -600,6 +614,7 @@ rel="stylesheet">
       </p>
 
     </article>
+
 
     <article class="info-area">
 
@@ -623,34 +638,32 @@ rel="stylesheet">
 </section>
 
 
+<!-- BLACK CTA -->
+
 <section class="info-coming">
 
   <div class="info-coming-inner">
 
     <p class="eyebrow">
-      CURRENTLY DEVELOPING
+      HAVE A PROJECT IN MIND?
     </p>
 
     <h2>
-      More infographics<br>
-      <em>coming soon.</em>
+      Let's create something<br>
+      <em>meaningful.</em>
     </h2>
 
-    <p>
-      New infographic projects will be added here as
-      the collection develops. For now, explore the
-      illustration work in the portfolio.
-    </p>
-
-    <a href="illustration.html">
-      Explore Illustration ↗
+    <a href="contact.html">
+      Get in touch ↗
     </a>
 
   </div>
 
 </section>
 
+
 </main>
+
 
 <footer>
 
@@ -664,7 +677,9 @@ rel="stylesheet">
 
 </footer>
 
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
