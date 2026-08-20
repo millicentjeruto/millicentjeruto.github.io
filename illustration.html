@@ -25,11 +25,6 @@ rel="stylesheet">
   color: #171717;
 }
 
-
-/* =====================================================
-   HERO
-===================================================== */
-
 .illustration-hero {
   width: min(1200px, 90vw);
   margin: auto;
@@ -58,11 +53,6 @@ rel="stylesheet">
   font-size: 14px;
   line-height: 1.8;
 }
-
-
-/* =====================================================
-   ILLUSTRATION SECTIONS
-===================================================== */
 
 .illustration-section {
   width: min(1200px, 90vw);
@@ -107,11 +97,6 @@ rel="stylesheet">
   line-height: 1.8;
 }
 
-
-/* =====================================================
-   GALLERY
-===================================================== */
-
 .illustration-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -140,7 +125,6 @@ rel="stylesheet">
   height: auto;
   max-width: 100%;
   object-fit: contain;
-
   transition:
     transform .6s cubic-bezier(.2,.7,.2,1),
     filter .4s ease;
@@ -156,22 +140,16 @@ rel="stylesheet">
   top: 18px;
   left: 18px;
   z-index: 3;
-
   width: 36px;
   height: 36px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: rgba(255,255,255,.95);
   color: #171717;
-
   font-size: 10px;
   font-weight: 700;
-
   box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
@@ -179,23 +157,17 @@ rel="stylesheet">
   position: absolute;
   inset: 0;
   z-index: 2;
-
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-
   padding: 18px;
-
   background: linear-gradient(
     to top,
     rgba(0,0,0,.42),
     transparent 45%
   );
-
   opacity: 0;
-
   transition: opacity .35s ease;
-
   pointer-events: none;
 }
 
@@ -206,40 +178,26 @@ rel="stylesheet">
 .image-arrow {
   width: 42px;
   height: 42px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: white;
   color: #171717;
-
   font-size: 18px;
 }
-
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
 
 .lightbox {
   position: fixed;
   inset: 0;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 30px;
-
   background: rgba(0,0,0,.94);
-
   opacity: 0;
   visibility: hidden;
-
   transition:
     opacity .3s ease,
     visibility .3s ease;
@@ -252,33 +210,24 @@ rel="stylesheet">
 
 .lightbox img {
   display: block;
-
   max-width: 92vw;
   max-height: 88vh;
-
   width: auto;
   height: auto;
-
   object-fit: contain;
 }
 
 .lightbox-close {
   position: absolute;
-
   top: 25px;
   right: 30px;
-
   width: 45px;
   height: 45px;
-
   border: 1px solid rgba(255,255,255,.35);
   border-radius: 50%;
-
   background: transparent;
   color: white;
-
   font-size: 28px;
-
   cursor: pointer;
 }
 
@@ -294,11 +243,8 @@ rel="stylesheet">
 
 .illustration-coming-inner {
   padding: 90px 30px;
-
   background: #171717;
-
   color: white;
-
   text-align: center;
 }
 
@@ -308,23 +254,15 @@ rel="stylesheet">
 
 .illustration-coming h2 {
   max-width: 700px;
-
   margin: 20px auto 25px;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(48px, 6vw, 75px);
-
   line-height: .95;
-
   font-weight: 500;
-
   letter-spacing: -.05em;
-
   color: white;
 }
 
-/* Infographics is deliberately NOT italic */
 .illustration-coming h2 em {
   font-style: normal;
   color: white;
@@ -332,35 +270,24 @@ rel="stylesheet">
 
 .illustration-coming p:not(.eyebrow) {
   max-width: 600px;
-
   margin: auto;
-
   color: white;
-
   font-size: 13px;
-
   line-height: 1.8;
 }
 
 .illustration-coming a {
   display: inline-flex;
-
   align-items: center;
   gap: 10px;
-
   margin-top: 35px;
   padding: 14px 23px;
-
   border: 1px solid white;
   border-radius: 100px;
-
   color: white;
-
   text-decoration: none;
-
   font-size: 12px;
   font-weight: 600;
-
   transition:
     background .25s ease,
     color .25s ease;
@@ -433,10 +360,6 @@ rel="stylesheet">
 <body class="illustration-page">
 
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
 <header class="nav">
 
   <a class="brand" href="index.html">
@@ -475,10 +398,6 @@ rel="stylesheet">
 <main>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <section class="illustration-hero">
 
   <p class="eyebrow">
@@ -486,7 +405,7 @@ rel="stylesheet">
   </p>
 
   <h1>
-    <em>Visual</em> Stories.
+    Illustration
   </h1>
 
   <p>
@@ -498,23 +417,17 @@ rel="stylesheet">
 </section>
 
 
-<!-- =====================================================
-     MEDICAL
-===================================================== -->
+<!-- MEDICAL -->
 
 <section class="illustration-section">
 
   <div class="category-header">
 
-    <div class="category-number">
-      01
-    </div>
+    <div class="category-number">01</div>
 
     <div class="category-content">
 
-      <h2>
-        <em>Medical</em>
-      </h2>
+      <h2><em>Medical</em></h2>
 
       <p>
         Visual interpretations of medical and anatomical
@@ -529,231 +442,151 @@ rel="stylesheet">
 
   <div class="illustration-grid">
 
-    <button
-      class="gallery-item featured"
-      type="button"
+    <button class="gallery-item featured" type="button"
       data-full="2.png"
       aria-label="Open medical illustration 1">
 
-      <img
-        src="2.png"
-        alt="Medical illustration 1">
+      <img src="2.png" alt="Medical illustration 1">
 
-      <span class="image-number">
-        01
-      </span>
+      <span class="image-number">01</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="10.png"
       aria-label="Open medical illustration 2">
 
-      <img
-        src="10.png"
-        alt="Medical illustration 2">
+      <img src="10.png" alt="Medical illustration 2">
 
-      <span class="image-number">
-        02
-      </span>
+      <span class="image-number">02</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="11.png"
       aria-label="Open medical illustration 3">
 
-      <img
-        src="11.png"
-        alt="Medical illustration 3">
+      <img src="11.png" alt="Medical illustration 3">
 
-      <span class="image-number">
-        03
-      </span>
+      <span class="image-number">03</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="12.png"
       aria-label="Open medical illustration 4">
 
-      <img
-        src="12.png"
-        alt="Medical illustration 4">
+      <img src="12.png" alt="Medical illustration 4">
 
-      <span class="image-number">
-        04
-      </span>
+      <span class="image-number">04</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="13.png"
       aria-label="Open medical illustration 5">
 
-      <img
-        src="13.png"
-        alt="Medical illustration 5">
+      <img src="13.png" alt="Medical illustration 5">
 
-      <span class="image-number">
-        05
-      </span>
+      <span class="image-number">05</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="14.png"
       aria-label="Open medical illustration 6">
 
-      <img
-        src="14.png"
-        alt="Medical illustration 6">
+      <img src="14.png" alt="Medical illustration 6">
 
-      <span class="image-number">
-        06
-      </span>
+      <span class="image-number">06</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="15.png"
       aria-label="Open medical illustration 7">
 
-      <img
-        src="15.png"
-        alt="Medical illustration 7">
+      <img src="15.png" alt="Medical illustration 7">
 
-      <span class="image-number">
-        07
-      </span>
+      <span class="image-number">07</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="16.png"
       aria-label="Open medical illustration 8">
 
-      <img
-        src="16.png"
-        alt="Medical illustration 8">
+      <img src="16.png" alt="Medical illustration 8">
 
-      <span class="image-number">
-        08
-      </span>
+      <span class="image-number">08</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="30.png"
       aria-label="Open medical illustration 9">
 
-      <img
-        src="30.png"
-        alt="Medical illustration 9">
+      <img src="30.png" alt="Medical illustration 9">
 
-      <span class="image-number">
-        09
-      </span>
+      <span class="image-number">09</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="31.png"
       aria-label="Open medical illustration 10">
 
-      <img
-        src="31.png"
-        alt="Medical illustration 10">
+      <img src="31.png" alt="Medical illustration 10">
 
-      <span class="image-number">
-        10
-      </span>
+      <span class="image-number">10</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
@@ -763,23 +596,17 @@ rel="stylesheet">
 </section>
 
 
-<!-- =====================================================
-     ROOFING
-===================================================== -->
+<!-- ROOFING -->
 
 <section class="illustration-section">
 
   <div class="category-header">
 
-    <div class="category-number">
-      02
-    </div>
+    <div class="category-number">02</div>
 
     <div class="category-content">
 
-      <h2>
-        <em>Roofing</em>
-      </h2>
+      <h2><em>Roofing</em></h2>
 
       <p>
         Illustration work focused on roofing,
@@ -793,70 +620,46 @@ rel="stylesheet">
 
   <div class="illustration-grid">
 
-    <button
-      class="gallery-item featured"
-      type="button"
+    <button class="gallery-item featured" type="button"
       data-full="26.png"
       aria-label="Open roofing illustration 1">
 
-      <img
-        src="26.png"
-        alt="Roofing illustration 1">
+      <img src="26.png" alt="Roofing illustration 1">
 
-      <span class="image-number">
-        01
-      </span>
+      <span class="image-number">01</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="29.png"
       aria-label="Open roofing illustration 2">
 
-      <img
-        src="29.png"
-        alt="Roofing illustration 2">
+      <img src="29.png" alt="Roofing illustration 2">
 
-      <span class="image-number">
-        02
-      </span>
+      <span class="image-number">02</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="25.png"
       aria-label="Open roofing illustration 3">
 
-      <img
-        src="25.png"
-        alt="Roofing illustration 3">
+      <img src="25.png" alt="Roofing illustration 3">
 
-      <span class="image-number">
-        03
-      </span>
+      <span class="image-number">03</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
@@ -866,23 +669,17 @@ rel="stylesheet">
 </section>
 
 
-<!-- =====================================================
-     CONSTRUCTION
-===================================================== -->
+<!-- CONSTRUCTION -->
 
 <section class="illustration-section">
 
   <div class="category-header">
 
-    <div class="category-number">
-      03
-    </div>
+    <div class="category-number">03</div>
 
     <div class="category-content">
 
-      <h2>
-        <em>Construction</em>
-      </h2>
+      <h2><em>Construction</em></h2>
 
       <p>
         Visual work exploring construction,
@@ -896,9 +693,7 @@ rel="stylesheet">
 
   <div class="illustration-grid">
 
-    <button
-      class="gallery-item featured"
-      type="button"
+    <button class="gallery-item featured" type="button"
       data-full="Upper%20body%20stretch.png"
       aria-label="Open construction illustration 1">
 
@@ -906,37 +701,25 @@ rel="stylesheet">
         src="Upper%20body%20stretch.png"
         alt="Construction illustration 1">
 
-      <span class="image-number">
-        01
-      </span>
+      <span class="image-number">01</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
 
 
-    <button
-      class="gallery-item"
-      type="button"
+    <button class="gallery-item" type="button"
       data-full="32.png"
       aria-label="Open construction illustration 2">
 
-      <img
-        src="32.png"
-        alt="Construction illustration 2">
+      <img src="32.png" alt="Construction illustration 2">
 
-      <span class="image-number">
-        02
-      </span>
+      <span class="image-number">02</span>
 
       <span class="image-overlay">
-        <span class="image-arrow">
-          ↗
-        </span>
+        <span class="image-arrow">↗</span>
       </span>
 
     </button>
@@ -946,9 +729,7 @@ rel="stylesheet">
 </section>
 
 
-<!-- =====================================================
-     NEXT IN THE PORTFOLIO
-===================================================== -->
+<!-- NEXT IN THE PORTFOLIO -->
 
 <section class="illustration-coming">
 
@@ -959,7 +740,7 @@ rel="stylesheet">
     </p>
 
     <h2>
-      Infographics.
+      Infographics
     </h2>
 
     <p>
@@ -979,32 +760,16 @@ rel="stylesheet">
 </main>
 
 
-<!-- =====================================================
-     LIGHTBOX
-===================================================== -->
+<div class="lightbox" aria-hidden="true">
 
-<div
-  class="lightbox"
-  aria-hidden="true">
-
-  <button
-    class="lightbox-close"
-    aria-label="Close image">
-
+  <button class="lightbox-close" aria-label="Close image">
     ×
-
   </button>
 
-  <img
-    src=""
-    alt="">
+  <img src="" alt="">
 
 </div>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
@@ -1089,9 +854,7 @@ lightbox.addEventListener(
   event => {
 
     if (event.target === lightbox) {
-
       closeLightbox();
-
     }
 
   }
