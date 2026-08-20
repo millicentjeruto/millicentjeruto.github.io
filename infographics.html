@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Infographics portfolio by Millicent Jeruto featuring visual communication and information design.">
+content="Infographics portfolio by Millicent Jeruto.">
 
 <title>Infographics | Millicent Jeruto</title>
 
@@ -34,17 +34,16 @@ rel="stylesheet">
    HERO
 ===================================================== */
 
-.infographic-hero {
+.info-hero {
   width: min(1200px, 90vw);
-
   margin: auto;
 
-  padding: 105px 0 95px;
+  padding: 105px 0 90px;
 
   text-align: center;
 }
 
-.infographic-hero h1 {
+.info-hero h1 {
   margin: 20px 0 0;
 
   font-family: "Playfair Display", serif;
@@ -58,13 +57,12 @@ rel="stylesheet">
   letter-spacing: -.06em;
 }
 
-.infographic-hero h1 em {
+.info-hero h1 em {
   color: #c87952;
-
   font-style: italic;
 }
 
-.infographic-hero > p:last-child {
+.info-hero > p:last-child {
   max-width: 650px;
 
   margin: 30px auto 0;
@@ -78,67 +76,344 @@ rel="stylesheet">
 
 
 /* =====================================================
-   PROJECT SECTION
+   FEATURE
 ===================================================== */
 
-.infographic-projects {
+.info-feature {
   width: min(1200px, 90vw);
-
   margin: auto;
 }
 
 
 /* =====================================================
-   PROJECT
+   ABSTRACT INFOGRAPHIC VISUAL
 ===================================================== */
 
-.info-project {
-  display: grid;
+.info-visual {
+  position: relative;
 
-  grid-template-columns: 80px 1fr;
+  min-height: 520px;
 
-  gap: 30px;
+  overflow: hidden;
 
-  padding: 90px 0;
+  display: flex;
 
-  border-top: 1px solid #d8d7d1;
+  align-items: center;
+  justify-content: center;
+
+  background: #deddd7;
 }
 
-.info-number {
-  padding-top: 8px;
 
-  color: #c87952;
+/* grid */
 
-  font-size: 11px;
+.info-visual::before {
+  content: "";
 
-  font-weight: 700;
+  position: absolute;
 
-  letter-spacing: .15em;
-}
+  inset: 0;
 
-.info-content {
-  min-width: 0;
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.55) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.55) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  opacity: .6;
 }
 
 
 /* =====================================================
-   PROJECT INTRO
+   INFOGRAPHIC MOCKUP
 ===================================================== */
 
-.info-heading {
+.info-sheet {
+  position: relative;
+
+  z-index: 2;
+
+  width: 280px;
+  height: 360px;
+
+  padding: 28px;
+
+  background: #f8f7f2;
+
+  box-shadow:
+    25px 30px 45px rgba(0,0,0,.16);
+
+  transform: rotate(-5deg);
+
+  border-radius: 3px;
+}
+
+
+/* heading */
+
+.info-sheet-title {
+  width: 150px;
+
+  height: 12px;
+
+  margin-bottom: 12px;
+
+  background: #171717;
+}
+
+.info-sheet-subtitle {
+  width: 105px;
+
+  height: 6px;
+
+  margin-bottom: 35px;
+
+  background: #c87952;
+}
+
+
+/* chart */
+
+.info-chart {
   display: flex;
 
   align-items: flex-end;
 
-  justify-content: space-between;
+  gap: 12px;
 
-  gap: 30px;
+  height: 130px;
 
-  margin-bottom: 35px;
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #bdbcb6;
 }
 
-.info-heading h2 {
+.info-bar {
+  width: 28px;
+
+  background: #b5b4ae;
+}
+
+.info-bar:nth-child(1) {
+  height: 45%;
+}
+
+.info-bar:nth-child(2) {
+  height: 75%;
+}
+
+.info-bar:nth-child(3) {
+  height: 58%;
+}
+
+.info-bar:nth-child(4) {
+  height: 92%;
+
+  background: #c87952;
+}
+
+.info-bar:nth-child(5) {
+  height: 67%;
+}
+
+
+/* text lines */
+
+.info-lines {
+  display: grid;
+
+  gap: 8px;
+}
+
+.info-line {
+  height: 5px;
+
+  background: #d0cfca;
+}
+
+.info-line:nth-child(1) {
+  width: 90%;
+}
+
+.info-line:nth-child(2) {
+  width: 72%;
+}
+
+.info-line:nth-child(3) {
+  width: 82%;
+}
+
+
+/* floating circle */
+
+.info-circle {
+  position: absolute;
+
+  z-index: 3;
+
+  width: 120px;
+  height: 120px;
+
+  right: 19%;
+  top: 23%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #c87952;
+
+  color: white;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 24px;
+
+  transform: rotate(8deg);
+
+  box-shadow:
+    15px 20px 30px rgba(0,0,0,.12);
+}
+
+
+/* =====================================================
+   VISUAL LABEL
+===================================================== */
+
+.info-label {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+}
+
+.info-label span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #c87952;
+}
+
+
+/* status */
+
+.info-status {
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 5;
+
+  padding: 10px 15px;
+
+  border: 1px solid rgba(0,0,0,.15);
+
+  border-radius: 100px;
+
+  background: rgba(255,255,255,.55);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .1em;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.info-description {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  padding: 80px 0 110px;
+}
+
+.info-description h2 {
   margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: .98;
+
+  font-weight: 500;
+
+  letter-spacing: -.05em;
+}
+
+.info-description h2 em {
+  color: #c87952;
+
+  font-style: italic;
+}
+
+.info-description-text {
+  color: #707070;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.info-description-text p {
+  margin: 0 0 25px;
+}
+
+
+/* =====================================================
+   AREAS
+===================================================== */
+
+.info-areas {
+  width: min(1200px, 90vw);
+
+  margin: auto;
+
+  padding-bottom: 120px;
+}
+
+.info-areas-header {
+  margin-bottom: 45px;
+}
+
+.info-areas-header h2 {
+  margin: 15px 0 0;
 
   font-family: "Playfair Display", serif;
 
@@ -151,14 +426,60 @@ rel="stylesheet">
   letter-spacing: -.05em;
 }
 
-.info-heading h2 em {
+.info-areas-header h2 em {
   color: #c87952;
 
   font-style: italic;
 }
 
-.info-heading p {
-  max-width: 330px;
+
+/* cards */
+
+.info-area-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid #d4d3cd;
+
+  border-bottom: 1px solid #d4d3cd;
+}
+
+.info-area {
+  min-height: 250px;
+
+  padding: 30px;
+
+  border-right: 1px solid #d4d3cd;
+}
+
+.info-area:last-child {
+  border-right: none;
+}
+
+.info-area-number {
+  color: #c87952;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .15em;
+}
+
+.info-area h3 {
+  margin: 60px 0 15px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  font-weight: 500;
+}
+
+.info-area p {
+  max-width: 270px;
 
   margin: 0;
 
@@ -166,204 +487,32 @@ rel="stylesheet">
 
   font-size: 12px;
 
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 
 /* =====================================================
-   IMAGE
+   COMING SOON
 ===================================================== */
 
-.info-image {
-  position: relative;
-
-  width: 100%;
-
-  overflow: hidden;
-
-  background: #e5e4de;
-
-  cursor: pointer;
-
-  border: none;
-
-  padding: 0;
-
-  text-align: left;
-}
-
-.info-image img {
-  display: block;
-
-  width: 100%;
-
-  height: auto;
-
-  max-width: 100%;
-
-  object-fit: contain;
-
-  transition:
-    transform .6s cubic-bezier(.2,.7,.2,1),
-    filter .4s ease;
-}
-
-.info-image:hover img {
-  transform: scale(1.015);
-
-  filter: brightness(.84);
-}
-
-
-/* =====================================================
-   IMAGE NUMBER
-===================================================== */
-
-.info-image-number {
-  position: absolute;
-
-  top: 18px;
-  left: 18px;
-
-  z-index: 3;
-
-  width: 38px;
-  height: 38px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: rgba(255,255,255,.95);
-
-  color: #171717;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  box-shadow: 0 4px 15px rgba(0,0,0,.08);
-}
-
-
-/* =====================================================
-   IMAGE OVERLAY
-===================================================== */
-
-.info-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 2;
-
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: flex-end;
-
-  padding: 20px;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.42),
-      transparent 45%
-    );
-
-  opacity: 0;
-
-  transition: opacity .35s ease;
-
-  pointer-events: none;
-}
-
-.info-image:hover .info-overlay {
-  opacity: 1;
-}
-
-.info-arrow {
-  width: 44px;
-  height: 44px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: white;
-
-  color: #171717;
-
-  font-size: 18px;
-}
-
-
-/* =====================================================
-   PROJECT FOOTER
-===================================================== */
-
-.info-footer {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  padding-top: 20px;
-}
-
-.info-footer h3 {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 24px;
-
-  font-weight: 500;
-}
-
-.info-footer span {
-  color: #777;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .12em;
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.info-cta {
+.info-coming {
   width: min(1200px, 90vw);
 
-  margin: 30px auto 130px;
+  margin: auto;
 
-  padding: 100px 30px;
+  padding-bottom: 130px;
+}
 
-  background: #171717;
+.info-coming-inner {
+  padding: 90px 30px;
 
-  color: white;
+  border: 1px solid #d5d4ce;
 
   text-align: center;
 }
 
-.info-cta h2 {
-  margin: 20px auto 30px;
-
-  max-width: 750px;
+.info-coming h2 {
+  margin: 20px 0 25px;
 
   font-family: "Playfair Display", serif;
 
@@ -376,26 +525,40 @@ rel="stylesheet">
   letter-spacing: -.05em;
 }
 
-.info-cta h2 em {
-  color: #d79b7d;
+.info-coming h2 em {
+  color: #c87952;
 
   font-style: italic;
 }
 
-.info-cta a {
+.info-coming p {
+  max-width: 520px;
+
+  margin: auto;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.info-coming a {
   display: inline-flex;
 
   align-items: center;
 
   gap: 10px;
 
+  margin-top: 35px;
+
   padding: 14px 23px;
 
-  border: 1px solid white;
+  border: 1px solid #171717;
 
   border-radius: 100px;
 
-  color: white;
+  color: #171717;
 
   text-decoration: none;
 
@@ -408,81 +571,10 @@ rel="stylesheet">
     color .25s ease;
 }
 
-.info-cta a:hover {
-  background: white;
-
-  color: #171717;
-}
-
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
-
-.lightbox {
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 1000;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 30px;
-
-  background: rgba(0,0,0,.94);
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  transition:
-    opacity .3s ease,
-    visibility .3s ease;
-}
-
-.lightbox.open {
-  opacity: 1;
-
-  visibility: visible;
-}
-
-.lightbox img {
-  display: block;
-
-  max-width: 92vw;
-
-  max-height: 88vh;
-
-  width: auto;
-  height: auto;
-
-  object-fit: contain;
-}
-
-.lightbox-close {
-  position: absolute;
-
-  top: 25px;
-  right: 30px;
-
-  width: 45px;
-  height: 45px;
-
-  border: 1px solid rgba(255,255,255,.35);
-
-  border-radius: 50%;
-
-  background: transparent;
+.info-coming a:hover {
+  background: #171717;
 
   color: white;
-
-  font-size: 28px;
-
-  cursor: pointer;
 }
 
 
@@ -492,48 +584,63 @@ rel="stylesheet">
 
 @media (max-width: 700px) {
 
-  .infographic-hero {
+  .info-hero {
     padding: 75px 0 70px;
   }
 
-  .infographic-hero h1 {
+  .info-hero h1 {
     font-size: 60px;
   }
 
-  .info-project {
+  .info-visual {
+    min-height: 390px;
+  }
+
+  .info-sheet {
+    width: 220px;
+    height: 290px;
+
+    padding: 22px;
+  }
+
+  .info-circle {
+    width: 85px;
+    height: 85px;
+
+    right: 8%;
+    top: 24%;
+
+    font-size: 18px;
+  }
+
+  .info-description {
     grid-template-columns: 1fr;
 
-    gap: 15px;
+    gap: 35px;
 
-    padding: 70px 0;
+    padding-top: 60px;
   }
 
-  .info-number {
-    padding: 0;
+  .info-area-grid {
+    grid-template-columns: 1fr;
   }
 
-  .info-heading {
-    display: block;
+  .info-area {
+    border-right: none;
 
-    margin-bottom: 25px;
+    border-bottom: 1px solid #d4d3cd;
   }
 
-  .info-heading p {
-    margin-top: 20px;
+  .info-area:last-child {
+    border-bottom: none;
   }
 
-  .info-footer {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    gap: 8px;
+  .info-coming {
+    padding-bottom: 80px;
   }
 
-  .info-cta {
-    margin-bottom: 80px;
-
-    padding: 70px 20px;
+  .info-coming-inner {
+    padding: 65px 20px;
   }
 
 }
@@ -600,7 +707,7 @@ rel="stylesheet">
      HERO
 ===================================================== -->
 
-<section class="infographic-hero">
+<section class="info-hero">
 
   <p class="eyebrow">
     03 / 03
@@ -612,269 +719,217 @@ rel="stylesheet">
   </h1>
 
   <p>
-    A selection of visual work designed to communicate
-    information clearly, creatively and effectively.
+    Exploring the relationship between information,
+    illustration and visual communication to make ideas
+    clearer, more engaging and easier to understand.
   </p>
 
 </section>
 
 
 <!-- =====================================================
-     PROJECTS
+     FEATURE
 ===================================================== -->
 
-<section class="infographic-projects">
+<section class="info-feature">
 
+  <div class="info-visual">
 
-  <!-- =================================================
-       PROJECT 01
-  ================================================== -->
-
-  <article class="info-project">
-
-    <div class="info-number">
-      01
+    <div class="info-label">
+      <span></span>
+      INFORMATION DESIGN
     </div>
 
-    <div class="info-content">
 
-      <div class="info-heading">
+    <div class="info-sheet">
 
-        <h2>
-          <em>Visual</em><br>
-          Communication.
-        </h2>
+      <div class="info-sheet-title"></div>
 
-        <p>
-          Combining imagery, structure and information
-          to make ideas easier to understand.
-        </p>
+      <div class="info-sheet-subtitle"></div>
+
+      <div class="info-chart">
+
+        <div class="info-bar"></div>
+        <div class="info-bar"></div>
+        <div class="info-bar"></div>
+        <div class="info-bar"></div>
+        <div class="info-bar"></div>
 
       </div>
 
 
-      <button
-        class="info-image"
-        type="button"
-        data-full="30.png"
-        aria-label="Open infographic project 1">
+      <div class="info-lines">
 
-        <img
-          src="30.png"
-          alt="Infographic project 1">
-
-        <span class="info-image-number">
-          01
-        </span>
-
-        <span class="info-overlay">
-          <span class="info-arrow">
-            ↗
-          </span>
-        </span>
-
-      </button>
-
-
-      <div class="info-footer">
-
-        <h3>
-          Information Design
-        </h3>
-
-        <span>
-          INFOGRAPHIC · 01
-        </span>
+        <div class="info-line"></div>
+        <div class="info-line"></div>
+        <div class="info-line"></div>
 
       </div>
 
     </div>
 
-  </article>
 
-
-  <!-- =================================================
-       PROJECT 02
-  ================================================== -->
-
-  <article class="info-project">
-
-    <div class="info-number">
-      02
+    <div class="info-circle">
+      DATA
     </div>
 
-    <div class="info-content">
 
-      <div class="info-heading">
+    <div class="info-status">
+      WORK IN PROGRESS
+    </div>
 
-        <h2>
-          <em>Anatomy</em><br>
-          Explained.
-        </h2>
-
-        <p>
-          An informative visual using illustration and
-          simplified visual storytelling to communicate
-          anatomical information.
-        </p>
-
-      </div>
+  </div>
 
 
-      <button
-        class="info-image"
-        type="button"
-        data-full="31.png"
-        aria-label="Open infographic project 2">
+  <div class="info-description">
 
-        <img
-          src="31.png"
-          alt="Anatomical infographic">
+    <h2>
+      Making information<br>
+      <em>easier to see.</em>
+    </h2>
 
-        <span class="info-image-number">
-          02
-        </span>
+    <div class="info-description-text">
 
-        <span class="info-overlay">
-          <span class="info-arrow">
-            ↗
-          </span>
-        </span>
+      <p>
+        Infographics combine design, information and
+        visual storytelling to communicate ideas in a
+        way that feels simple and engaging.
+      </p>
 
-      </button>
+      <p>
+        I am interested in how typography, illustration,
+        layout and visual hierarchy can transform
+        information into something people can understand
+        quickly.
+      </p>
 
-
-      <div class="info-footer">
-
-        <h3>
-          Anatomy Visual
-        </h3>
-
-        <span>
-          INFOGRAPHIC · 02
-        </span>
-
-      </div>
+      <p>
+        This section will grow as new infographic projects
+        are developed and added to the portfolio.
+      </p>
 
     </div>
 
-  </article>
-
-
-  <!-- =================================================
-       PROJECT 03
-  ================================================== -->
-
-  <article class="info-project">
-
-    <div class="info-number">
-      03
-    </div>
-
-    <div class="info-content">
-
-      <div class="info-heading">
-
-        <h2>
-          <em>Movement</em><br>
-          Made Clear.
-        </h2>
-
-        <p>
-          An illustrated guide presenting upper-body
-          stretches through clear visual instructions.
-        </p>
-
-      </div>
-
-
-      <button
-        class="info-image"
-        type="button"
-        data-full="Upper%20body%20stretch.png"
-        aria-label="Open Upper Body Stretch infographic">
-
-        <img
-          src="Upper%20body%20stretch.png"
-          alt="Upper Body Stretch infographic">
-
-        <span class="info-image-number">
-          03
-        </span>
-
-        <span class="info-overlay">
-          <span class="info-arrow">
-            ↗
-          </span>
-        </span>
-
-      </button>
-
-
-      <div class="info-footer">
-
-        <h3>
-          Upper Body Stretch
-        </h3>
-
-        <span>
-          INFOGRAPHIC · 03
-        </span>
-
-      </div>
-
-    </div>
-
-  </article>
-
+  </div>
 
 </section>
 
 
 <!-- =====================================================
-     CTA
+     AREAS
 ===================================================== -->
 
-<section class="info-cta">
+<section class="info-areas">
 
-  <p class="eyebrow">
-    END OF THE PORTFOLIO
-  </p>
+  <div class="info-areas-header">
 
-  <h2>
-    Have an idea?
-    <em>Let's create it.</em>
-  </h2>
+    <p class="eyebrow">
+      AREAS OF EXPLORATION
+    </p>
 
-  <a href="contact.html">
-    Get in touch ↗
-  </a>
+    <h2>
+      Ideas become clearer<br>
+      when they're <em>visual.</em>
+    </h2>
+
+  </div>
+
+
+  <div class="info-area-grid">
+
+
+    <article class="info-area">
+
+      <span class="info-area-number">
+        01
+      </span>
+
+      <h3>
+        Information
+      </h3>
+
+      <p>
+        Organising information into clear visual
+        structures that are easy to follow and understand.
+      </p>
+
+    </article>
+
+
+    <article class="info-area">
+
+      <span class="info-area-number">
+        02
+      </span>
+
+      <h3>
+        Illustration
+      </h3>
+
+      <p>
+        Using visual elements to explain subjects,
+        concepts and processes in a more engaging way.
+      </p>
+
+    </article>
+
+
+    <article class="info-area">
+
+      <span class="info-area-number">
+        03
+      </span>
+
+      <h3>
+        Storytelling
+      </h3>
+
+      <p>
+        Creating a visual flow that helps information
+        communicate an idea from beginning to end.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMING SOON
+===================================================== -->
+
+<section class="info-coming">
+
+  <div class="info-coming-inner">
+
+    <p class="eyebrow">
+      CURRENTLY DEVELOPING
+    </p>
+
+    <h2>
+      More infographics<br>
+      <em>coming soon.</em>
+    </h2>
+
+    <p>
+      New infographic projects will be added here as
+      the collection develops. For now, explore the
+      illustration work in the portfolio.
+    </p>
+
+    <a href="illustration.html">
+      Explore Illustration ↗
+    </a>
+
+  </div>
 
 </section>
 
 
 </main>
-
-
-<!-- =====================================================
-     LIGHTBOX
-===================================================== -->
-
-<div
-  class="lightbox"
-  aria-hidden="true">
-
-  <button
-    class="lightbox-close"
-    aria-label="Close image">
-    ×
-  </button>
-
-  <img
-    src=""
-    alt="">
-
-</div>
 
 
 <!-- =====================================================
@@ -896,103 +951,6 @@ rel="stylesheet">
 
 <script src="script.js"></script>
 
-
-<script>
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
-
-const infoItems =
-  document.querySelectorAll(".info-image");
-
-const lightbox =
-  document.querySelector(".lightbox");
-
-const lightboxImage =
-  lightbox.querySelector("img");
-
-const closeButton =
-  document.querySelector(".lightbox-close");
-
-
-infoItems.forEach(item => {
-
-  item.addEventListener("click", () => {
-
-    const image =
-      item.getAttribute("data-full");
-
-    lightboxImage.src = image;
-
-    lightboxImage.alt =
-      item.querySelector("img").alt;
-
-    lightbox.classList.add("open");
-
-    lightbox.setAttribute(
-      "aria-hidden",
-      "false"
-    );
-
-    document.body.style.overflow = "hidden";
-
-  });
-
-});
-
-
-function closeLightbox() {
-
-  lightbox.classList.remove("open");
-
-  lightbox.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-  lightboxImage.src = "";
-
-  document.body.style.overflow = "";
-
-}
-
-
-closeButton.addEventListener(
-  "click",
-  closeLightbox
-);
-
-
-lightbox.addEventListener(
-  "click",
-  event => {
-
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-
-  }
-);
-
-
-document.addEventListener(
-  "keydown",
-  event => {
-
-    if (
-      event.key === "Escape" &&
-      lightbox.classList.contains("open")
-    ) {
-
-      closeLightbox();
-
-    }
-
-  }
-);
-
-</script>
-
 </body>
+
 </html>
