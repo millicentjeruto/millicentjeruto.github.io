@@ -1,34 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Infographics portfolio by Millicent Jeruto featuring visual communication and information design.">
 
 <title>Infographics | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.infographic-page {
+  background: #f5f4ef;
+  color: #171717;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.infographic-hero {
+  width: min(1200px, 90vw);
+
+  margin: auto;
+
+  padding: 105px 0 95px;
+
+  text-align: center;
+}
+
+.infographic-hero h1 {
+  margin: 20px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(65px, 9vw, 120px);
+
+  line-height: .9;
+
+  font-weight: 500;
+
+  letter-spacing: -.06em;
+}
+
+.infographic-hero h1 em {
+  color: #c87952;
+
+  font-style: italic;
+}
+
+.infographic-hero > p:last-child {
+  max-width: 650px;
+
+  margin: 30px auto 0;
+
+  color: #707070;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   PROJECT SECTION
+===================================================== */
+
+.infographic-projects {
+  width: min(1200px, 90vw);
+
+  margin: auto;
+}
+
+
+/* =====================================================
+   PROJECT
+===================================================== */
+
+.info-project {
+  display: grid;
+
+  grid-template-columns: 80px 1fr;
+
+  gap: 30px;
+
+  padding: 90px 0;
+
+  border-top: 1px solid #d8d7d1;
+}
+
+.info-number {
+  padding-top: 8px;
+
+  color: #c87952;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .15em;
+}
+
+.info-content {
+  min-width: 0;
+}
+
+
+/* =====================================================
+   PROJECT INTRO
+===================================================== */
+
+.info-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 35px;
+}
+
+.info-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: .95;
+
+  font-weight: 500;
+
+  letter-spacing: -.05em;
+}
+
+.info-heading h2 em {
+  color: #c87952;
+
+  font-style: italic;
+}
+
+.info-heading p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.info-image {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #e5e4de;
+
+  cursor: pointer;
+
+  border: none;
+
+  padding: 0;
+
+  text-align: left;
+}
+
+.info-image img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  transition:
+    transform .6s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.info-image:hover img {
+  transform: scale(1.015);
+
+  filter: brightness(.84);
+}
+
+
+/* =====================================================
+   IMAGE NUMBER
+===================================================== */
+
+.info-image-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  z-index: 3;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.95);
+
+  color: #171717;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.info-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: flex-end;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.42),
+      transparent 45%
+    );
+
+  opacity: 0;
+
+  transition: opacity .35s ease;
+
+  pointer-events: none;
+}
+
+.info-image:hover .info-overlay {
+  opacity: 1;
+}
+
+.info-arrow {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #171717;
+
+  font-size: 18px;
+}
+
+
+/* =====================================================
+   PROJECT FOOTER
+===================================================== */
+
+.info-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 20px;
+}
+
+.info-footer h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 24px;
+
+  font-weight: 500;
+}
+
+.info-footer span {
+  color: #777;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.info-cta {
+  width: min(1200px, 90vw);
+
+  margin: 30px auto 130px;
+
+  padding: 100px 30px;
+
+  background: #171717;
+
+  color: white;
+
+  text-align: center;
+}
+
+.info-cta h2 {
+  margin: 20px auto 30px;
+
+  max-width: 750px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 6vw, 75px);
+
+  line-height: .95;
+
+  font-weight: 500;
+
+  letter-spacing: -.05em;
+}
+
+.info-cta h2 em {
+  color: #d79b7d;
+
+  font-style: italic;
+}
+
+.info-cta a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 23px;
+
+  border: 1px solid white;
+
+  border-radius: 100px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+.info-cta a:hover {
+  background: white;
+
+  color: #171717;
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0,0,0,.94);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.lightbox img {
+  display: block;
+
+  max-width: 92vw;
+
+  max-height: 88vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .infographic-hero {
+    padding: 75px 0 70px;
+  }
+
+  .infographic-hero h1 {
+    font-size: 60px;
+  }
+
+  .info-project {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 70px 0;
+  }
+
+  .info-number {
+    padding: 0;
+  }
+
+  .info-heading {
+    display: block;
+
+    margin-bottom: 25px;
+  }
+
+  .info-heading p {
+    margin-top: 20px;
+  }
+
+  .info-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .info-cta {
+    margin-bottom: 80px;
+
+    padding: 70px 20px;
+  }
+
+}
+
+</style>
+
 </head>
 
-<body>
+
+<body class="infographic-page">
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="nav">
 
-  <a class="brand" href="index.html">MJ<span>.</span></a>
+  <a class="brand" href="index.html">
+    MJ<span>.</span>
+  </a>
 
-  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <button
+    class="menu-toggle"
+    aria-label="Open menu">
+    ☰
+  </button>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="3d-modelling.html">3D Modelling</a>
-    <a href="illustration.html">Illustration</a>
-    <a class="active" href="infographics.html">Infographics</a>
-    <a class="nav-contact" href="contact.html">Contact</a>
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
+    <a href="3d-modelling.html">
+      3D Modelling
+    </a>
+
+    <a href="illustration.html">
+      Illustration
+    </a>
+
+    <a class="active" href="infographics.html">
+      Infographics
+    </a>
+
+    <a class="nav-contact" href="contact.html">
+      Contact
+    </a>
+
   </nav>
 
 </header>
@@ -36,165 +595,404 @@
 
 <main>
 
-  <section class="page-hero section">
 
-    <p class="eyebrow">03 / 03</p>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <h1><em>Infographics</em></h1>
+<section class="infographic-hero">
 
-    <p class="lead">
-      A selection of visual work designed to communicate information clearly,
-      creatively and effectively.
-    </p>
+  <p class="eyebrow">
+    03 / 03
+  </p>
 
-  </section>
+  <h1>
+    <em>Information</em><br>
+    made visual.
+  </h1>
+
+  <p>
+    A selection of visual work designed to communicate
+    information clearly, creatively and effectively.
+  </p>
+
+</section>
 
 
-  <section class="portfolio-grid section">
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="infographic-projects">
 
 
-    <!-- INFOGRAPHIC 01 -->
+  <!-- =================================================
+       PROJECT 01
+  ================================================== -->
 
-    <article class="project">
+  <article class="info-project">
+
+    <div class="info-number">
+      01
+    </div>
+
+    <div class="info-content">
+
+      <div class="info-heading">
+
+        <h2>
+          <em>Visual</em><br>
+          Communication.
+        </h2>
+
+        <p>
+          Combining imagery, structure and information
+          to make ideas easier to understand.
+        </p>
+
+      </div>
+
 
       <button
-        class="gallery-item"
+        class="info-image"
         type="button"
         data-full="30.png"
-        aria-label="Open infographic project 1"
-      >
+        aria-label="Open infographic project 1">
 
         <img
           src="30.png"
-          alt="Infographic project 1"
-          onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')"
-        >
+          alt="Infographic project 1">
 
-        <span class="fallback-label">
-          INFOGRAPHIC 01
+        <span class="info-image-number">
+          01
         </span>
 
-        <span class="zoom">
-          ↗
+        <span class="info-overlay">
+          <span class="info-arrow">
+            ↗
+          </span>
         </span>
 
       </button>
 
-      <h3>Project 1</h3>
 
-      <p>
-        Visual communication combining imagery and information in a clear,
-        engaging format.
-      </p>
+      <div class="info-footer">
 
-    </article>
+        <h3>
+          Information Design
+        </h3>
+
+        <span>
+          INFOGRAPHIC · 01
+        </span>
+
+      </div>
+
+    </div>
+
+  </article>
 
 
-    <!-- INFOGRAPHIC 02 -->
+  <!-- =================================================
+       PROJECT 02
+  ================================================== -->
 
-    <article class="project">
+  <article class="info-project">
+
+    <div class="info-number">
+      02
+    </div>
+
+    <div class="info-content">
+
+      <div class="info-heading">
+
+        <h2>
+          <em>Anatomy</em><br>
+          Explained.
+        </h2>
+
+        <p>
+          An informative visual using illustration and
+          simplified visual storytelling to communicate
+          anatomical information.
+        </p>
+
+      </div>
+
 
       <button
-        class="gallery-item"
+        class="info-image"
         type="button"
         data-full="31.png"
-        aria-label="Open infographic project 2"
-      >
+        aria-label="Open infographic project 2">
 
         <img
           src="31.png"
-          alt="Infographic project 2"
-          onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')"
-        >
+          alt="Anatomical infographic">
 
-        <span class="fallback-label">
-          INFOGRAPHIC 02
+        <span class="info-image-number">
+          02
         </span>
 
-        <span class="zoom">
-          ↗
+        <span class="info-overlay">
+          <span class="info-arrow">
+            ↗
+          </span>
         </span>
 
       </button>
 
-      <h3>Project 2</h3>
 
-      <p>
-        An informative visual exploring anatomy through illustration and
-        simplified visual storytelling.
-      </p>
+      <div class="info-footer">
 
-    </article>
+        <h3>
+          Anatomy Visual
+        </h3>
+
+        <span>
+          INFOGRAPHIC · 02
+        </span>
+
+      </div>
+
+    </div>
+
+  </article>
 
 
-    <!-- INFOGRAPHIC 03 -->
+  <!-- =================================================
+       PROJECT 03
+  ================================================== -->
 
-    <article class="project">
+  <article class="info-project">
+
+    <div class="info-number">
+      03
+    </div>
+
+    <div class="info-content">
+
+      <div class="info-heading">
+
+        <h2>
+          <em>Movement</em><br>
+          Made Clear.
+        </h2>
+
+        <p>
+          An illustrated guide presenting upper-body
+          stretches through clear visual instructions.
+        </p>
+
+      </div>
+
 
       <button
-        class="gallery-item"
+        class="info-image"
         type="button"
-        data-full="Upper Body Stretch.png"
-        aria-label="Open infographic project 3"
-      >
+        data-full="Upper%20body%20stretch.png"
+        aria-label="Open Upper Body Stretch infographic">
 
         <img
-          src="Upper Body Stretch.png"
-          alt="Upper Body Stretch infographic"
-          onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-work')"
-        >
+          src="Upper%20body%20stretch.png"
+          alt="Upper Body Stretch infographic">
 
-        <span class="fallback-label">
-          INFOGRAPHIC 03
+        <span class="info-image-number">
+          03
         </span>
 
-        <span class="zoom">
-          ↗
+        <span class="info-overlay">
+          <span class="info-arrow">
+            ↗
+          </span>
         </span>
 
       </button>
 
-      <h3>Upper Body Stretch</h3>
 
-      <p>
-        An illustrated informational guide presenting upper-body stretches
-        through clear visual instructions.
-      </p>
+      <div class="info-footer">
 
-    </article>
+        <h3>
+          Upper Body Stretch
+        </h3>
+
+        <span>
+          INFOGRAPHIC · 03
+        </span>
+
+      </div>
+
+    </div>
+
+  </article>
 
 
-  </section>
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="info-cta">
+
+  <p class="eyebrow">
+    END OF THE PORTFOLIO
+  </p>
+
+  <h2>
+    Have an idea?
+    <em>Let's create it.</em>
+  </h2>
+
+  <a href="contact.html">
+    Get in touch ↗
+  </a>
+
+</section>
+
 
 </main>
 
 
-<!-- LIGHTBOX -->
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
 
-<div class="lightbox" aria-hidden="true">
+<div
+  class="lightbox"
+  aria-hidden="true">
 
   <button
     class="lightbox-close"
-    aria-label="Close image"
-  >
+    aria-label="Close image">
     ×
   </button>
 
-  <img src="" alt="">
+  <img
+    src=""
+    alt="">
 
 </div>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
-  <span>© 2026 Millicent Jeruto</span>
+  <span>
+    © 2026 Millicent Jeruto
+  </span>
 
-  <span>Infographics</span>
+  <span>
+    Infographics
+  </span>
 
 </footer>
 
 
 <script src="script.js"></script>
+
+
+<script>
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+const infoItems =
+  document.querySelectorAll(".info-image");
+
+const lightbox =
+  document.querySelector(".lightbox");
+
+const lightboxImage =
+  lightbox.querySelector("img");
+
+const closeButton =
+  document.querySelector(".lightbox-close");
+
+
+infoItems.forEach(item => {
+
+  item.addEventListener("click", () => {
+
+    const image =
+      item.getAttribute("data-full");
+
+    lightboxImage.src = image;
+
+    lightboxImage.alt =
+      item.querySelector("img").alt;
+
+    lightbox.classList.add("open");
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    document.body.style.overflow = "hidden";
+
+  });
+
+});
+
+
+function closeLightbox() {
+
+  lightbox.classList.remove("open");
+
+  lightbox.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  lightboxImage.src = "";
+
+  document.body.style.overflow = "";
+
+}
+
+
+closeButton.addEventListener(
+  "click",
+  closeLightbox
+);
+
+
+lightbox.addEventListener(
+  "click",
+  event => {
+
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+
+  }
+);
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape" &&
+      lightbox.classList.contains("open")
+    ) {
+
+      closeLightbox();
+
+    }
+
+  }
+);
+
+</script>
 
 </body>
 </html>
