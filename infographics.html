@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Infographics portfolio by Millicent Jeruto.">
+content="Illustration portfolio by Millicent Jeruto featuring medical, roofing and construction illustrations.">
 
-<title>Infographics | Millicent Jeruto</title>
+<title>Illustration | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,403 +20,494 @@ rel="stylesheet">
 
 <style>
 
-.infographic-page {
+/* =====================================================
+   PAGE
+===================================================== */
+
+.illustration-page {
   background: #f5f4ef;
   color: #171717;
 }
 
-.info-hero {
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.illustration-hero {
   width: min(1200px, 90vw);
   margin: auto;
-  padding: 105px 0 90px;
+
+  padding: 105px 0 95px;
+
   text-align: center;
 }
 
-.info-hero h1 {
+.illustration-hero h1 {
   margin: 20px 0 0;
+
   font-family: "Playfair Display", serif;
+
   font-size: clamp(65px, 9vw, 120px);
+
   line-height: .9;
+
   font-weight: 500;
+
   letter-spacing: -.06em;
 }
 
-.info-hero h1 em {
+.illustration-hero h1 em {
   color: #171717;
+
   font-style: italic;
 }
 
-.info-hero > p:last-child {
-  max-width: 650px;
+.illustration-hero > p:last-child {
+  max-width: 620px;
+
   margin: 30px auto 0;
+
   color: #707070;
+
   font-size: 14px;
-  line-height: 1.8;
-}
 
-.info-feature {
-  width: min(1200px, 90vw);
-  margin: auto;
-}
-
-.info-visual {
-  position: relative;
-  min-height: 520px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #deddd7;
-}
-
-.info-visual::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,.55) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.55) 1px,
-      transparent 1px
-    );
-
-  background-size: 55px 55px;
-  opacity: .6;
-}
-
-.info-sheet {
-  position: relative;
-  z-index: 2;
-  width: 280px;
-  height: 360px;
-  padding: 28px;
-  background: #f8f7f2;
-  box-shadow: 25px 30px 45px rgba(0,0,0,.16);
-  transform: rotate(-5deg);
-  border-radius: 3px;
-}
-
-.info-sheet-title {
-  width: 150px;
-  height: 12px;
-  margin-bottom: 12px;
-  background: #171717;
-}
-
-.info-sheet-subtitle {
-  width: 105px;
-  height: 6px;
-  margin-bottom: 35px;
-  background: #c87952;
-}
-
-.info-chart {
-  display: flex;
-  align-items: flex-end;
-  gap: 12px;
-  height: 130px;
-  margin-bottom: 28px;
-  border-bottom: 1px solid #bdbcb6;
-}
-
-.info-bar {
-  width: 28px;
-  background: #b5b4ae;
-}
-
-.info-bar:nth-child(1) { height: 45%; }
-.info-bar:nth-child(2) { height: 75%; }
-.info-bar:nth-child(3) { height: 58%; }
-
-.info-bar:nth-child(4) {
-  height: 92%;
-  background: #c87952;
-}
-
-.info-bar:nth-child(5) { height: 67%; }
-
-.info-lines {
-  display: grid;
-  gap: 8px;
-}
-
-.info-line {
-  height: 5px;
-  background: #d0cfca;
-}
-
-.info-line:nth-child(1) { width: 90%; }
-.info-line:nth-child(2) { width: 72%; }
-.info-line:nth-child(3) { width: 82%; }
-
-.info-circle {
-  position: absolute;
-  z-index: 3;
-  width: 120px;
-  height: 120px;
-  right: 19%;
-  top: 23%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #c87952;
-  color: white;
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  transform: rotate(8deg);
-  box-shadow: 15px 20px 30px rgba(0,0,0,.12);
-}
-
-.info-label {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .16em;
-}
-
-.info-label span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #c87952;
-}
-
-.info-status {
-  position: absolute;
-  right: 25px;
-  bottom: 25px;
-  z-index: 5;
-  padding: 10px 15px;
-  border: 1px solid rgba(0,0,0,.15);
-  border-radius: 100px;
-  background: rgba(255,255,255,.55);
-  backdrop-filter: blur(8px);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
-
-.info-description {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  padding: 80px 0 110px;
-}
-
-.info-description h2 {
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(42px, 5vw, 65px);
-  line-height: .98;
-  font-weight: 500;
-  letter-spacing: -.05em;
-}
-
-.info-description h2 em {
-  color: #c87952;
-  font-style: italic;
-}
-
-.info-description-text {
-  color: #707070;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-.info-description-text p {
-  margin: 0 0 25px;
-}
-
-.info-areas {
-  width: min(1200px, 90vw);
-  margin: auto;
-  padding-bottom: 120px;
-}
-
-.info-areas-header {
-  margin-bottom: 45px;
-}
-
-.info-areas-header h2 {
-  margin: 15px 0 0;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(42px, 5vw, 65px);
-  line-height: .95;
-  font-weight: 500;
-  letter-spacing: -.05em;
-}
-
-.info-areas-header h2 em {
-  color: #c87952;
-  font-style: italic;
-}
-
-.info-area-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid #d4d3cd;
-  border-bottom: 1px solid #d4d3cd;
-}
-
-.info-area {
-  min-height: 250px;
-  padding: 30px;
-  border-right: 1px solid #d4d3cd;
-}
-
-.info-area:last-child {
-  border-right: none;
-}
-
-.info-area-number {
-  color: #c87952;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .15em;
-}
-
-.info-area h3 {
-  margin: 60px 0 15px;
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.info-area p {
-  max-width: 270px;
-  margin: 0;
-  color: #777;
-  font-size: 12px;
   line-height: 1.8;
 }
 
 
 /* =====================================================
-   BOTTOM CTA
+   CATEGORY SECTIONS
 ===================================================== */
 
-.info-coming {
+.illustration-section {
   width: min(1200px, 90vw);
+
   margin: auto;
-  padding-bottom: 130px;
+
+  padding: 90px 0 120px;
+
+  border-top: 1px solid #d8d7d1;
 }
 
-.info-coming-inner {
-  padding: 90px 30px;
-  background: #171717;
-  color: white;
-  text-align: center;
+.category-header {
+  display: grid;
+
+  grid-template-columns: 80px 1fr;
+
+  gap: 30px;
+
+  margin-bottom: 55px;
 }
 
-.info-coming h2 {
-  margin: 20px 0 25px;
+.category-number {
+  padding-top: 9px;
+
+  color: #c87952;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .15em;
+}
+
+.category-content h2 {
+  margin: 0;
+
   font-family: "Playfair Display", serif;
-  font-size: clamp(48px, 6vw, 75px);
+
+  font-size: clamp(50px, 6vw, 76px);
+
   line-height: .95;
+
   font-weight: 500;
+
   letter-spacing: -.05em;
 }
 
-.info-coming h2 em {
-  color: #d79b7d;
+.category-content h2 em {
+  color: #171717;
+
   font-style: italic;
 }
 
-.info-coming p {
-  max-width: 520px;
-  margin: auto;
-  color: #bdbdbd;
+.category-content p {
+  max-width: 580px;
+
+  margin: 22px 0 0;
+
+  color: #777;
+
   font-size: 13px;
+
   line-height: 1.8;
 }
 
-.info-coming a {
-  display: inline-flex;
+
+/* =====================================================
+   IMAGE GRID
+===================================================== */
+
+.illustration-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+
+  align-items: start;
+}
+
+.gallery-item {
+  position: relative;
+
+  width: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  text-align: left;
+}
+
+.gallery-item.featured {
+  grid-column: 1 / -1;
+}
+
+.gallery-item img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  transition:
+    transform .6s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.018);
+
+  filter: brightness(.84);
+}
+
+
+/* =====================================================
+   IMAGE NUMBER
+===================================================== */
+
+.image-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  z-index: 3;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
   align-items: center;
-  gap: 10px;
-  margin-top: 35px;
-  padding: 14px 23px;
-  border: 1px solid white;
-  border-radius: 100px;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.95);
+
+  color: #171717;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+}
+
+
+/* =====================================================
+   IMAGE HOVER
+===================================================== */
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: flex-end;
+
+  padding: 18px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.42),
+      transparent 45%
+    );
+
+  opacity: 0;
+
+  transition: opacity .35s ease;
+
+  pointer-events: none;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-arrow {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #171717;
+
+  font-size: 18px;
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0,0,0,.94);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.lightbox img {
+  display: block;
+
+  max-width: 92vw;
+
+  max-height: 88vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  border-radius: 50%;
+
+  background: transparent;
+
   color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   TRANSITION TO INFOGRAPHICS
+===================================================== */
+
+.illustration-coming {
+  width: min(1200px, 90vw);
+
+  margin: 30px auto 130px;
+}
+
+.illustration-coming-inner {
+  padding: 90px 30px;
+
+  background: #171717;
+
+  color: white;
+
+  text-align: center;
+}
+
+.illustration-coming h2 {
+  max-width: 760px;
+
+  margin: 20px auto 25px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 6vw, 75px);
+
+  line-height: .95;
+
+  font-weight: 500;
+
+  letter-spacing: -.05em;
+}
+
+.illustration-coming h2 em {
+  color: #d79b7d;
+
+  font-style: italic;
+}
+
+.illustration-coming p {
+  max-width: 520px;
+
+  margin: auto;
+
+  color: #bdbdbd;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.illustration-coming a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 35px;
+
+  padding: 14px 23px;
+
+  border: 1px solid white;
+
+  border-radius: 100px;
+
+  color: white;
+
   text-decoration: none;
+
   font-size: 12px;
+
   font-weight: 600;
+
   transition:
     background .25s ease,
     color .25s ease;
 }
 
-.info-coming a:hover {
+.illustration-coming a:hover {
   background: white;
+
   color: #171717;
 }
 
 
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media (max-width: 700px) {
 
-  .info-hero {
+  .illustration-hero {
     padding: 75px 0 70px;
   }
 
-  .info-hero h1 {
+  .illustration-hero h1 {
     font-size: 60px;
   }
 
-  .info-visual {
-    min-height: 390px;
+  .illustration-section {
+    padding: 70px 0 85px;
   }
 
-  .info-sheet {
-    width: 220px;
-    height: 290px;
-    padding: 22px;
+  .category-header {
+    display: block;
+
+    text-align: center;
   }
 
-  .info-circle {
-    width: 85px;
-    height: 85px;
-    right: 8%;
-    top: 24%;
-    font-size: 18px;
+  .category-number {
+    padding: 0;
+
+    margin-bottom: 12px;
   }
 
-  .info-description {
+  .category-content p {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .illustration-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
-    padding-top: 60px;
+
+    gap: 22px;
   }
 
-  .info-area-grid {
-    grid-template-columns: 1fr;
+  .gallery-item,
+  .gallery-item.featured {
+    grid-column: 1;
   }
 
-  .info-area {
-    border-right: none;
-    border-bottom: 1px solid #d4d3cd;
+  .illustration-coming {
+    margin-bottom: 80px;
   }
 
-  .info-area:last-child {
-    border-bottom: none;
-  }
-
-  .info-coming {
-    padding-bottom: 80px;
-  }
-
-  .info-coming-inner {
+  .illustration-coming-inner {
     padding: 65px 20px;
   }
 
@@ -427,8 +518,12 @@ rel="stylesheet">
 </head>
 
 
-<body class="infographic-page">
+<body class="illustration-page">
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="nav">
 
@@ -436,21 +531,31 @@ rel="stylesheet">
     MJ<span>.</span>
   </a>
 
-  <button class="menu-toggle" aria-label="Open menu">
+  <button
+    class="menu-toggle"
+    aria-label="Open menu">
     ☰
   </button>
 
   <nav>
 
-    <a href="index.html">Home</a>
+    <a href="index.html">
+      Home
+    </a>
 
-    <a href="about.html">About</a>
+    <a href="about.html">
+      About
+    </a>
 
-    <a href="3d-modelling.html">3D Modelling</a>
+    <a href="3d-modelling.html">
+      3D Modelling
+    </a>
 
-    <a href="illustration.html">Illustration</a>
+    <a class="active" href="illustration.html">
+      Illustration
+    </a>
 
-    <a class="active" href="infographics.html">
+    <a href="infographics.html">
       Infographics
     </a>
 
@@ -466,195 +571,502 @@ rel="stylesheet">
 <main>
 
 
-<section class="info-hero">
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="illustration-hero">
 
   <p class="eyebrow">
-    03 / 03
+    02 / 03
   </p>
 
   <h1>
-    <em>Information</em><br>
-    made visual.
+    <em>Visual</em> Stories.
   </h1>
 
   <p>
-    Exploring the relationship between information,
-    illustration and visual communication to make ideas
-    clearer, more engaging and easier to understand.
+    A collection of illustration work exploring
+    medical subjects, roofing, construction
+    and practical visual communication.
   </p>
 
 </section>
 
 
-<section class="info-feature">
+<!-- =====================================================
+     MEDICAL
+===================================================== -->
 
-  <div class="info-visual">
+<section class="illustration-section">
 
-    <div class="info-label">
-      <span></span>
-      INFORMATION DESIGN
+  <div class="category-header">
+
+    <div class="category-number">
+      01
     </div>
 
-    <div class="info-sheet">
+    <div class="category-content">
 
-      <div class="info-sheet-title"></div>
-
-      <div class="info-sheet-subtitle"></div>
-
-      <div class="info-chart">
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-        <div class="info-bar"></div>
-      </div>
-
-      <div class="info-lines">
-        <div class="info-line"></div>
-        <div class="info-line"></div>
-        <div class="info-line"></div>
-      </div>
-
-    </div>
-
-    <div class="info-circle">
-      DATA
-    </div>
-
-    <div class="info-status">
-      WORK IN PROGRESS
-    </div>
-
-  </div>
-
-
-  <div class="info-description">
-
-    <h2>
-      Making information<br>
-      <em>easier to see.</em>
-    </h2>
-
-    <div class="info-description-text">
+      <h2>
+        <em>Medical</em>
+      </h2>
 
       <p>
-        Infographics combine design, information and
-        visual storytelling to communicate ideas in a
-        way that feels simple and engaging.
-      </p>
-
-      <p>
-        I am interested in how typography, illustration,
-        layout and visual hierarchy can transform
-        information into something people can understand
-        quickly.
-      </p>
-
-      <p>
-        This section will grow as new infographic projects
-        are developed and added to the portfolio.
+        Visual interpretations of medical and anatomical
+        subjects, created to make complex ideas easier
+        to understand.
       </p>
 
     </div>
 
   </div>
 
-</section>
 
+  <div class="illustration-grid">
 
-<section class="info-areas">
+    <button
+      class="gallery-item featured"
+      type="button"
+      data-full="2.png"
+      aria-label="Open medical illustration 1">
 
-  <div class="info-areas-header">
+      <img
+        src="2.png"
+        alt="Medical illustration 1">
 
-    <p class="eyebrow">
-      AREAS OF EXPLORATION
-    </p>
-
-    <h2>
-      Ideas become clearer<br>
-      when they're <em>visual.</em>
-    </h2>
-
-  </div>
-
-
-  <div class="info-area-grid">
-
-    <article class="info-area">
-
-      <span class="info-area-number">
+      <span class="image-number">
         01
       </span>
 
-      <h3>
-        Information
-      </h3>
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
 
-      <p>
-        Organising information into clear visual
-        structures that are easy to follow and understand.
-      </p>
-
-    </article>
+    </button>
 
 
-    <article class="info-area">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="10.png"
+      aria-label="Open medical illustration 2">
 
-      <span class="info-area-number">
+      <img
+        src="10.png"
+        alt="Medical illustration 2">
+
+      <span class="image-number">
         02
       </span>
 
-      <h3>
-        Illustration
-      </h3>
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
 
-      <p>
-        Using visual elements to explain subjects,
-        concepts and processes in a more engaging way.
-      </p>
-
-    </article>
+    </button>
 
 
-    <article class="info-area">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="11.png"
+      aria-label="Open medical illustration 3">
 
-      <span class="info-area-number">
+      <img
+        src="11.png"
+        alt="Medical illustration 3">
+
+      <span class="image-number">
         03
       </span>
 
-      <h3>
-        Storytelling
-      </h3>
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
 
-      <p>
-        Creating a visual flow that helps information
-        communicate an idea from beginning to end.
-      </p>
+    </button>
 
-    </article>
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="12.png"
+      aria-label="Open medical illustration 4">
+
+      <img
+        src="12.png"
+        alt="Medical illustration 4">
+
+      <span class="image-number">
+        04
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="13.png"
+      aria-label="Open medical illustration 5">
+
+      <img
+        src="13.png"
+        alt="Medical illustration 5">
+
+      <span class="image-number">
+        05
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="14.png"
+      aria-label="Open medical illustration 6">
+
+      <img
+        src="14.png"
+        alt="Medical illustration 6">
+
+      <span class="image-number">
+        06
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="15.png"
+      aria-label="Open medical illustration 7">
+
+      <img
+        src="15.png"
+        alt="Medical illustration 7">
+
+      <span class="image-number">
+        07
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="16.png"
+      aria-label="Open medical illustration 8">
+
+      <img
+        src="16.png"
+        alt="Medical illustration 8">
+
+      <span class="image-number">
+        08
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="30.png"
+      aria-label="Open medical illustration 9">
+
+      <img
+        src="30.png"
+        alt="Medical illustration 9">
+
+      <span class="image-number">
+        09
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="31.png"
+      aria-label="Open medical illustration 10">
+
+      <img
+        src="31.png"
+        alt="Medical illustration 10">
+
+      <span class="image-number">
+        10
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
 
   </div>
 
 </section>
 
 
-<!-- BLACK CTA -->
+<!-- =====================================================
+     ROOFING
+===================================================== -->
 
-<section class="info-coming">
+<section class="illustration-section">
 
-  <div class="info-coming-inner">
+  <div class="category-header">
+
+    <div class="category-number">
+      02
+    </div>
+
+    <div class="category-content">
+
+      <h2>
+        <em>Roofing</em>
+      </h2>
+
+      <p>
+        Illustration work focused on roofing,
+        structures and practical visual communication.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="illustration-grid">
+
+    <button
+      class="gallery-item featured"
+      type="button"
+      data-full="26.png"
+      aria-label="Open roofing illustration 1">
+
+      <img
+        src="26.png"
+        alt="Roofing illustration 1">
+
+      <span class="image-number">
+        01
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="29.png"
+      aria-label="Open roofing illustration 2">
+
+      <img
+        src="29.png"
+        alt="Roofing illustration 2">
+
+      <span class="image-number">
+        02
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="25.png"
+      aria-label="Open roofing illustration 3">
+
+      <img
+        src="25.png"
+        alt="Roofing illustration 3">
+
+      <span class="image-number">
+        03
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONSTRUCTION
+===================================================== -->
+
+<section class="illustration-section">
+
+  <div class="category-header">
+
+    <div class="category-number">
+      03
+    </div>
+
+    <div class="category-content">
+
+      <h2>
+        <em>Construction</em>
+      </h2>
+
+      <p>
+        Visual work exploring construction,
+        structure and physical form.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="illustration-grid">
+
+    <button
+      class="gallery-item featured"
+      type="button"
+      data-full="Upper%20body%20stretch.png"
+      aria-label="Open construction illustration 1">
+
+      <img
+        src="Upper%20body%20stretch.png"
+        alt="Construction illustration 1">
+
+      <span class="image-number">
+        01
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="32.png"
+      aria-label="Open construction illustration 2">
+
+      <img
+        src="32.png"
+        alt="Construction illustration 2">
+
+      <span class="image-number">
+        02
+      </span>
+
+      <span class="image-overlay">
+        <span class="image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEXT SECTION — INFOGRAPHICS
+===================================================== -->
+
+<section class="illustration-coming">
+
+  <div class="illustration-coming-inner">
 
     <p class="eyebrow">
-      HAVE A PROJECT IN MIND?
+      NEXT / 03
     </p>
 
     <h2>
-      Let's create something<br>
-      <em>meaningful.</em>
+      Turning information<br>
+      into <em>visual clarity.</em>
     </h2>
 
-    <a href="contact.html">
-      Get in touch ↗
+    <p>
+      Explore a collection of infographic projects
+      designed to communicate information clearly,
+      simply and meaningfully.
+    </p>
+
+    <a href="infographics.html">
+      Explore Infographics ↗
     </a>
 
   </div>
@@ -665,6 +1077,31 @@ rel="stylesheet">
 </main>
 
 
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+  class="lightbox"
+  aria-hidden="true">
+
+  <button
+    class="lightbox-close"
+    aria-label="Close image">
+    ×
+  </button>
+
+  <img
+    src=""
+    alt="">
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
   <span>
@@ -672,7 +1109,7 @@ rel="stylesheet">
   </span>
 
   <span>
-    Infographics
+    Illustration
   </span>
 
 </footer>
@@ -680,6 +1117,102 @@ rel="stylesheet">
 
 <script src="script.js"></script>
 
-</body>
 
+<script>
+
+const galleryItems =
+  document.querySelectorAll(".gallery-item");
+
+const lightbox =
+  document.querySelector(".lightbox");
+
+const lightboxImage =
+  lightbox.querySelector("img");
+
+const closeButton =
+  document.querySelector(".lightbox-close");
+
+
+galleryItems.forEach(item => {
+
+  item.addEventListener("click", () => {
+
+    const image =
+      item.getAttribute("data-full");
+
+    lightboxImage.src = image;
+
+    lightboxImage.alt =
+      item.querySelector("img").alt;
+
+    lightbox.classList.add("open");
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    document.body.style.overflow = "hidden";
+
+  });
+
+});
+
+
+function closeLightbox() {
+
+  lightbox.classList.remove("open");
+
+  lightbox.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  lightboxImage.src = "";
+
+  document.body.style.overflow = "";
+
+}
+
+
+closeButton.addEventListener(
+  "click",
+  closeLightbox
+);
+
+
+lightbox.addEventListener(
+  "click",
+  event => {
+
+    if (event.target === lightbox) {
+
+      closeLightbox();
+
+    }
+
+  }
+);
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape" &&
+      lightbox.classList.contains("open")
+    ) {
+
+      closeLightbox();
+
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
 </html>
