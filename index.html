@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -454,120 +455,193 @@
     }
 
 
-    /* ================= SERVICES ================= */
+    /* ================= SELECTED WORK ================= */
 
-    .services-section {
-      padding: 130px 5vw;
+    .selected-work {
+      padding: 130px 5vw 140px;
     }
 
-    .services-heading {
-      max-width: 1250px;
+    .selected-work-inner {
+      width: min(1250px, 100%);
+      margin: auto;
+    }
 
-      margin: 0 auto 45px;
-
+    .selected-work-heading {
       display: flex;
-
       align-items: end;
-
       justify-content: space-between;
+      gap: 30px;
+
+      margin-bottom: 45px;
 
       border-bottom: 1px solid var(--line);
 
       padding-bottom: 25px;
     }
 
-    .services-heading h2 {
+    .selected-work-heading h2 {
       margin: 0;
 
       font-family: "Playfair Display", serif;
 
+      font-size: clamp(48px, 6vw, 72px);
+
+      line-height: .95;
+
       font-weight: 500;
 
-      font-size: 45px;
-
-      letter-spacing: -.04em;
+      letter-spacing: -.05em;
     }
 
-    .services-heading p {
+    .selected-work-heading p {
       margin: 0;
+
+      max-width: 300px;
 
       color: var(--muted);
 
       font-size: 12px;
+
+      line-height: 1.7;
     }
 
-    .service-list {
-      max-width: 1250px;
-
-      margin: auto;
-    }
-
-    .service {
+    .selected-work-grid {
       display: grid;
 
-      grid-template-columns: 90px 1fr 40px;
+      grid-template-columns: repeat(3, 1fr);
 
-      gap: 25px;
+      gap: 20px;
+    }
 
-      align-items: center;
+    .work-card {
+      position: relative;
 
-      padding: 35px 5px;
+      min-height: 330px;
 
-      border-bottom: 1px solid var(--line);
+      padding: 30px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      background: #ebe9e2;
+
+      border: 1px solid var(--line);
 
       text-decoration: none;
 
+      overflow: hidden;
+
       transition:
-        padding .3s ease,
-        background .3s ease;
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
     }
 
-    .service:hover {
-      padding-left: 20px;
+    .work-card::after {
+      content: "";
 
-      padding-right: 20px;
+      position: absolute;
 
-      background: rgba(255, 255, 255, .45);
+      width: 180px;
+
+      height: 180px;
+
+      right: -70px;
+
+      bottom: -70px;
+
+      border-radius: 50%;
+
+      background: rgba(200, 121, 82, .12);
+
+      transition:
+        transform .45s ease,
+        background .35s ease;
     }
 
-    .service-number {
-      font-size: 11px;
+    .work-card:hover {
+      transform: translateY(-8px);
 
+      background: var(--ink);
+
+      color: white;
+    }
+
+    .work-card:hover::after {
+      transform: scale(1.7);
+
+      background: rgba(200, 121, 82, .2);
+    }
+
+    .work-card-top {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-start;
+    }
+
+    .work-number {
       color: var(--accent);
 
+      font-size: 11px;
+
       font-weight: 700;
+
+      letter-spacing: .15em;
     }
 
-    .service h3 {
-      margin: 0 0 7px;
+    .work-arrow {
+      font-size: 24px;
+
+      transition: transform .3s ease;
+    }
+
+    .work-card:hover .work-arrow {
+      transform: translate(5px, -5px);
+    }
+
+    .work-card-bottom {
+      position: relative;
+      z-index: 2;
+    }
+
+    .work-card h3 {
+      margin: 0 0 12px;
 
       font-family: "Playfair Display", serif;
 
-      font-size: 32px;
+      font-size: clamp(30px, 3vw, 42px);
+
+      line-height: 1;
 
       font-weight: 500;
+
+      letter-spacing: -.04em;
     }
 
-    .service p {
-      margin: 0;
+    .work-card p {
+      max-width: 330px;
 
-      max-width: 620px;
+      margin: 0;
 
       color: var(--muted);
 
-      font-size: 14px;
+      font-size: 13px;
 
-      line-height: 1.6;
+      line-height: 1.7;
+
+      transition: color .35s ease;
     }
 
-    .service-arrow {
-      font-size: 22px;
-
-      transition: transform .25s ease;
-    }
-
-    .service:hover .service-arrow {
-      transform: translate(5px, -5px);
+    .work-card:hover p {
+      color: #bdbdbd;
     }
 
 
@@ -685,14 +759,26 @@
         height: 430px;
       }
 
-      .services-heading {
+      .selected-work {
+        padding: 110px 6vw;
+      }
+
+      .selected-work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-card {
+        min-height: 280px;
+      }
+
+      .selected-work-heading {
         display: block;
 
         text-align: center;
       }
 
-      .services-heading p {
-        margin-top: 10px;
+      .selected-work-heading p {
+        margin: 15px auto 0;
       }
 
     }
@@ -752,29 +838,37 @@
         right: 0;
       }
 
-      .services-section {
+      .selected-work {
         padding: 90px 6vw;
       }
 
-      .services-heading h2 {
-        font-size: 40px;
+      .selected-work-heading {
+        margin-bottom: 30px;
       }
 
-      .service {
-        grid-template-columns: 45px 1fr 25px;
-
-        gap: 12px;
-
-        padding: 28px 0;
-
-        text-align: left;
+      .selected-work-heading h2 {
+        font-size: 48px;
       }
 
-      .service h3 {
-        font-size: 25px;
+      .selected-work-heading p {
+        font-size: 13px;
       }
 
-      .service p {
+      .selected-work-grid {
+        gap: 15px;
+      }
+
+      .work-card {
+        min-height: 250px;
+
+        padding: 25px;
+      }
+
+      .work-card h3 {
+        font-size: 32px;
+      }
+
+      .work-card p {
         font-size: 13px;
       }
 
@@ -849,27 +943,22 @@
 
     <section class="home-hero">
 
-
       <div class="hero-content">
-
 
         <div class="hero-label">
           CREATIVE DESIGNER
         </div>
-
 
         <h1>
           Hi, I'm<br>
           <em>Millicent.</em>
         </h1>
 
-
         <p class="hero-description">
           A creative designer working across 3D modelling, illustration and
           infographics — creating visuals that communicate ideas with
           clarity and character.
         </p>
-
 
         <div class="hero-actions">
 
@@ -881,7 +970,6 @@
             <span>↗</span>
           </a>
 
-
           <a
             class="home-button light"
             href="about.html"
@@ -891,7 +979,6 @@
 
         </div>
 
-
       </div>
 
 
@@ -900,7 +987,6 @@
       <div class="hero-art">
 
         <div class="hero-circle"></div>
-
 
         <div class="portrait">
 
@@ -912,7 +998,6 @@
               this.nextElementSibling.style.display='flex';
             "
           >
-
 
           <div class="portrait-placeholder">
 
@@ -928,14 +1013,11 @@
 
         </div>
 
-
         <div class="floating-number">
           MJ
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -975,112 +1057,138 @@
     </div>
 
 
-    <!-- ================= SERVICES / SELECTED WORK ================= -->
+    <!-- ================= SELECTED WORK ================= -->
 
-    <section class="services-section">
+    <section class="selected-work">
 
-      <div class="services-heading">
+      <div class="selected-work-inner">
 
-        <h2>
-          What I create
-        </h2>
+        <div class="selected-work-heading">
 
-        <p>
-          Explore the different areas of my work →
-        </p>
+          <h2>
+            Selected Work
+          </h2>
 
-      </div>
+          <p>
+            A selection of creative work across 3D modelling,
+            illustration and infographics.
+          </p>
 
-
-      <div class="service-list">
-
-
-        <a
-          class="service"
-          href="3d-modelling.html"
-        >
-
-          <span class="service-number">
-            01
-          </span>
-
-          <div>
-
-            <h3>
-              3D Modelling
-            </h3>
-
-            <p>
-              Exploring form, shape, materials and lighting to bring ideas
-              into three dimensions.
-            </p>
-
-          </div>
-
-          <span class="service-arrow">
-            ↗
-          </span>
-
-        </a>
+        </div>
 
 
-        <a
-          class="service"
-          href="illustration.html"
-        >
-
-          <span class="service-number">
-            02
-          </span>
-
-          <div>
-
-            <h3>
-              Illustration
-            </h3>
-
-            <p>
-              Creating expressive visuals through different styles, shapes
-              and ideas.
-            </p>
-
-          </div>
-
-          <span class="service-arrow">
-            ↗
-          </span>
-
-        </a>
+        <div class="selected-work-grid">
 
 
-        <a
-          class="service"
-          href="infographics.html"
-        >
+          <!-- 3D MODELLING -->
 
-          <span class="service-number">
-            03
-          </span>
+          <a
+            class="work-card"
+            href="3d-modelling.html"
+          >
 
-          <div>
+            <div class="work-card-top">
 
-            <h3>
-              Infographics
-            </h3>
+              <span class="work-number">
+                01 / 03
+              </span>
 
-            <p>
-              Making information easier to understand through thoughtful
-              visual storytelling.
-            </p>
+              <span class="work-arrow">
+                ↗
+              </span>
 
-          </div>
+            </div>
 
-          <span class="service-arrow">
-            ↗
-          </span>
 
-        </a>
+            <div class="work-card-bottom">
 
+              <h3>
+                3D Modelling
+              </h3>
+
+              <p>
+                Exploring form, shape, materials and lighting
+                to bring ideas into three dimensions.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <!-- ILLUSTRATION -->
+
+          <a
+            class="work-card"
+            href="illustration.html"
+          >
+
+            <div class="work-card-top">
+
+              <span class="work-number">
+                02 / 03
+              </span>
+
+              <span class="work-arrow">
+                ↗
+              </span>
+
+            </div>
+
+
+            <div class="work-card-bottom">
+
+              <h3>
+                Illustration
+              </h3>
+
+              <p>
+                Creating expressive visuals through different
+                styles, shapes and ideas.
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <!-- INFOGRAPHICS -->
+
+          <a
+            class="work-card"
+            href="infographics.html"
+          >
+
+            <div class="work-card-top">
+
+              <span class="work-number">
+                03 / 03
+              </span>
+
+              <span class="work-arrow">
+                ↗
+              </span>
+
+            </div>
+
+
+            <div class="work-card-bottom">
+
+              <h3>
+                Infographics
+              </h3>
+
+              <p>
+                Making information easier to understand through
+                thoughtful visual storytelling.
+              </p>
+
+            </div>
+
+          </a>
+
+
+        </div>
 
       </div>
 
@@ -1095,12 +1203,10 @@
         LET'S CREATE
       </div>
 
-
       <h2>
         Have an idea?<br>
         <em>Let’s bring it to life.</em>
       </h2>
-
 
       <a
         class="home-button dark"
