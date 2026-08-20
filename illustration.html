@@ -5,14 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Illustration portfolio by Millicent Jeruto featuring medical, roofing and construction illustrations.">
+<meta name="description"
+content="Illustration portfolio by Millicent Jeruto featuring medical, roofing and construction illustrations.">
 
 <title>Illustration | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -34,38 +36,31 @@
 
 .illustration-hero {
   width: min(1200px, 90vw);
-  margin: 0 auto;
-  padding: 105px 0 90px;
+  margin: auto;
+  padding: 105px 0 95px;
   text-align: center;
 }
 
-.illustration-hero .eyebrow {
-  margin-bottom: 25px;
-}
-
 .illustration-hero h1 {
-  margin: 0;
+  margin: 20px 0 0;
 
   font-family: "Playfair Display", serif;
-
   font-size: clamp(65px, 9vw, 120px);
   line-height: .9;
-
   font-weight: 500;
   letter-spacing: -.06em;
 }
 
 .illustration-hero h1 em {
-  font-style: italic;
   color: #c87952;
+  font-style: italic;
 }
 
-.illustration-hero p {
+.illustration-hero > p:last-child {
   max-width: 620px;
   margin: 30px auto 0;
 
   color: #707070;
-
   font-size: 14px;
   line-height: 1.8;
 }
@@ -77,10 +72,8 @@
 
 .illustration-section {
   width: min(1200px, 90vw);
-  margin: 0 auto;
-
-  padding: 90px 0 110px;
-
+  margin: auto;
+  padding: 90px 0 120px;
   border-top: 1px solid #d8d7d1;
 }
 
@@ -91,22 +84,17 @@
 
 .category-header {
   display: grid;
-
-  grid-template-columns: 90px 1fr;
-
+  grid-template-columns: 80px 1fr;
   gap: 30px;
-
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 .category-number {
   padding-top: 9px;
 
   color: #c87952;
-
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: .15em;
 }
 
@@ -114,13 +102,9 @@
   margin: 0;
 
   font-family: "Playfair Display", serif;
-
-  font-size: clamp(48px, 6vw, 72px);
-
+  font-size: clamp(50px, 6vw, 76px);
   line-height: .95;
-
   font-weight: 500;
-
   letter-spacing: -.05em;
 }
 
@@ -129,54 +113,71 @@
 }
 
 .category-content p {
-  max-width: 570px;
-
-  margin: 20px 0 0;
+  max-width: 580px;
+  margin: 22px 0 0;
 
   color: #777;
-
   font-size: 13px;
-
   line-height: 1.8;
 }
 
 
 /* =====================================================
-   IMAGE GRID
+   GALLERY
 ===================================================== */
 
 .illustration-grid {
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 35px;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 28px;
 }
 
 
 /* =====================================================
-   IMAGE ITEM
+   IMAGE CONTAINER
+
+   IMPORTANT:
+   The container no longer forces the artwork
+   into a cropped aspect ratio.
 ===================================================== */
 
 .gallery-item {
   position: relative;
 
-  display: block;
+  grid-column: span 6;
 
   width: 100%;
-
-  aspect-ratio: 4 / 3;
+  min-height: 380px;
 
   padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   overflow: hidden;
 
   border: none;
 
-  background: #e4e2dc;
+  background: #ebe9e3;
 
   cursor: pointer;
 }
+
+
+/* First artwork gets more space */
+
+.gallery-item.featured {
+  grid-column: span 12;
+  min-height: 560px;
+}
+
+
+/* =====================================================
+   IMAGE
+
+   contain = preserve the complete artwork
+===================================================== */
 
 .gallery-item img {
   display: block;
@@ -184,21 +185,24 @@
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 
   transition:
     transform .6s cubic-bezier(.2,.7,.2,1),
     filter .4s ease;
 }
 
+
+/* Slight zoom without destroying detail */
+
 .gallery-item:hover img {
-  transform: scale(1.045);
+  transform: scale(1.025);
   filter: brightness(.82);
 }
 
 
 /* =====================================================
-   IMAGE NUMBER
+   NUMBER
 ===================================================== */
 
 .image-number {
@@ -207,26 +211,23 @@
   top: 18px;
   left: 18px;
 
-  z-index: 2;
+  z-index: 3;
 
   width: 36px;
   height: 36px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
-  background: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.95);
 
   color: #171717;
 
   font-size: 10px;
   font-weight: 700;
-
-  letter-spacing: .04em;
 }
 
 
@@ -239,10 +240,10 @@
 
   inset: 0;
 
+  z-index: 2;
+
   display: flex;
-
   align-items: flex-end;
-
   justify-content: flex-end;
 
   padding: 18px;
@@ -250,7 +251,7 @@
   background:
     linear-gradient(
       to top,
-      rgba(0,0,0,.48),
+      rgba(0,0,0,.45),
       transparent 45%
     );
 
@@ -265,19 +266,18 @@
   opacity: 1;
 }
 
+
 .image-arrow {
   width: 42px;
   height: 42px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
   background: white;
-
   color: #171717;
 
   font-size: 18px;
@@ -285,79 +285,54 @@
 
 
 /* =====================================================
-   FEATURED IMAGE
-===================================================== */
-
-.gallery-item.featured {
-  grid-column: 1 / -1;
-
-  aspect-ratio: 16 / 8;
-}
-
-
-/* =====================================================
-   CONTACT CTA
+   CONTACT
 ===================================================== */
 
 .illustration-contact {
   width: min(900px, 90vw);
 
-  margin: 40px auto 130px;
-
+  margin: 30px auto 130px;
   padding: 90px 30px;
 
   background: #171717;
-
   color: white;
 
   text-align: center;
 }
 
-.illustration-contact .eyebrow {
-  color: #aaa;
-}
-
 .illustration-contact h2 {
-  margin: 22px auto 30px;
-
   max-width: 650px;
+
+  margin: 20px auto 30px;
 
   font-family: "Playfair Display", serif;
 
   font-size: clamp(45px, 6vw, 70px);
 
   line-height: .98;
-
   font-weight: 500;
-
   letter-spacing: -.05em;
 }
 
 .illustration-contact h2 em {
   color: #d79b7d;
-
   font-style: italic;
 }
 
 .illustration-contact a {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
 
   padding: 14px 23px;
 
   border: 1px solid white;
-
   border-radius: 100px;
 
   color: white;
-
   text-decoration: none;
 
   font-size: 12px;
-
   font-weight: 600;
 
   transition:
@@ -377,13 +352,11 @@
 
 .lightbox {
   position: fixed;
-
   inset: 0;
 
   z-index: 1000;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -405,8 +378,13 @@
 }
 
 .lightbox img {
+  display: block;
+
   max-width: 92vw;
   max-height: 88vh;
+
+  width: auto;
+  height: auto;
 
   object-fit: contain;
 }
@@ -421,11 +399,9 @@
   height: 45px;
 
   border: 1px solid rgba(255,255,255,.35);
-
   border-radius: 50%;
 
   background: transparent;
-
   color: white;
 
   font-size: 28px;
@@ -449,7 +425,7 @@
   }
 
   .illustration-section {
-    padding: 70px 0 80px;
+    padding: 70px 0 85px;
   }
 
   .category-header {
@@ -469,34 +445,27 @@
 
   .illustration-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 22px;
+  }
+
+  .gallery-item,
+  .gallery-item.featured {
+    grid-column: 1;
+
+    min-height: 300px;
   }
 
   .gallery-item.featured {
-    grid-column: auto;
-    aspect-ratio: 4 / 3;
+    min-height: 400px;
+  }
+
+  .gallery-item img {
+    object-fit: contain;
   }
 
   .illustration-contact {
     margin-bottom: 80px;
     padding: 70px 25px;
-  }
-
-}
-
-
-/* =====================================================
-   SMALL PHONES
-===================================================== */
-
-@media (max-width: 430px) {
-
-  .illustration-hero h1 {
-    font-size: 52px;
-  }
-
-  .category-content h2 {
-    font-size: 45px;
   }
 
 }
@@ -519,10 +488,7 @@
     MJ<span>.</span>
   </a>
 
-  <button
-    class="menu-toggle"
-    aria-label="Open menu"
-  >
+  <button class="menu-toggle" aria-label="Open menu">
     ☰
   </button>
 
@@ -576,7 +542,7 @@
 
 
 <!-- =====================================================
-     01 — MEDICAL
+     MEDICAL
 ===================================================== -->
 
 <section class="illustration-section">
@@ -606,24 +572,14 @@
 
   <div class="illustration-grid">
 
-
-    <!-- 01 — 2.png -->
-
-    <button
-      class="gallery-item featured"
+    <button class="gallery-item featured"
       type="button"
       data-full="2.png"
-      aria-label="Open medical illustration 1"
-    >
+      aria-label="Open medical illustration 1">
 
-      <img
-        src="2.png"
-        alt="Medical illustration 1"
-      >
+      <img src="2.png" alt="Medical illustration 1">
 
-      <span class="image-number">
-        01
-      </span>
+      <span class="image-number">01</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -632,23 +588,14 @@
     </button>
 
 
-    <!-- 02 — 10.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="10.png"
-      aria-label="Open medical illustration 2"
-    >
+      aria-label="Open medical illustration 2">
 
-      <img
-        src="10.png"
-        alt="Medical illustration 2"
-      >
+      <img src="10.png" alt="Medical illustration 2">
 
-      <span class="image-number">
-        02
-      </span>
+      <span class="image-number">02</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -657,23 +604,14 @@
     </button>
 
 
-    <!-- 03 — 11.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="11.png"
-      aria-label="Open medical illustration 3"
-    >
+      aria-label="Open medical illustration 3">
 
-      <img
-        src="11.png"
-        alt="Medical illustration 3"
-      >
+      <img src="11.png" alt="Medical illustration 3">
 
-      <span class="image-number">
-        03
-      </span>
+      <span class="image-number">03</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -682,23 +620,14 @@
     </button>
 
 
-    <!-- 04 — 12.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="12.png"
-      aria-label="Open medical illustration 4"
-    >
+      aria-label="Open medical illustration 4">
 
-      <img
-        src="12.png"
-        alt="Medical illustration 4"
-      >
+      <img src="12.png" alt="Medical illustration 4">
 
-      <span class="image-number">
-        04
-      </span>
+      <span class="image-number">04</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -707,23 +636,14 @@
     </button>
 
 
-    <!-- 05 — 13.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="13.png"
-      aria-label="Open medical illustration 5"
-    >
+      aria-label="Open medical illustration 5">
 
-      <img
-        src="13.png"
-        alt="Medical illustration 5"
-      >
+      <img src="13.png" alt="Medical illustration 5">
 
-      <span class="image-number">
-        05
-      </span>
+      <span class="image-number">05</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -732,23 +652,14 @@
     </button>
 
 
-    <!-- 06 — 14.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="14.png"
-      aria-label="Open medical illustration 6"
-    >
+      aria-label="Open medical illustration 6">
 
-      <img
-        src="14.png"
-        alt="Medical illustration 6"
-      >
+      <img src="14.png" alt="Medical illustration 6">
 
-      <span class="image-number">
-        06
-      </span>
+      <span class="image-number">06</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -757,23 +668,14 @@
     </button>
 
 
-    <!-- 07 — 15.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="15.png"
-      aria-label="Open medical illustration 7"
-    >
+      aria-label="Open medical illustration 7">
 
-      <img
-        src="15.png"
-        alt="Medical illustration 7"
-      >
+      <img src="15.png" alt="Medical illustration 7">
 
-      <span class="image-number">
-        07
-      </span>
+      <span class="image-number">07</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -782,23 +684,14 @@
     </button>
 
 
-    <!-- 08 — 16.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="16.png"
-      aria-label="Open medical illustration 8"
-    >
+      aria-label="Open medical illustration 8">
 
-      <img
-        src="16.png"
-        alt="Medical illustration 8"
-      >
+      <img src="16.png" alt="Medical illustration 8">
 
-      <span class="image-number">
-        08
-      </span>
+      <span class="image-number">08</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -807,23 +700,14 @@
     </button>
 
 
-    <!-- 09 — 30.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="30.png"
-      aria-label="Open medical illustration 9"
-    >
+      aria-label="Open medical illustration 9">
 
-      <img
-        src="30.png"
-        alt="Medical illustration 9"
-      >
+      <img src="30.png" alt="Medical illustration 9">
 
-      <span class="image-number">
-        09
-      </span>
+      <span class="image-number">09</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -832,23 +716,14 @@
     </button>
 
 
-    <!-- 10 — 31.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="31.png"
-      aria-label="Open medical illustration 10"
-    >
+      aria-label="Open medical illustration 10">
 
-      <img
-        src="31.png"
-        alt="Medical illustration 10"
-      >
+      <img src="31.png" alt="Medical illustration 10">
 
-      <span class="image-number">
-        10
-      </span>
+      <span class="image-number">10</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -862,7 +737,7 @@
 
 
 <!-- =====================================================
-     02 — ROOFING
+     ROOFING
 ===================================================== -->
 
 <section class="illustration-section">
@@ -891,24 +766,14 @@
 
   <div class="illustration-grid">
 
-
-    <!-- 01 — 26.png -->
-
-    <button
-      class="gallery-item featured"
+    <button class="gallery-item featured"
       type="button"
       data-full="26.png"
-      aria-label="Open roofing illustration 1"
-    >
+      aria-label="Open roofing illustration 1">
 
-      <img
-        src="26.png"
-        alt="Roofing illustration 1"
-      >
+      <img src="26.png" alt="Roofing illustration 1">
 
-      <span class="image-number">
-        01
-      </span>
+      <span class="image-number">01</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -917,23 +782,14 @@
     </button>
 
 
-    <!-- 02 — 29.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="29.png"
-      aria-label="Open roofing illustration 2"
-    >
+      aria-label="Open roofing illustration 2">
 
-      <img
-        src="29.png"
-        alt="Roofing illustration 2"
-      >
+      <img src="29.png" alt="Roofing illustration 2">
 
-      <span class="image-number">
-        02
-      </span>
+      <span class="image-number">02</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -942,23 +798,14 @@
     </button>
 
 
-    <!-- 03 — 25.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="25.png"
-      aria-label="Open roofing illustration 3"
-    >
+      aria-label="Open roofing illustration 3">
 
-      <img
-        src="25.png"
-        alt="Roofing illustration 3"
-      >
+      <img src="25.png" alt="Roofing illustration 3">
 
-      <span class="image-number">
-        03
-      </span>
+      <span class="image-number">03</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -972,7 +819,7 @@
 
 
 <!-- =====================================================
-     03 — CONSTRUCTION
+     CONSTRUCTION
 ===================================================== -->
 
 <section class="illustration-section">
@@ -1001,24 +848,15 @@
 
   <div class="illustration-grid">
 
-
-    <!-- 01 — Upper Body Stretch.png -->
-
-    <button
-      class="gallery-item featured"
+    <button class="gallery-item featured"
       type="button"
       data-full="Upper Body Stretch.png"
-      aria-label="Open construction illustration 1"
-    >
+      aria-label="Open construction illustration 1">
 
-      <img
-        src="Upper Body Stretch.png"
-        alt="Construction illustration 1"
-      >
+      <img src="Upper Body Stretch.png"
+        alt="Construction illustration 1">
 
-      <span class="image-number">
-        01
-      </span>
+      <span class="image-number">01</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -1027,23 +865,14 @@
     </button>
 
 
-    <!-- 02 — 32.png -->
-
-    <button
-      class="gallery-item"
+    <button class="gallery-item"
       type="button"
       data-full="32.png"
-      aria-label="Open construction illustration 2"
-    >
+      aria-label="Open construction illustration 2">
 
-      <img
-        src="32.png"
-        alt="Construction illustration 2"
-      >
+      <img src="32.png" alt="Construction illustration 2">
 
-      <span class="image-number">
-        02
-      </span>
+      <span class="image-number">02</span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -1057,7 +886,7 @@
 
 
 <!-- =====================================================
-     CONTACT
+     CTA
 ===================================================== -->
 
 <section class="illustration-contact">
@@ -1085,29 +914,18 @@
      LIGHTBOX
 ===================================================== -->
 
-<div
-  class="lightbox"
-  aria-hidden="true"
->
+<div class="lightbox" aria-hidden="true">
 
   <button
     class="lightbox-close"
-    aria-label="Close image"
-  >
+    aria-label="Close image">
     ×
   </button>
 
-  <img
-    src=""
-    alt=""
-  >
+  <img src="" alt="">
 
 </div>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
@@ -1139,7 +957,7 @@ const lightbox =
 const lightboxImage =
   lightbox.querySelector("img");
 
-const lightboxClose =
+const closeButton =
   document.querySelector(".lightbox-close");
 
 
@@ -1150,15 +968,10 @@ galleryItems.forEach(item => {
     const image =
       item.getAttribute("data-full");
 
-    const sourceImage =
-      item.querySelector("img");
-
     lightboxImage.src = image;
 
     lightboxImage.alt =
-      sourceImage
-        ? sourceImage.alt
-        : "Illustration";
+      item.querySelector("img").alt;
 
     lightbox.classList.add("open");
 
@@ -1190,7 +1003,7 @@ function closeLightbox() {
 }
 
 
-lightboxClose.addEventListener(
+closeButton.addEventListener(
   "click",
   closeLightbox
 );
