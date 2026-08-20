@@ -42,7 +42,7 @@ rel="stylesheet">
 }
 
 .illustration-hero h1 em {
-  color: #c87952;
+  color: #171717;
   font-style: italic;
 }
 
@@ -161,12 +161,11 @@ rel="stylesheet">
   align-items: flex-end;
   justify-content: flex-end;
   padding: 18px;
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.42),
-      transparent 45%
-    );
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.42),
+    transparent 45%
+  );
   opacity: 0;
   transition: opacity .35s ease;
   pointer-events: none;
@@ -232,34 +231,51 @@ rel="stylesheet">
   cursor: pointer;
 }
 
-.illustration-contact {
-  width: min(900px, 90vw);
+
+/* =====================================================
+   BOTTOM CTA
+===================================================== */
+
+.illustration-coming {
+  width: min(1200px, 90vw);
   margin: 30px auto 130px;
+}
+
+.illustration-coming-inner {
   padding: 90px 30px;
   background: #171717;
   color: white;
   text-align: center;
 }
 
-.illustration-contact h2 {
-  max-width: 650px;
-  margin: 20px auto 30px;
+.illustration-coming h2 {
+  max-width: 700px;
+  margin: 20px auto 25px;
   font-family: "Playfair Display", serif;
-  font-size: clamp(45px, 6vw, 70px);
-  line-height: .98;
+  font-size: clamp(48px, 6vw, 75px);
+  line-height: .95;
   font-weight: 500;
   letter-spacing: -.05em;
 }
 
-.illustration-contact h2 em {
+.illustration-coming h2 em {
   color: #d79b7d;
   font-style: italic;
 }
 
-.illustration-contact a {
+.illustration-coming p {
+  max-width: 520px;
+  margin: auto;
+  color: #bdbdbd;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.illustration-coming a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  margin-top: 35px;
   padding: 14px 23px;
   border: 1px solid white;
   border-radius: 100px;
@@ -272,10 +288,11 @@ rel="stylesheet">
     color .25s ease;
 }
 
-.illustration-contact a:hover {
+.illustration-coming a:hover {
   background: white;
   color: #171717;
 }
+
 
 @media (max-width: 700px) {
 
@@ -316,9 +333,12 @@ rel="stylesheet">
     grid-column: 1;
   }
 
-  .illustration-contact {
+  .illustration-coming {
     margin-bottom: 80px;
-    padding: 70px 25px;
+  }
+
+  .illustration-coming-inner {
+    padding: 65px 20px;
   }
 
 }
@@ -376,30 +396,29 @@ rel="stylesheet">
   </p>
 
   <h1>
-    <em>Illustration.</em>
+    <em>Visual</em> Stories.
   </h1>
 
   <p>
-    Exploring visual storytelling through medical subjects,
-    roofing, construction and practical visual communication.
+    A collection of illustration work exploring
+    medical subjects, roofing, construction
+    and practical visual communication.
   </p>
 
 </section>
 
 
+<!-- MEDICAL -->
+
 <section class="illustration-section">
 
   <div class="category-header">
 
-    <div class="category-number">
-      01
-    </div>
+    <div class="category-number">01</div>
 
     <div class="category-content">
 
-      <h2>
-        <em>Medical</em>
-      </h2>
+      <h2><em>Medical</em></h2>
 
       <p>
         Visual interpretations of medical and anatomical
@@ -568,19 +587,17 @@ rel="stylesheet">
 </section>
 
 
+<!-- ROOFING -->
+
 <section class="illustration-section">
 
   <div class="category-header">
 
-    <div class="category-number">
-      02
-    </div>
+    <div class="category-number">02</div>
 
     <div class="category-content">
 
-      <h2>
-        <em>Roofing</em>
-      </h2>
+      <h2><em>Roofing</em></h2>
 
       <p>
         Illustration work focused on roofing,
@@ -643,19 +660,17 @@ rel="stylesheet">
 </section>
 
 
+<!-- CONSTRUCTION -->
+
 <section class="illustration-section">
 
   <div class="category-header">
 
-    <div class="category-number">
-      03
-    </div>
+    <div class="category-number">03</div>
 
     <div class="category-content">
 
-      <h2>
-        <em>Construction</em>
-      </h2>
+      <h2><em>Construction</em></h2>
 
       <p>
         Visual work exploring construction,
@@ -705,20 +720,32 @@ rel="stylesheet">
 </section>
 
 
-<section class="illustration-contact">
+<!-- BOTTOM -->
 
-  <p class="eyebrow">
-    HAVE A PROJECT IN MIND?
-  </p>
+<section class="illustration-coming">
 
-  <h2>
-    Let's create something
-    <em>meaningful.</em>
-  </h2>
+  <div class="illustration-coming-inner">
 
-  <a href="contact.html">
-    Get in touch ↗
-  </a>
+    <p class="eyebrow">
+      CURRENTLY DEVELOPING
+    </p>
+
+    <h2>
+      More infographics<br>
+      <em>coming soon.</em>
+    </h2>
+
+    <p>
+      New infographic projects will be added here as
+      the collection develops. For now, explore the
+      illustration work in the portfolio.
+    </p>
+
+    <a href="infographics.html">
+      Explore Infographics ↗
+    </a>
+
+  </div>
 
 </section>
 
@@ -739,13 +766,9 @@ rel="stylesheet">
 
 <footer>
 
-  <span>
-    © 2026 Millicent Jeruto
-  </span>
+  <span>© 2026 Millicent Jeruto</span>
 
-  <span>
-    Illustration
-  </span>
+  <span>Illustration</span>
 
 </footer>
 
@@ -765,6 +788,7 @@ const lightboxImage =
 
 const closeButton =
   document.querySelector(".lightbox-close");
+
 
 galleryItems.forEach(item => {
 
@@ -791,6 +815,7 @@ galleryItems.forEach(item => {
 
 });
 
+
 function closeLightbox() {
 
   lightbox.classList.remove("open");
@@ -806,10 +831,12 @@ function closeLightbox() {
 
 }
 
+
 closeButton.addEventListener(
   "click",
   closeLightbox
 );
+
 
 lightbox.addEventListener(
   "click",
@@ -821,6 +848,7 @@ lightbox.addEventListener(
 
   }
 );
+
 
 document.addEventListener(
   "keydown",
