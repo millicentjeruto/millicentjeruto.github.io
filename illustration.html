@@ -21,7 +21,7 @@ rel="stylesheet">
 <style>
 
 /* =====================================================
-   ILLUSTRATION PAGE
+   PAGE
 ===================================================== */
 
 .illustration-page {
@@ -67,13 +67,15 @@ rel="stylesheet">
 
 
 /* =====================================================
-   CATEGORY SECTION
+   CATEGORY
 ===================================================== */
 
 .illustration-section {
   width: min(1200px, 90vw);
   margin: auto;
+
   padding: 90px 0 120px;
+
   border-top: 1px solid #d8d7d1;
 }
 
@@ -84,8 +86,11 @@ rel="stylesheet">
 
 .category-header {
   display: grid;
+
   grid-template-columns: 80px 1fr;
+
   gap: 30px;
+
   margin-bottom: 55px;
 }
 
@@ -93,8 +98,11 @@ rel="stylesheet">
   padding-top: 9px;
 
   color: #c87952;
+
   font-size: 11px;
+
   font-weight: 700;
+
   letter-spacing: .15em;
 }
 
@@ -102,9 +110,13 @@ rel="stylesheet">
   margin: 0;
 
   font-family: "Playfair Display", serif;
+
   font-size: clamp(50px, 6vw, 76px);
+
   line-height: .95;
+
   font-weight: 500;
+
   letter-spacing: -.05em;
 }
 
@@ -114,10 +126,13 @@ rel="stylesheet">
 
 .category-content p {
   max-width: 580px;
+
   margin: 22px 0 0;
 
   color: #777;
+
   font-size: 13px;
+
   line-height: 1.8;
 }
 
@@ -128,62 +143,56 @@ rel="stylesheet">
 
 .illustration-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 28px;
+
+  align-items: start;
 }
 
 
 /* =====================================================
-   IMAGE CONTAINER
-
-   IMPORTANT:
-   The container no longer forces the artwork
-   into a cropped aspect ratio.
+   IMAGE ITEM
 ===================================================== */
 
 .gallery-item {
   position: relative;
 
-  grid-column: span 6;
-
   width: 100%;
-  min-height: 380px;
 
   padding: 0;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
 
   overflow: hidden;
 
-  border: none;
-
-  background: #ebe9e3;
-
-  cursor: pointer;
+  text-align: left;
 }
 
 
-/* First artwork gets more space */
+/* Featured image spans both columns */
 
 .gallery-item.featured {
-  grid-column: span 12;
-  min-height: 560px;
+  grid-column: 1 / -1;
 }
 
 
 /* =====================================================
    IMAGE
-
-   contain = preserve the complete artwork
 ===================================================== */
 
 .gallery-item img {
   display: block;
 
   width: 100%;
-  height: 100%;
+  height: auto;
+
+  max-width: 100%;
 
   object-fit: contain;
 
@@ -192,17 +201,15 @@ rel="stylesheet">
     filter .4s ease;
 }
 
-
-/* Slight zoom without destroying detail */
-
 .gallery-item:hover img {
-  transform: scale(1.025);
-  filter: brightness(.82);
+  transform: scale(1.018);
+
+  filter: brightness(.84);
 }
 
 
 /* =====================================================
-   NUMBER
+   IMAGE NUMBER
 ===================================================== */
 
 .image-number {
@@ -217,6 +224,7 @@ rel="stylesheet">
   height: 36px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -227,7 +235,10 @@ rel="stylesheet">
   color: #171717;
 
   font-size: 10px;
+
   font-weight: 700;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
 
@@ -243,7 +254,9 @@ rel="stylesheet">
   z-index: 2;
 
   display: flex;
+
   align-items: flex-end;
+
   justify-content: flex-end;
 
   padding: 18px;
@@ -251,7 +264,7 @@ rel="stylesheet">
   background:
     linear-gradient(
       to top,
-      rgba(0,0,0,.45),
+      rgba(0,0,0,.42),
       transparent 45%
     );
 
@@ -272,12 +285,14 @@ rel="stylesheet">
   height: 42px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
   background: white;
+
   color: #171717;
 
   font-size: 18px;
@@ -285,16 +300,91 @@ rel="stylesheet">
 
 
 /* =====================================================
-   CONTACT
+   LIGHTBOX
+===================================================== */
+
+.lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0,0,0,.94);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.lightbox img {
+  display: block;
+
+  max-width: 92vw;
+
+  max-height: 88vh;
+
+  width: auto;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+
+  top: 25px;
+
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   CTA
 ===================================================== */
 
 .illustration-contact {
   width: min(900px, 90vw);
 
   margin: 30px auto 130px;
+
   padding: 90px 30px;
 
   background: #171717;
+
   color: white;
 
   text-align: center;
@@ -310,29 +400,37 @@ rel="stylesheet">
   font-size: clamp(45px, 6vw, 70px);
 
   line-height: .98;
+
   font-weight: 500;
+
   letter-spacing: -.05em;
 }
 
 .illustration-contact h2 em {
   color: #d79b7d;
+
   font-style: italic;
 }
 
 .illustration-contact a {
   display: inline-flex;
+
   align-items: center;
+
   gap: 10px;
 
   padding: 14px 23px;
 
   border: 1px solid white;
+
   border-radius: 100px;
 
   color: white;
+
   text-decoration: none;
 
   font-size: 12px;
+
   font-weight: 600;
 
   transition:
@@ -342,71 +440,8 @@ rel="stylesheet">
 
 .illustration-contact a:hover {
   background: white;
+
   color: #171717;
-}
-
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-
-  z-index: 1000;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 30px;
-
-  background: rgba(0,0,0,.94);
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition:
-    opacity .3s ease,
-    visibility .3s ease;
-}
-
-.lightbox.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.lightbox img {
-  display: block;
-
-  max-width: 92vw;
-  max-height: 88vh;
-
-  width: auto;
-  height: auto;
-
-  object-fit: contain;
-}
-
-.lightbox-close {
-  position: absolute;
-
-  top: 25px;
-  right: 30px;
-
-  width: 45px;
-  height: 45px;
-
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 50%;
-
-  background: transparent;
-  color: white;
-
-  font-size: 28px;
-
-  cursor: pointer;
 }
 
 
@@ -430,11 +465,13 @@ rel="stylesheet">
 
   .category-header {
     display: block;
+
     text-align: center;
   }
 
   .category-number {
     padding: 0;
+
     margin-bottom: 12px;
   }
 
@@ -445,26 +482,18 @@ rel="stylesheet">
 
   .illustration-grid {
     grid-template-columns: 1fr;
+
     gap: 22px;
   }
 
   .gallery-item,
   .gallery-item.featured {
     grid-column: 1;
-
-    min-height: 300px;
-  }
-
-  .gallery-item.featured {
-    min-height: 400px;
-  }
-
-  .gallery-item img {
-    object-fit: contain;
   }
 
   .illustration-contact {
     margin-bottom: 80px;
+
     padding: 70px 25px;
   }
 
@@ -504,7 +533,9 @@ rel="stylesheet">
       Illustration
     </a>
 
-    <a href="infographics.html">Infographics</a>
+    <a href="infographics.html">
+      Infographics
+    </a>
 
     <a class="nav-contact" href="contact.html">
       Contact
@@ -572,14 +603,20 @@ rel="stylesheet">
 
   <div class="illustration-grid">
 
-    <button class="gallery-item featured"
+
+    <button
+      class="gallery-item featured"
       type="button"
       data-full="2.png"
       aria-label="Open medical illustration 1">
 
-      <img src="2.png" alt="Medical illustration 1">
+      <img
+        src="2.png"
+        alt="Medical illustration 1">
 
-      <span class="image-number">01</span>
+      <span class="image-number">
+        01
+      </span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -588,12 +625,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="10.png"
       aria-label="Open medical illustration 2">
 
-      <img src="10.png" alt="Medical illustration 2">
+      <img
+        src="10.png"
+        alt="Medical illustration 2">
 
       <span class="image-number">02</span>
 
@@ -604,12 +644,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="11.png"
       aria-label="Open medical illustration 3">
 
-      <img src="11.png" alt="Medical illustration 3">
+      <img
+        src="11.png"
+        alt="Medical illustration 3">
 
       <span class="image-number">03</span>
 
@@ -620,12 +663,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="12.png"
       aria-label="Open medical illustration 4">
 
-      <img src="12.png" alt="Medical illustration 4">
+      <img
+        src="12.png"
+        alt="Medical illustration 4">
 
       <span class="image-number">04</span>
 
@@ -636,12 +682,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="13.png"
       aria-label="Open medical illustration 5">
 
-      <img src="13.png" alt="Medical illustration 5">
+      <img
+        src="13.png"
+        alt="Medical illustration 5">
 
       <span class="image-number">05</span>
 
@@ -652,12 +701,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="14.png"
       aria-label="Open medical illustration 6">
 
-      <img src="14.png" alt="Medical illustration 6">
+      <img
+        src="14.png"
+        alt="Medical illustration 6">
 
       <span class="image-number">06</span>
 
@@ -668,12 +720,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="15.png"
       aria-label="Open medical illustration 7">
 
-      <img src="15.png" alt="Medical illustration 7">
+      <img
+        src="15.png"
+        alt="Medical illustration 7">
 
       <span class="image-number">07</span>
 
@@ -684,12 +739,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="16.png"
       aria-label="Open medical illustration 8">
 
-      <img src="16.png" alt="Medical illustration 8">
+      <img
+        src="16.png"
+        alt="Medical illustration 8">
 
       <span class="image-number">08</span>
 
@@ -700,12 +758,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="30.png"
       aria-label="Open medical illustration 9">
 
-      <img src="30.png" alt="Medical illustration 9">
+      <img
+        src="30.png"
+        alt="Medical illustration 9">
 
       <span class="image-number">09</span>
 
@@ -716,12 +777,15 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="31.png"
       aria-label="Open medical illustration 10">
 
-      <img src="31.png" alt="Medical illustration 10">
+      <img
+        src="31.png"
+        alt="Medical illustration 10">
 
       <span class="image-number">10</span>
 
@@ -766,14 +830,20 @@ rel="stylesheet">
 
   <div class="illustration-grid">
 
-    <button class="gallery-item featured"
+
+    <button
+      class="gallery-item featured"
       type="button"
       data-full="26.png"
       aria-label="Open roofing illustration 1">
 
-      <img src="26.png" alt="Roofing illustration 1">
+      <img
+        src="26.png"
+        alt="Roofing illustration 1">
 
-      <span class="image-number">01</span>
+      <span class="image-number">
+        01
+      </span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -782,14 +852,19 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="29.png"
       aria-label="Open roofing illustration 2">
 
-      <img src="29.png" alt="Roofing illustration 2">
+      <img
+        src="29.png"
+        alt="Roofing illustration 2">
 
-      <span class="image-number">02</span>
+      <span class="image-number">
+        02
+      </span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -798,14 +873,19 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="25.png"
       aria-label="Open roofing illustration 3">
 
-      <img src="25.png" alt="Roofing illustration 3">
+      <img
+        src="25.png"
+        alt="Roofing illustration 3">
 
-      <span class="image-number">03</span>
+      <span class="image-number">
+        03
+      </span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -848,15 +928,20 @@ rel="stylesheet">
 
   <div class="illustration-grid">
 
-    <button class="gallery-item featured"
+
+    <button
+      class="gallery-item featured"
       type="button"
-      data-full="Upper Body Stretch.png"
+      data-full="Upper%20body%20stretch.png"
       aria-label="Open construction illustration 1">
 
-      <img src="Upper Body Stretch.png"
+      <img
+        src="Upper%20body%20stretch.png"
         alt="Construction illustration 1">
 
-      <span class="image-number">01</span>
+      <span class="image-number">
+        01
+      </span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -865,14 +950,19 @@ rel="stylesheet">
     </button>
 
 
-    <button class="gallery-item"
+    <button
+      class="gallery-item"
       type="button"
       data-full="32.png"
       aria-label="Open construction illustration 2">
 
-      <img src="32.png" alt="Construction illustration 2">
+      <img
+        src="32.png"
+        alt="Construction illustration 2">
 
-      <span class="image-number">02</span>
+      <span class="image-number">
+        02
+      </span>
 
       <span class="image-overlay">
         <span class="image-arrow">↗</span>
@@ -914,7 +1004,9 @@ rel="stylesheet">
      LIGHTBOX
 ===================================================== -->
 
-<div class="lightbox" aria-hidden="true">
+<div
+  class="lightbox"
+  aria-hidden="true">
 
   <button
     class="lightbox-close"
@@ -922,7 +1014,9 @@ rel="stylesheet">
     ×
   </button>
 
-  <img src="" alt="">
+  <img
+    src=""
+    alt="">
 
 </div>
 
@@ -941,6 +1035,7 @@ rel="stylesheet">
 
 
 <script src="script.js"></script>
+
 
 <script>
 
@@ -1029,7 +1124,9 @@ document.addEventListener(
       event.key === "Escape" &&
       lightbox.classList.contains("open")
     ) {
+
       closeLightbox();
+
     }
 
   }
