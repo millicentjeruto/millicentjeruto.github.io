@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Millicent Jeruto — creative designer specializing in 3D modelling, illustration and infographics.">
+  <meta
+    name="description"
+    content="Millicent Jeruto — creative designer specializing in 3D modelling, illustration and infographics."
+  >
 
   <title>Millicent Jeruto | Creative Designer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 
@@ -45,18 +51,23 @@
       color: inherit;
     }
 
+
     /* ================= NAVIGATION ================= */
 
     .nav {
       position: relative;
       z-index: 20;
+
       width: 90vw;
       max-width: 1400px;
+
       margin: auto;
       padding: 26px 0;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       background: var(--paper);
     }
 
@@ -81,7 +92,9 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 500;
+
       position: relative;
+
       transition: opacity .25s ease;
     }
 
@@ -91,17 +104,24 @@
 
     .nav nav a.active::after {
       content: "";
+
       position: absolute;
+
       left: 0;
       right: 0;
+
       bottom: -8px;
+
       height: 1px;
+
       background: var(--ink);
     }
 
     .nav .nav-contact {
       padding: 11px 18px;
+
       border: 1px solid var(--ink);
+
       border-radius: 100px;
     }
 
@@ -111,98 +131,138 @@
 
     .menu-toggle {
       display: none;
+
       border: 0;
       background: none;
+
       font-size: 25px;
+
       cursor: pointer;
     }
+
 
     /* ================= HERO ================= */
 
     .home-hero {
       min-height: calc(100vh - 85px);
+
       width: min(1400px, 90vw);
+
       margin: 0 auto;
+
       padding: 45px 0 70px;
 
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 70px;
+
       align-items: center;
     }
 
     .hero-content {
       width: 100%;
       max-width: 620px;
+
       margin: 0 auto;
     }
 
     .hero-label {
       display: flex;
+
       align-items: center;
+
       gap: 12px;
+
       margin-bottom: 30px;
 
       font-size: 11px;
+
       font-weight: 700;
+
       letter-spacing: .18em;
+
       color: var(--muted);
     }
 
     .hero-label::before {
       content: "";
+
       width: 35px;
+
       height: 1px;
+
       background: var(--ink);
     }
 
     .home-hero h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(64px, 8vw, 115px);
-      line-height: .88;
-      letter-spacing: -.065em;
+
+      font-size: clamp(58px, 7vw, 100px);
+
+      line-height: .95;
+
+      letter-spacing: -.06em;
+
       font-weight: 500;
+
       margin: 0;
     }
 
     .home-hero h1 em {
       font-style: italic;
+
       color: var(--accent);
     }
 
     .hero-description {
-      max-width: 510px;
-      margin: 38px auto 32px;
-      font-size: 17px;
+      max-width: 500px;
+
+      margin: 28px 0 34px;
+
+      font-size: 16px;
+
       line-height: 1.75;
-      color: #555;
+
+      color: #606060;
     }
 
     .hero-description strong {
       color: var(--ink);
+
       font-weight: 600;
     }
 
     .hero-actions {
       display: flex;
+
       align-items: center;
+
       gap: 14px;
+
       flex-wrap: wrap;
     }
 
     .home-button {
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
+
       gap: 12px;
 
       min-height: 52px;
+
       padding: 0 23px;
 
       border-radius: 100px;
+
       text-decoration: none;
 
       font-size: 13px;
+
       font-weight: 600;
 
       transition:
@@ -217,6 +277,7 @@
 
     .home-button.dark {
       background: var(--ink);
+
       color: white;
     }
 
@@ -226,6 +287,7 @@
 
     .home-button.light {
       border: 1px solid var(--line);
+
       background: transparent;
     }
 
@@ -233,15 +295,20 @@
       background: white;
     }
 
+
     /* ================= HERO IMAGE ================= */
 
     .hero-art {
       position: relative;
+
       min-height: 620px;
+
       width: 100%;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
     }
 
@@ -249,118 +316,118 @@
       position: absolute;
 
       width: min(42vw, 560px);
+
       height: min(42vw, 560px);
 
       border-radius: 50%;
+
       background: #e7e2d8;
     }
 
     .portrait {
       position: relative;
+
       z-index: 2;
 
-      width: min(30vw, 390px);
-      height: min(42vw, 510px);
+      width: min(32vw, 430px);
+
+      height: min(32vw, 430px);
 
       overflow: hidden;
 
       background: #ddd8ce;
 
-      transform: rotate(3deg);
+      border-radius: 50%;
+
+      border: 8px solid var(--paper);
 
       box-shadow:
-        20px 25px 70px rgba(0,0,0,.12);
+        0 25px 70px rgba(0, 0, 0, .15);
     }
 
     .portrait img {
       width: 100%;
+
       height: 100%;
 
-      object-fit: cover;
       display: block;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      border-radius: 50%;
     }
 
     .portrait-placeholder {
       width: 100%;
+
       height: 100%;
 
       display: none;
 
       flex-direction: column;
+
       justify-content: center;
+
       align-items: center;
 
       text-align: center;
+
+      border-radius: 50%;
     }
 
     .portrait-placeholder strong {
       font-family: "Playfair Display", serif;
+
       font-size: 90px;
+
       font-weight: 500;
     }
 
     .portrait-placeholder span {
       font-size: 10px;
+
       letter-spacing: .15em;
+
       text-transform: uppercase;
     }
 
+
+    /* ================= FLOATING MJ ================= */
+
     .floating-number {
       position: absolute;
+
       z-index: 4;
 
       top: 10%;
+
       right: 5%;
 
       width: 92px;
+
       height: 92px;
 
       border-radius: 50%;
 
       background: var(--ink);
+
       color: white;
 
       display: flex;
+
       justify-content: center;
+
       align-items: center;
 
       font-family: "Playfair Display", serif;
+
       font-size: 25px;
 
       transform: rotate(8deg);
     }
 
-    .floating-text {
-      position: absolute;
-      z-index: 4;
-
-      left: 1%;
-      bottom: 10%;
-
-      background: white;
-
-      padding: 20px 23px;
-
-      box-shadow:
-        0 15px 40px rgba(0,0,0,.09);
-    }
-
-    .floating-text small {
-      display: block;
-      margin-bottom: 7px;
-
-      font-size: 9px;
-      letter-spacing: .16em;
-      font-weight: 700;
-
-      color: var(--muted);
-    }
-
-    .floating-text strong {
-      font-family: "Playfair Display", serif;
-      font-size: 19px;
-      font-weight: 500;
-    }
 
     /* ================= MARQUEE ================= */
 
@@ -368,6 +435,7 @@
       overflow: hidden;
 
       border-top: 1px solid var(--line);
+
       border-bottom: 1px solid var(--line);
 
       padding: 17px 0;
@@ -377,6 +445,7 @@
 
     .marquee-track {
       display: inline-block;
+
       animation: marquee 24s linear infinite;
     }
 
@@ -384,7 +453,9 @@
       margin-right: 45px;
 
       font-size: 11px;
+
       letter-spacing: .18em;
+
       font-weight: 600;
 
       color: var(--muted);
@@ -392,10 +463,12 @@
 
     .marquee .dot {
       color: var(--accent);
+
       font-size: 18px;
     }
 
     @keyframes marquee {
+
       from {
         transform: translateX(0);
       }
@@ -403,67 +476,141 @@
       to {
         transform: translateX(-50%);
       }
+
     }
 
-    /* ================= INTRO ================= */
 
-    .home-section {
-      padding: 130px 5vw;
+    /* ================= CREATIVE STATEMENT ================= */
+
+    .creative-section {
+      padding: 150px 5vw;
+
+      background: #ebe9e2;
     }
 
-    .intro-grid {
-      max-width: 1250px;
+    .creative-inner {
+      width: min(1250px, 100%);
+
       margin: auto;
-
-      display: grid;
-      grid-template-columns: .65fr 1.35fr;
-
-      gap: 80px;
-
-      align-items: start;
     }
 
-    .section-label {
+    .creative-heading {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      margin-bottom: 35px;
+    }
+
+    .creative-heading p {
+      margin: 0;
+
       font-size: 10px;
+
       font-weight: 700;
-      letter-spacing: .18em;
+
+      letter-spacing: .2em;
+
       color: var(--muted);
-      margin-bottom: 25px;
     }
 
-    .intro-grid h2 {
+    .creative-line {
+      width: 40px;
+
+      height: 1px;
+
+      background: var(--ink);
+    }
+
+    .creative-inner h2 {
+      max-width: 1050px;
+
+      margin: 0;
+
       font-family: "Playfair Display", serif;
 
-      font-size: clamp(42px, 5vw, 72px);
+      font-size: clamp(55px, 7vw, 100px);
 
-      line-height: 1.02;
+      line-height: .98;
 
       font-weight: 500;
 
-      letter-spacing: -.045em;
-
-      margin: 0;
+      letter-spacing: -.06em;
     }
 
-    .intro-grid h2 em {
+    .creative-inner h2 em {
+      font-style: italic;
+
       color: var(--accent);
     }
 
-    .intro-grid p {
-      max-width: 650px;
+    .creative-bottom {
+      margin-top: 60px;
 
-      font-size: 18px;
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px;
+
+      align-items: end;
+
+      border-top: 1px solid rgba(23, 23, 23, .15);
+
+      padding-top: 30px;
+    }
+
+    .creative-description {
+      max-width: 540px;
+
+      margin: 0;
+
+      font-size: 16px;
+
       line-height: 1.8;
 
-      color: #606060;
-
-      margin: 25px 0 0;
+      color: #5f5f5f;
     }
+
+    .creative-tags {
+      display: flex;
+
+      justify-content: flex-end;
+
+      align-items: center;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+    }
+
+    .creative-tags span {
+      display: inline-flex;
+
+      align-items: center;
+
+      padding: 10px 17px;
+
+      border: 1px solid rgba(23, 23, 23, .18);
+
+      border-radius: 100px;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      color: #555;
+
+      background: rgba(255, 255, 255, .25);
+    }
+
 
     /* ================= SERVICES ================= */
 
     .services-section {
-      padding: 0 5vw 130px;
+      padding: 130px 5vw;
     }
 
     .services-heading {
@@ -474,6 +621,7 @@
       display: flex;
 
       align-items: end;
+
       justify-content: space-between;
 
       border-bottom: 1px solid var(--line);
@@ -503,6 +651,7 @@
 
     .service-list {
       max-width: 1250px;
+
       margin: auto;
     }
 
@@ -528,9 +677,10 @@
 
     .service:hover {
       padding-left: 20px;
+
       padding-right: 20px;
 
-      background: rgba(255,255,255,.45);
+      background: rgba(255, 255, 255, .45);
     }
 
     .service-number {
@@ -570,8 +720,9 @@
     }
 
     .service:hover .service-arrow {
-      transform: translate(5px,-5px);
+      transform: translate(5px, -5px);
     }
+
 
     /* ================= STATEMENT ================= */
 
@@ -615,6 +766,7 @@
       color: #d79b7d;
     }
 
+
     /* ================= CTA ================= */
 
     .home-cta {
@@ -641,9 +793,12 @@
       color: var(--accent);
     }
 
+
     /* ================= FOOTER ================= */
 
     footer {
+      width: 90vw;
+
       max-width: 1400px;
 
       margin: auto;
@@ -662,6 +817,7 @@
 
       font-size: 11px;
     }
+
 
     /* ================= TABLET ================= */
 
@@ -701,6 +857,7 @@
 
       .hero-description {
         margin-left: auto;
+
         margin-right: auto;
       }
 
@@ -714,25 +871,30 @@
 
       .hero-circle {
         width: 400px;
+
         height: 400px;
       }
 
       .portrait {
-        width: 290px;
-        height: 390px;
+        width: 330px;
+
+        height: 330px;
       }
 
-      .intro-grid {
+      .creative-section {
+        padding: 110px 6vw;
+      }
+
+      .creative-bottom {
         grid-template-columns: 1fr;
 
-        gap: 25px;
+        gap: 35px;
 
-        text-align: center;
+        margin-top: 45px;
       }
 
-      .intro-grid p {
-        margin-left: auto;
-        margin-right: auto;
+      .creative-tags {
+        justify-content: flex-start;
       }
 
       .services-heading {
@@ -744,7 +906,9 @@
       .services-heading p {
         margin-top: 10px;
       }
+
     }
+
 
     /* ================= MOBILE ================= */
 
@@ -752,6 +916,7 @@
 
       .nav {
         width: 88vw;
+
         padding: 22px 0;
       }
 
@@ -762,7 +927,7 @@
       }
 
       .home-hero h1 {
-        font-size: 65px;
+        font-size: 58px;
       }
 
       .hero-description {
@@ -775,16 +940,19 @@
 
       .hero-circle {
         width: 320px;
+
         height: 320px;
       }
 
       .portrait {
-        width: 245px;
-        height: 340px;
+        width: 280px;
+
+        height: 280px;
       }
 
       .floating-number {
         width: 68px;
+
         height: 68px;
 
         font-size: 20px;
@@ -792,30 +960,42 @@
         right: 2%;
       }
 
-      .floating-text {
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        bottom: 3%;
-
-        padding: 15px 18px;
-
-        white-space: nowrap;
-      }
-
-      .home-section {
+      .creative-section {
         padding: 90px 6vw;
 
         text-align: center;
       }
 
-      .intro-grid h2 {
-        font-size: 43px;
+      .creative-heading {
+        justify-content: center;
+
+        margin-bottom: 25px;
+      }
+
+      .creative-inner h2 {
+        font-size: 50px;
+      }
+
+      .creative-bottom {
+        margin-top: 40px;
+
+        text-align: center;
+      }
+
+      .creative-description {
+        font-size: 15px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+      }
+
+      .creative-tags {
+        justify-content: center;
       }
 
       .services-section {
-        padding: 0 6vw 90px;
+        padding: 90px 6vw;
       }
 
       .services-heading h2 {
@@ -859,14 +1039,17 @@
 
         text-align: center;
       }
+
     }
 
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
+
+  <!-- ================= NAVIGATION ================= -->
 
   <header class="nav">
 
@@ -911,60 +1094,81 @@
 
   <main>
 
-    <!-- HERO -->
+
+    <!-- ================= HERO ================= -->
 
     <section class="home-hero">
 
+
       <div class="hero-content">
+
 
         <div class="hero-label">
           CREATIVE DESIGNER
         </div>
 
+
         <h1>
-          Ideas<br>
-          made <em>visual.</em>
+          Hi, I'm<br>
+          <em>Millicent.</em>
         </h1>
 
+
         <p class="hero-description">
-          Hi, I’m <strong>Millicent Jeruto</strong> — a creative designer
-          exploring <strong>3D modelling, illustration and infographics</strong>
-          to turn ideas into clear and engaging visual experiences.
+          A creative designer working across 3D modelling, illustration and
+          infographics — creating visuals that communicate ideas with
+          clarity and character.
         </p>
+
 
         <div class="hero-actions">
 
-          <a class="home-button dark" href="3d-modelling.html">
+          <a
+            class="home-button dark"
+            href="3d-modelling.html"
+          >
             Explore my work
             <span>↗</span>
           </a>
 
-          <a class="home-button light" href="about.html">
+
+          <a
+            class="home-button light"
+            href="about.html"
+          >
             About me
           </a>
 
         </div>
 
+
       </div>
 
 
-      <!-- PROFILE -->
+      <!-- ================= PROFILE IMAGE ================= -->
 
       <div class="hero-art">
 
         <div class="hero-circle"></div>
+
 
         <div class="portrait">
 
           <img
             src="pfp.png"
             alt="Portrait of Millicent Jeruto"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            onerror="
+              this.style.display='none';
+              this.nextElementSibling.style.display='flex';
+            "
           >
+
 
           <div class="portrait-placeholder">
 
-            <strong>MJ</strong>
+            <strong>
+              MJ
+            </strong>
 
             <span>
               Creative Designer
@@ -974,28 +1178,19 @@
 
         </div>
 
+
         <div class="floating-number">
           MJ
         </div>
 
-        <div class="floating-text">
-
-          <small>
-            FOCUS
-          </small>
-
-          <strong>
-            3D · Illustration · Visuals
-          </strong>
-
-        </div>
 
       </div>
+
 
     </section>
 
 
-    <!-- MARQUEE -->
+    <!-- ================= MARQUEE ================= -->
 
     <div class="marquee">
 
@@ -1030,44 +1225,71 @@
     </div>
 
 
-    <!-- INTRODUCTION -->
+    <!-- ================= CREATIVE STATEMENT ================= -->
 
-    <section class="home-section">
+    <section class="creative-section">
 
-      <div class="intro-grid">
 
-        <div>
+      <div class="creative-inner">
 
-          <div class="section-label">
-            01 — APPROACH
-          </div>
 
-        </div>
+        <div class="creative-heading">
 
-        <div>
-
-          <h2>
-            Turning concepts into
-            <em>visual experiences.</em>
-          </h2>
+          <span class="creative-line"></span>
 
           <p>
-            I like taking a simple idea and finding a visual way to make it
-            clearer, more interesting and memorable. My work combines
-            creativity with thoughtful design to communicate ideas through
-            different visual forms.
+            MY CREATIVE APPROACH
           </p>
 
         </div>
 
+
+        <h2>
+          I turn ideas into
+          <em>something you can see.</em>
+        </h2>
+
+
+        <div class="creative-bottom">
+
+
+          <p class="creative-description">
+            I enjoy exploring different forms of visual design, from building
+            objects in 3D to creating illustrations and transforming
+            information into engaging visuals.
+          </p>
+
+
+          <div class="creative-tags">
+
+            <span>
+              3D
+            </span>
+
+            <span>
+              Illustration
+            </span>
+
+            <span>
+              Visual storytelling
+            </span>
+
+          </div>
+
+
+        </div>
+
+
       </div>
+
 
     </section>
 
 
-    <!-- SERVICES -->
+    <!-- ================= SERVICES ================= -->
 
     <section class="services-section">
+
 
       <div class="services-heading">
 
@@ -1084,11 +1306,16 @@
 
       <div class="service-list">
 
-        <a class="service" href="3d-modelling.html">
+
+        <a
+          class="service"
+          href="3d-modelling.html"
+        >
 
           <span class="service-number">
             01
           </span>
+
 
           <div>
 
@@ -1103,6 +1330,7 @@
 
           </div>
 
+
           <span class="service-arrow">
             ↗
           </span>
@@ -1110,11 +1338,15 @@
         </a>
 
 
-        <a class="service" href="illustration.html">
+        <a
+          class="service"
+          href="illustration.html"
+        >
 
           <span class="service-number">
             02
           </span>
+
 
           <div>
 
@@ -1129,6 +1361,7 @@
 
           </div>
 
+
           <span class="service-arrow">
             ↗
           </span>
@@ -1136,11 +1369,15 @@
         </a>
 
 
-        <a class="service" href="infographics.html">
+        <a
+          class="service"
+          href="infographics.html"
+        >
 
           <span class="service-number">
             03
           </span>
+
 
           <div>
 
@@ -1155,24 +1392,29 @@
 
           </div>
 
+
           <span class="service-arrow">
             ↗
           </span>
 
         </a>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- STATEMENT -->
+    <!-- ================= STATEMENT ================= -->
 
     <section class="statement">
+
 
       <small>
         DESIGN · PROCESS · EXPRESSION
       </small>
+
 
       <h2>
         Good design doesn't just
@@ -1180,36 +1422,49 @@
         It communicates.
       </h2>
 
-      <a class="home-button light" href="infographics.html">
+
+      <a
+        class="home-button light"
+        href="infographics.html"
+      >
         See the work ↗
       </a>
+
 
     </section>
 
 
-    <!-- CONTACT CTA -->
+    <!-- ================= CTA ================= -->
 
     <section class="home-cta">
+
 
       <div class="section-label">
         LET'S CREATE
       </div>
+
 
       <h2>
         Have an idea?<br>
         <em>Let’s bring it to life.</em>
       </h2>
 
-      <a class="home-button dark" href="contact.html">
+
+      <a
+        class="home-button dark"
+        href="contact.html"
+      >
         Get in touch ↗
       </a>
 
+
     </section>
+
 
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
 
   <footer>
 
