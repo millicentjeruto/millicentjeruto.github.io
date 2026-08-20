@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,26 +19,15 @@
 
 <style>
 
-/* =========================================================
-   ABOUT PAGE
-========================================================= */
-
 .about-page {
   background: #f5f4ef;
   color: #171717;
 }
 
-
-/* =========================================================
-   HERO
-========================================================= */
-
 .about-hero {
   width: min(1180px, 90vw);
   margin: 0 auto;
-
   padding: 95px 0 90px;
-
   text-align: center;
 }
 
@@ -47,15 +37,10 @@
 
 .about-hero h1 {
   margin: 0;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(70px, 10vw, 135px);
-
   line-height: .88;
-
   font-weight: 500;
-
   letter-spacing: -.065em;
 }
 
@@ -66,62 +51,43 @@
 
 .about-hero .intro {
   max-width: 570px;
-
   margin: 35px auto 0;
-
   color: #6f6f6f;
-
   font-size: 15px;
-
   line-height: 1.9;
 }
 
 
-/* =========================================================
-   PORTRAIT + INTRODUCTION
-========================================================= */
+/* =====================================================
+   INTRODUCTION
+===================================================== */
 
 .about-introduction {
   width: min(1180px, 90vw);
   margin: 0 auto;
 
   display: grid;
-
   grid-template-columns: minmax(300px, 460px) minmax(300px, 1fr);
-
   gap: clamp(55px, 9vw, 130px);
-
   align-items: center;
 
   padding-bottom: 125px;
 }
 
-
-/* PHOTO */
-
 .about-photo {
   width: 100%;
-
   aspect-ratio: 4 / 5;
-
   overflow: hidden;
-
   background: #deddd7;
 }
 
 .about-photo img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-
   object-position: center;
 }
-
-
-/* TEXT */
 
 .about-introduction-text {
   max-width: 560px;
@@ -135,13 +101,9 @@
   margin: 0 0 28px;
 
   font-family: "Playfair Display", serif;
-
   font-size: clamp(38px, 5vw, 64px);
-
   line-height: .98;
-
   font-weight: 500;
-
   letter-spacing: -.055em;
 }
 
@@ -152,18 +114,15 @@
 
 .about-introduction-text p {
   margin: 0 0 20px;
-
   color: #6d6d6d;
-
   font-size: 14px;
-
   line-height: 1.9;
 }
 
 
-/* =========================================================
-   CREATIVE INTERESTS
-========================================================= */
+/* =====================================================
+   WHAT I DO
+===================================================== */
 
 .about-interests {
   width: min(1180px, 90vw);
@@ -176,7 +135,6 @@
 
 .about-interests-heading {
   max-width: 700px;
-
   margin-bottom: 65px;
 }
 
@@ -184,13 +142,9 @@
   margin: 15px 0 0;
 
   font-family: "Playfair Display", serif;
-
   font-size: clamp(45px, 6vw, 76px);
-
   line-height: .94;
-
   font-weight: 500;
-
   letter-spacing: -.06em;
 }
 
@@ -199,20 +153,15 @@
   font-style: italic;
 }
 
-
-/* INTEREST LIST */
-
 .interest-list {
   border-top: 1px solid #d5d4ce;
 }
 
 .interest {
   display: grid;
-
   grid-template-columns: 70px 1fr auto;
 
   align-items: center;
-
   gap: 30px;
 
   padding: 28px 0;
@@ -220,53 +169,52 @@
   border-bottom: 1px solid #d5d4ce;
 
   text-decoration: none;
-
   color: inherit;
 
-  transition: padding .25s ease;
+  transition:
+    padding .25s ease,
+    background .25s ease;
 }
 
 .interest:hover {
   padding-left: 12px;
   padding-right: 12px;
+  background: rgba(255,255,255,.35);
 }
 
 .interest-number {
   color: #c87952;
-
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: .12em;
 }
 
 .interest-name {
   font-family: "Playfair Display", serif;
-
   font-size: clamp(27px, 3vw, 40px);
-
   font-weight: 500;
 }
 
 .interest-detail {
   color: #777;
-
   font-size: 11px;
-
   text-transform: uppercase;
-
   letter-spacing: .1em;
 }
 
 .interest-arrow {
   font-size: 20px;
+  transition: transform .25s ease;
+}
+
+.interest:hover .interest-arrow {
+  transform: translate(4px, -4px);
 }
 
 
-/* =========================================================
-   LARGE STATEMENT
-========================================================= */
+/* =====================================================
+   STATEMENT
+===================================================== */
 
 .about-statement {
   width: min(1180px, 90vw);
@@ -283,13 +231,9 @@
   margin: 0;
 
   font-family: "Playfair Display", serif;
-
   font-size: clamp(42px, 6vw, 78px);
-
   line-height: 1.02;
-
   letter-spacing: -.06em;
-
   font-weight: 500;
 }
 
@@ -306,23 +250,20 @@
   color: #777;
 
   font-size: 13px;
-
   line-height: 1.8;
 }
 
 
-/* =========================================================
-   PERSONAL SECTION
-========================================================= */
+/* =====================================================
+   PERSONAL
+===================================================== */
 
 .about-personal {
   width: min(1180px, 90vw);
   margin: 0 auto;
 
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 80px;
 
   padding-bottom: 130px;
@@ -332,13 +273,9 @@
   margin: 15px 0 0;
 
   font-family: "Playfair Display", serif;
-
   font-size: clamp(42px, 5vw, 65px);
-
   line-height: .96;
-
   font-weight: 500;
-
   letter-spacing: -.055em;
 }
 
@@ -353,16 +290,14 @@
   max-width: 500px;
 
   color: #6f6f6f;
-
   font-size: 14px;
-
   line-height: 1.95;
 }
 
 
-/* =========================================================
+/* =====================================================
    CTA
-========================================================= */
+===================================================== */
 
 .about-cta {
   width: min(1180px, 90vw);
@@ -375,7 +310,6 @@
   padding: 80px 30px;
 
   background: #171717;
-
   color: white;
 
   text-align: center;
@@ -387,17 +321,12 @@
 
 .about-cta-inner h2 {
   max-width: 760px;
-
   margin: 20px auto 32px;
 
   font-family: "Playfair Display", serif;
-
   font-size: clamp(45px, 6vw, 75px);
-
   line-height: .95;
-
   font-weight: 500;
-
   letter-spacing: -.06em;
 }
 
@@ -408,23 +337,18 @@
 
 .about-cta-button {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
 
   padding: 14px 22px;
 
   border: 1px solid rgba(255,255,255,.7);
-
   border-radius: 100px;
 
   color: white;
-
   text-decoration: none;
 
   font-size: 12px;
-
   font-weight: 600;
 
   transition: all .25s ease;
@@ -436,14 +360,14 @@
 }
 
 
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
 @media (max-width: 760px) {
 
   .about-hero {
-    padding: 70px 0 70px;
+    padding: 70px 0;
   }
 
   .about-hero h1 {
@@ -452,9 +376,7 @@
 
   .about-introduction {
     grid-template-columns: 1fr;
-
     gap: 50px;
-
     padding-bottom: 90px;
   }
 
@@ -469,7 +391,6 @@
 
   .interest {
     grid-template-columns: 45px 1fr auto;
-
     gap: 15px;
   }
 
@@ -483,9 +404,7 @@
 
   .about-personal {
     grid-template-columns: 1fr;
-
     gap: 35px;
-
     padding-bottom: 90px;
   }
 
@@ -506,10 +425,6 @@
 
 <body class="about-page">
 
-
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
 
 <header class="nav">
 
@@ -545,10 +460,6 @@
 <main>
 
 
-<!-- =========================================================
-     INTRO
-========================================================= -->
-
 <section class="about-hero">
 
   <p class="eyebrow">
@@ -567,12 +478,7 @@
 </section>
 
 
-<!-- =========================================================
-     PHOTO + INTRODUCTION
-========================================================= -->
-
 <section class="about-introduction">
-
 
   <div class="about-photo">
 
@@ -615,24 +521,19 @@
 
   </div>
 
-
 </section>
 
-
-<!-- =========================================================
-     CREATIVE INTERESTS
-========================================================= -->
 
 <section class="about-interests">
 
   <div class="about-interests-heading">
 
     <p class="eyebrow">
-      WHAT I'M EXPLORING
+      WHAT I CREATE
     </p>
 
     <h2>
-      Different tools.<br>
+      Three disciplines.<br>
       One love for <em>visuals.</em>
     </h2>
 
@@ -640,7 +541,6 @@
 
 
   <div class="interest-list">
-
 
     <a class="interest" href="illustration.html">
 
@@ -674,7 +574,7 @@
       </span>
 
       <span class="interest-detail">
-        Exploring
+        Form · Materials · Lighting
       </span>
 
       <span class="interest-arrow">
@@ -695,7 +595,7 @@
       </span>
 
       <span class="interest-detail">
-        Exploring
+        Information · Visual storytelling
       </span>
 
       <span class="interest-arrow">
@@ -704,34 +604,28 @@
 
     </a>
 
-
   </div>
 
 </section>
 
-
-<!-- =========================================================
-     STATEMENT
-========================================================= -->
 
 <section class="about-statement">
 
   <div class="about-statement-inner">
 
     <p class="eyebrow">
-      WHY I CREATE
+      MY APPROACH
     </p>
 
     <blockquote>
-      “Curiosity is usually where
-      the work <em>starts.</em>”
+      I create visuals that make ideas
+      <em>clearer.</em>
     </blockquote>
 
     <p class="about-statement-caption">
-      I like experimenting with an idea instead of
-      immediately deciding what it should become.
-      Sometimes the process of figuring it out is
-      just as interesting as the final result.
+      Whether I'm illustrating a subject, building something
+      in 3D or organising information, I enjoy finding a
+      visual approach that makes the idea easier to understand.
     </p>
 
   </div>
@@ -739,12 +633,7 @@
 </section>
 
 
-<!-- =========================================================
-     PERSONAL
-========================================================= -->
-
 <section class="about-personal">
-
 
   <div class="about-personal-heading">
 
@@ -753,8 +642,8 @@
     </p>
 
     <h2>
-      Still figuring things
-      <em>out.</em>
+      Always learning.<br>
+      Always <em>exploring.</em>
     </h2>
 
   </div>
@@ -777,31 +666,36 @@
 
   </div>
 
-
 </section>
 
-
-<!-- =========================================================
-     CTA
-========================================================= -->
 
 <section class="about-cta">
 
   <div class="about-cta-inner">
 
     <p class="eyebrow">
-      KEEP EXPLORING
+      NEXT IN THE PORTFOLIO
     </p>
 
     <h2>
-      See what I've
-      <em>made.</em>
+      3D Modelling.
     </h2>
+
+    <p style="
+      max-width:520px;
+      margin:0 auto 30px;
+      color:#bdbdbd;
+      font-size:13px;
+      line-height:1.8;
+    ">
+      Exploring form, shape, materials and lighting
+      through three-dimensional design.
+    </p>
 
     <a
       class="about-cta-button"
-      href="illustration.html">
-      Explore the work ↗
+      href="3d-modelling.html">
+      Explore 3D Modelling ↗
     </a>
 
   </div>
@@ -811,10 +705,6 @@
 
 </main>
 
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
 <footer>
 
@@ -833,3 +723,4 @@
 
 </body>
 </html>
+```
