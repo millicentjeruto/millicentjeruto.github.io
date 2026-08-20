@@ -5,20 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="description"
-  content="Illustration portfolio by Millicent Jeruto featuring medical, roofing and construction illustrations."
->
+<meta name="description" content="Illustration portfolio by Millicent Jeruto featuring medical, roofing and construction illustrations.">
 
 <title>Illustration | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-  rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -39,40 +33,14 @@
 ===================================================== */
 
 .illustration-hero {
-  width: min(1250px, 90vw);
+  width: min(1200px, 90vw);
   margin: 0 auto;
-
-  padding: 110px 0 100px;
-
+  padding: 105px 0 90px;
   text-align: center;
 }
 
-.illustration-label {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  gap: 12px;
-
+.illustration-hero .eyebrow {
   margin-bottom: 25px;
-
-  color: #737373;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: .2em;
-}
-
-.illustration-label::before,
-.illustration-label::after {
-  content: "";
-
-  width: 35px;
-  height: 1px;
-
-  background: #171717;
 }
 
 .illustration-hero h1 {
@@ -80,46 +48,40 @@
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(65px, 9vw, 125px);
-
-  line-height: .88;
-
-  letter-spacing: -.065em;
+  font-size: clamp(65px, 9vw, 120px);
+  line-height: .9;
 
   font-weight: 500;
+  letter-spacing: -.06em;
 }
 
 .illustration-hero h1 em {
-  color: #c87952;
-
   font-style: italic;
+  color: #c87952;
 }
 
 .illustration-hero p {
   max-width: 620px;
+  margin: 30px auto 0;
 
-  margin: 35px auto 0;
+  color: #707070;
 
-  color: #6d6d6d;
-
-  font-size: 15px;
-
+  font-size: 14px;
   line-height: 1.8;
 }
 
 
 /* =====================================================
-   CATEGORY SECTIONS
+   CATEGORY SECTION
 ===================================================== */
 
 .illustration-section {
-  width: min(1250px, 90vw);
-
+  width: min(1200px, 90vw);
   margin: 0 auto;
 
   padding: 90px 0 110px;
 
-  border-top: 1px solid #d9d8d2;
+  border-top: 1px solid #d8d7d1;
 }
 
 
@@ -130,23 +92,22 @@
 .category-header {
   display: grid;
 
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 90px 1fr;
 
-  gap: 35px;
+  gap: 30px;
 
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 
 .category-number {
+  padding-top: 9px;
+
   color: #c87952;
 
   font-size: 11px;
-
   font-weight: 700;
 
-  letter-spacing: .12em;
-
-  padding-top: 8px;
+  letter-spacing: .15em;
 }
 
 .category-content h2 {
@@ -154,7 +115,7 @@
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(48px, 6vw, 75px);
+  font-size: clamp(48px, 6vw, 72px);
 
   line-height: .95;
 
@@ -168,9 +129,9 @@
 }
 
 .category-content p {
-  max-width: 580px;
+  max-width: 570px;
 
-  margin: 22px 0 0;
+  margin: 20px 0 0;
 
   color: #777;
 
@@ -181,49 +142,23 @@
 
 
 /* =====================================================
-   PROJECT GRID
+   IMAGE GRID
 ===================================================== */
 
 .illustration-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 
-  gap: 70px 35px;
+  gap: 35px;
 }
 
 
 /* =====================================================
-   PROJECT
+   IMAGE ITEM
 ===================================================== */
 
-.illustration-project {
-  margin: 0;
-}
-
-.illustration-project:nth-child(3n) {
-  margin-top: 45px;
-}
-
-
-/* Make first project larger */
-
-.illustration-project.featured {
-  grid-column: 1 / -1;
-
-  margin-top: 0;
-}
-
-.illustration-project.featured .illustration-image {
-  aspect-ratio: 16 / 8;
-}
-
-
-/* =====================================================
-   IMAGE
-===================================================== */
-
-.illustration-image {
+.gallery-item {
   position: relative;
 
   display: block;
@@ -238,16 +173,16 @@
 
   border: none;
 
-  background: #e7e5df;
+  background: #e4e2dc;
 
   cursor: pointer;
 }
 
-.illustration-image img {
+.gallery-item img {
+  display: block;
+
   width: 100%;
   height: 100%;
-
-  display: block;
 
   object-fit: cover;
 
@@ -256,18 +191,50 @@
     filter .4s ease;
 }
 
-.illustration-image:hover img {
+.gallery-item:hover img {
   transform: scale(1.045);
-
-  filter: brightness(.88);
+  filter: brightness(.82);
 }
 
 
 /* =====================================================
-   IMAGE HOVER
+   IMAGE NUMBER
 ===================================================== */
 
-.illustration-overlay {
+.image-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  z-index: 2;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.92);
+
+  color: #171717;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: .04em;
+}
+
+
+/* =====================================================
+   HOVER OVERLAY
+===================================================== */
+
+.image-overlay {
   position: absolute;
 
   inset: 0;
@@ -276,14 +243,14 @@
 
   align-items: flex-end;
 
-  justify-content: space-between;
+  justify-content: flex-end;
 
-  padding: 20px;
+  padding: 18px;
 
   background:
     linear-gradient(
       to top,
-      rgba(0,0,0,.58),
+      rgba(0,0,0,.48),
       transparent 45%
     );
 
@@ -294,23 +261,13 @@
   pointer-events: none;
 }
 
-.illustration-image:hover .illustration-overlay {
+.gallery-item:hover .image-overlay {
   opacity: 1;
 }
 
-.overlay-label {
-  color: white;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .12em;
-}
-
-.overlay-arrow {
-  width: 40px;
-  height: 40px;
+.image-arrow {
+  width: 42px;
+  height: 42px;
 
   display: flex;
 
@@ -323,162 +280,73 @@
 
   color: #171717;
 
-  font-size: 17px;
+  font-size: 18px;
 }
 
 
 /* =====================================================
-   PROJECT INFORMATION
+   FEATURED IMAGE
 ===================================================== */
 
-.project-info {
-  display: flex;
+.gallery-item.featured {
+  grid-column: 1 / -1;
 
-  justify-content: space-between;
-
-  align-items: flex-start;
-
-  gap: 20px;
-
-  padding-top: 18px;
-}
-
-.project-info-main {
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 15px;
-}
-
-.project-number {
-  padding-top: 5px;
-
-  color: #c87952;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .1em;
-}
-
-.project-title {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 25px;
-
-  line-height: 1.1;
-
-  font-weight: 500;
-}
-
-.project-category {
-  margin: 7px 0 0;
-
-  color: #888;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: .12em;
-
-  text-transform: uppercase;
-}
-
-.project-arrow {
-  color: #777;
-
-  font-size: 20px;
-
-  transition:
-    transform .3s ease,
-    color .3s ease;
-}
-
-.illustration-project:hover .project-arrow {
-  transform: translate(4px, -4px);
-
-  color: #c87952;
+  aspect-ratio: 16 / 8;
 }
 
 
 /* =====================================================
-   SECTION DIVIDER
+   CONTACT CTA
 ===================================================== */
 
-.section-end {
-  width: 100%;
-
-  height: 1px;
-
-  margin-top: 90px;
-
-  background: #d9d8d2;
-}
-
-
-/* =====================================================
-   BOTTOM CTA
-===================================================== */
-
-.illustration-cta {
+.illustration-contact {
   width: min(900px, 90vw);
 
-  margin: 30px auto 140px;
+  margin: 40px auto 130px;
 
-  padding: 100px 30px;
-
-  text-align: center;
+  padding: 90px 30px;
 
   background: #171717;
 
   color: white;
+
+  text-align: center;
 }
 
-.illustration-cta small {
+.illustration-contact .eyebrow {
   color: #aaa;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .2em;
 }
 
-.illustration-cta h2 {
-  max-width: 700px;
+.illustration-contact h2 {
+  margin: 22px auto 30px;
 
-  margin: 25px auto 35px;
+  max-width: 650px;
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(45px, 6vw, 75px);
+  font-size: clamp(45px, 6vw, 70px);
 
   line-height: .98;
 
-  letter-spacing: -.05em;
-
   font-weight: 500;
+
+  letter-spacing: -.05em;
 }
 
-.illustration-cta h2 em {
+.illustration-contact h2 em {
   color: #d79b7d;
 
   font-style: italic;
 }
 
-.illustration-cta a {
+.illustration-contact a {
   display: inline-flex;
 
   align-items: center;
 
   gap: 10px;
 
-  padding: 14px 22px;
+  padding: 14px 23px;
 
   border: 1px solid white;
 
@@ -497,9 +365,8 @@
     color .25s ease;
 }
 
-.illustration-cta a:hover {
+.illustration-contact a:hover {
   background: white;
-
   color: #171717;
 }
 
@@ -513,12 +380,11 @@
 
   inset: 0;
 
-  z-index: 100;
+  z-index: 1000;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   padding: 30px;
@@ -526,7 +392,6 @@
   background: rgba(0,0,0,.94);
 
   opacity: 0;
-
   visibility: hidden;
 
   transition:
@@ -536,16 +401,12 @@
 
 .lightbox.open {
   opacity: 1;
-
   visibility: visible;
 }
 
 .lightbox img {
   max-width: 92vw;
-
   max-height: 88vh;
-
-  display: block;
 
   object-fit: contain;
 }
@@ -567,9 +428,7 @@
 
   color: white;
 
-  font-size: 27px;
-
-  line-height: 1;
+  font-size: 28px;
 
   cursor: pointer;
 }
@@ -586,22 +445,20 @@
   }
 
   .illustration-hero h1 {
-    font-size: 62px;
+    font-size: 60px;
   }
 
   .illustration-section {
-    padding: 70px 0 85px;
+    padding: 70px 0 80px;
   }
 
   .category-header {
     display: block;
-
     text-align: center;
   }
 
   .category-number {
     padding: 0;
-
     margin-bottom: 12px;
   }
 
@@ -612,30 +469,17 @@
 
   .illustration-grid {
     grid-template-columns: 1fr;
-
-    gap: 55px;
+    gap: 25px;
   }
 
-  .illustration-project:nth-child(3n) {
-    margin-top: 0;
-  }
-
-  .illustration-project.featured {
+  .gallery-item.featured {
     grid-column: auto;
-  }
-
-  .illustration-project.featured .illustration-image {
     aspect-ratio: 4 / 3;
   }
 
-  .project-title {
-    font-size: 22px;
-  }
-
-  .illustration-cta {
-    margin-bottom: 90px;
-
-    padding: 75px 25px;
+  .illustration-contact {
+    margin-bottom: 80px;
+    padding: 70px 25px;
   }
 
 }
@@ -648,7 +492,7 @@
 @media (max-width: 430px) {
 
   .illustration-hero h1 {
-    font-size: 53px;
+    font-size: 52px;
   }
 
   .category-content h2 {
@@ -684,33 +528,19 @@
 
   <nav>
 
-    <a href="index.html">
-      Home
-    </a>
+    <a href="index.html">Home</a>
 
-    <a href="about.html">
-      About
-    </a>
+    <a href="about.html">About</a>
 
-    <a href="3d-modelling.html">
-      3D Modelling
-    </a>
+    <a href="3d-modelling.html">3D Modelling</a>
 
-    <a
-      class="active"
-      href="illustration.html"
-    >
+    <a class="active" href="illustration.html">
       Illustration
     </a>
 
-    <a href="infographics.html">
-      Infographics
-    </a>
+    <a href="infographics.html">Infographics</a>
 
-    <a
-      class="nav-contact"
-      href="contact.html"
-    >
+    <a class="nav-contact" href="contact.html">
       Contact
     </a>
 
@@ -728,16 +558,16 @@
 
 <section class="illustration-hero">
 
-  <div class="illustration-label">
-    03 / 03
-  </div>
+  <p class="eyebrow">
+    ILLUSTRATION
+  </p>
 
   <h1>
-    <em>Illustration</em>
+    <em>Visual</em> Stories.
   </h1>
 
   <p>
-    A collection of visual work exploring
+    A collection of illustration work exploring
     medical subjects, roofing, construction
     and practical visual communication.
   </p>
@@ -746,7 +576,7 @@
 
 
 <!-- =====================================================
-     MEDICAL
+     01 — MEDICAL
 ===================================================== -->
 
 <section class="illustration-section">
@@ -777,525 +607,254 @@
   <div class="illustration-grid">
 
 
-    <!-- MEDICAL 01 — 2.png -->
+    <!-- 01 — 2.png -->
 
-    <article class="illustration-project featured">
+    <button
+      class="gallery-item featured"
+      type="button"
+      data-full="2.png"
+      aria-label="Open medical illustration 1"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="2.png"
-        aria-label="Open medical illustration 1"
+      <img
+        src="2.png"
+        alt="Medical illustration 1"
       >
 
-        <img
-          src="2.png"
-          alt="Medical illustration 1"
-        >
+      <span class="image-number">
+        01
+      </span>
 
-        <div class="illustration-overlay">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-label">
-            MEDICAL · 01
-          </span>
-
-          <span class="overlay-arrow">
-            ↗
-          </span>
-
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">
-            01
-          </span>
-
-          <div>
-
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-
-          </div>
-
-        </div>
-
-        <span class="project-arrow">
-          ↗
-        </span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 02 — 10.png -->
+    <!-- 02 — 10.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="10.png"
+      aria-label="Open medical illustration 2"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="10.png"
-        aria-label="Open medical illustration 2"
+      <img
+        src="10.png"
+        alt="Medical illustration 2"
       >
 
-        <img
-          src="10.png"
-          alt="Medical illustration 2"
-        >
+      <span class="image-number">
+        02
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 02
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">02</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 03 — 11.png -->
+    <!-- 03 — 11.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="11.png"
+      aria-label="Open medical illustration 3"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="11.png"
-        aria-label="Open medical illustration 3"
+      <img
+        src="11.png"
+        alt="Medical illustration 3"
       >
 
-        <img
-          src="11.png"
-          alt="Medical illustration 3"
-        >
+      <span class="image-number">
+        03
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 03
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">03</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 04 — 12.png -->
+    <!-- 04 — 12.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="12.png"
+      aria-label="Open medical illustration 4"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="12.png"
-        aria-label="Open medical illustration 4"
+      <img
+        src="12.png"
+        alt="Medical illustration 4"
       >
 
-        <img
-          src="12.png"
-          alt="Medical illustration 4"
-        >
+      <span class="image-number">
+        04
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 04
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">04</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 05 — 13.png -->
+    <!-- 05 — 13.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="13.png"
+      aria-label="Open medical illustration 5"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="13.png"
-        aria-label="Open medical illustration 5"
+      <img
+        src="13.png"
+        alt="Medical illustration 5"
       >
 
-        <img
-          src="13.png"
-          alt="Medical illustration 5"
-        >
+      <span class="image-number">
+        05
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 05
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">05</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 06 — 14.png -->
+    <!-- 06 — 14.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="14.png"
+      aria-label="Open medical illustration 6"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="14.png"
-        aria-label="Open medical illustration 6"
+      <img
+        src="14.png"
+        alt="Medical illustration 6"
       >
 
-        <img
-          src="14.png"
-          alt="Medical illustration 6"
-        >
+      <span class="image-number">
+        06
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 06
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">06</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 07 — 15.png -->
+    <!-- 07 — 15.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="15.png"
+      aria-label="Open medical illustration 7"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="15.png"
-        aria-label="Open medical illustration 7"
+      <img
+        src="15.png"
+        alt="Medical illustration 7"
       >
 
-        <img
-          src="15.png"
-          alt="Medical illustration 7"
-        >
+      <span class="image-number">
+        07
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 07
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">07</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 08 — 16.png -->
+    <!-- 08 — 16.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="16.png"
+      aria-label="Open medical illustration 8"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="16.png"
-        aria-label="Open medical illustration 8"
+      <img
+        src="16.png"
+        alt="Medical illustration 8"
       >
 
-        <img
-          src="16.png"
-          alt="Medical illustration 8"
-        >
+      <span class="image-number">
+        08
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 08
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">08</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 09 — 30.png -->
+    <!-- 09 — 30.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="30.png"
+      aria-label="Open medical illustration 9"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="30.png"
-        aria-label="Open medical illustration 9"
+      <img
+        src="30.png"
+        alt="Medical illustration 9"
       >
 
-        <img
-          src="30.png"
-          alt="Medical illustration 9"
-        >
+      <span class="image-number">
+        09
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 09
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">09</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- MEDICAL 10 — 31.png -->
+    <!-- 10 — 31.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="31.png"
+      aria-label="Open medical illustration 10"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="31.png"
-        aria-label="Open medical illustration 10"
+      <img
+        src="31.png"
+        alt="Medical illustration 10"
       >
 
-        <img
-          src="31.png"
-          alt="Medical illustration 10"
-        >
+      <span class="image-number">
+        10
+      </span>
 
-        <div class="illustration-overlay">
-          <span class="overlay-label">
-            MEDICAL · 10
-          </span>
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-arrow">↗</span>
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">10</span>
-
-          <div>
-            <h3 class="project-title">
-              Medical Study
-            </h3>
-
-            <p class="project-category">
-              Medical
-            </p>
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
-
+    </button>
 
   </div>
 
@@ -1303,7 +862,7 @@
 
 
 <!-- =====================================================
-     ROOFING
+     02 — ROOFING
 ===================================================== -->
 
 <section class="illustration-section">
@@ -1333,176 +892,79 @@
   <div class="illustration-grid">
 
 
-    <!-- ROOFING 01 — 26.png -->
+    <!-- 01 — 26.png -->
 
-    <article class="illustration-project featured">
+    <button
+      class="gallery-item featured"
+      type="button"
+      data-full="26.png"
+      aria-label="Open roofing illustration 1"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="26.png"
-        aria-label="Open roofing illustration 1"
+      <img
+        src="26.png"
+        alt="Roofing illustration 1"
       >
 
-        <img
-          src="26.png"
-          alt="Roofing illustration 1"
-        >
+      <span class="image-number">
+        01
+      </span>
 
-        <div class="illustration-overlay">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-label">
-            ROOFING · 01
-          </span>
-
-          <span class="overlay-arrow">↗</span>
-
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">
-            01
-          </span>
-
-          <div>
-
-            <h3 class="project-title">
-              Roofing Study
-            </h3>
-
-            <p class="project-category">
-              Roofing
-            </p>
-
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- ROOFING 02 — 29.png -->
+    <!-- 02 — 29.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="29.png"
+      aria-label="Open roofing illustration 2"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="29.png"
-        aria-label="Open roofing illustration 2"
+      <img
+        src="29.png"
+        alt="Roofing illustration 2"
       >
 
-        <img
-          src="29.png"
-          alt="Roofing illustration 2"
-        >
+      <span class="image-number">
+        02
+      </span>
 
-        <div class="illustration-overlay">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-label">
-            ROOFING · 02
-          </span>
-
-          <span class="overlay-arrow">↗</span>
-
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">
-            02
-          </span>
-
-          <div>
-
-            <h3 class="project-title">
-              Roofing Study
-            </h3>
-
-            <p class="project-category">
-              Roofing
-            </p>
-
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- ROOFING 03 — 25.png -->
+    <!-- 03 — 25.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="25.png"
+      aria-label="Open roofing illustration 3"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="25.png"
-        aria-label="Open roofing illustration 3"
+      <img
+        src="25.png"
+        alt="Roofing illustration 3"
       >
 
-        <img
-          src="25.png"
-          alt="Roofing illustration 3"
-        >
+      <span class="image-number">
+        03
+      </span>
 
-        <div class="illustration-overlay">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-label">
-            ROOFING · 03
-          </span>
-
-          <span class="overlay-arrow">↗</span>
-
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">
-            03
-          </span>
-
-          <div>
-
-            <h3 class="project-title">
-              Roofing Study
-            </h3>
-
-            <p class="project-category">
-              Roofing
-            </p>
-
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
-
+    </button>
 
   </div>
 
@@ -1510,7 +972,7 @@
 
 
 <!-- =====================================================
-     CONSTRUCTION
+     03 — CONSTRUCTION
 ===================================================== -->
 
 <section class="illustration-section">
@@ -1540,119 +1002,54 @@
   <div class="illustration-grid">
 
 
-    <!-- CONSTRUCTION 01 — Upper Body Stretch.png -->
+    <!-- 01 — Upper Body Stretch.png -->
 
-    <article class="illustration-project featured">
+    <button
+      class="gallery-item featured"
+      type="button"
+      data-full="Upper Body Stretch.png"
+      aria-label="Open construction illustration 1"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="Upper Body Stretch.png"
-        aria-label="Open construction illustration 1"
+      <img
+        src="Upper Body Stretch.png"
+        alt="Construction illustration 1"
       >
 
-        <img
-          src="Upper Body Stretch.png"
-          alt="Construction illustration 1"
-        >
+      <span class="image-number">
+        01
+      </span>
 
-        <div class="illustration-overlay">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-label">
-            CONSTRUCTION · 01
-          </span>
-
-          <span class="overlay-arrow">↗</span>
-
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">
-            01
-          </span>
-
-          <div>
-
-            <h3 class="project-title">
-              Structural Study
-            </h3>
-
-            <p class="project-category">
-              Construction
-            </p>
-
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
+    </button>
 
 
-    <!-- CONSTRUCTION 02 — 32.png -->
+    <!-- 02 — 32.png -->
 
-    <article class="illustration-project">
+    <button
+      class="gallery-item"
+      type="button"
+      data-full="32.png"
+      aria-label="Open construction illustration 2"
+    >
 
-      <button
-        class="illustration-image gallery-item"
-        type="button"
-        data-full="32.png"
-        aria-label="Open construction illustration 2"
+      <img
+        src="32.png"
+        alt="Construction illustration 2"
       >
 
-        <img
-          src="32.png"
-          alt="Construction illustration 2"
-        >
+      <span class="image-number">
+        02
+      </span>
 
-        <div class="illustration-overlay">
+      <span class="image-overlay">
+        <span class="image-arrow">↗</span>
+      </span>
 
-          <span class="overlay-label">
-            CONSTRUCTION · 02
-          </span>
-
-          <span class="overlay-arrow">↗</span>
-
-        </div>
-
-      </button>
-
-      <div class="project-info">
-
-        <div class="project-info-main">
-
-          <span class="project-number">
-            02
-          </span>
-
-          <div>
-
-            <h3 class="project-title">
-              Structural Study
-            </h3>
-
-            <p class="project-category">
-              Construction
-            </p>
-
-          </div>
-
-        </div>
-
-        <span class="project-arrow">↗</span>
-
-      </div>
-
-    </article>
-
+    </button>
 
   </div>
 
@@ -1660,22 +1057,22 @@
 
 
 <!-- =====================================================
-     CTA
+     CONTACT
 ===================================================== -->
 
-<section class="illustration-cta">
+<section class="illustration-contact">
 
-  <small>
-    NEXT IN THE PORTFOLIO
-  </small>
+  <p class="eyebrow">
+    HAVE A PROJECT IN MIND?
+  </p>
 
   <h2>
-    Information made
-    <em>visual.</em>
+    Let's create something
+    <em>meaningful.</em>
   </h2>
 
-  <a href="infographics.html">
-    Explore Infographics ↗
+  <a href="contact.html">
+    Get in touch ↗
   </a>
 
 </section>
@@ -1727,7 +1124,6 @@
 
 <script src="script.js"></script>
 
-
 <script>
 
 /* =====================================================
@@ -1743,7 +1139,7 @@ const lightbox =
 const lightboxImage =
   lightbox.querySelector("img");
 
-const closeButton =
+const lightboxClose =
   document.querySelector(".lightbox-close");
 
 
@@ -1754,13 +1150,15 @@ galleryItems.forEach(item => {
     const image =
       item.getAttribute("data-full");
 
-    const alt =
-      item.querySelector("img")?.alt ||
-      "Illustration project";
+    const sourceImage =
+      item.querySelector("img");
 
     lightboxImage.src = image;
 
-    lightboxImage.alt = alt;
+    lightboxImage.alt =
+      sourceImage
+        ? sourceImage.alt
+        : "Illustration";
 
     lightbox.classList.add("open");
 
@@ -1792,7 +1190,7 @@ function closeLightbox() {
 }
 
 
-closeButton.addEventListener(
+lightboxClose.addEventListener(
   "click",
   closeLightbox
 );
@@ -1818,9 +1216,7 @@ document.addEventListener(
       event.key === "Escape" &&
       lightbox.classList.contains("open")
     ) {
-
       closeLightbox();
-
     }
 
   }
