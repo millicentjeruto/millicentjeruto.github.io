@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,17 +58,13 @@
     .nav {
       position: relative;
       z-index: 20;
-
       width: 90vw;
       max-width: 1400px;
-
       margin: auto;
       padding: 26px 0;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       background: var(--paper);
     }
 
@@ -133,19 +130,12 @@
 
     .home-hero {
       min-height: calc(100vh - 85px);
-
       width: min(1400px, 90vw);
-
       margin: 0 auto;
-
       padding: 45px 0 70px;
-
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 50px;
-
       align-items: center;
     }
 
@@ -159,36 +149,26 @@
       display: flex;
       align-items: center;
       gap: 12px;
-
       margin-bottom: 30px;
-
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .18em;
-
       color: var(--muted);
     }
 
     .hero-label::before {
       content: "";
-
       width: 35px;
       height: 1px;
-
       background: var(--ink);
     }
 
     .home-hero h1 {
       font-family: "Playfair Display", serif;
-
       font-size: clamp(58px, 7vw, 100px);
-
       line-height: .95;
-
       letter-spacing: -.06em;
-
       font-weight: 500;
-
       margin: 0;
     }
 
@@ -199,47 +179,30 @@
 
     .hero-description {
       max-width: 500px;
-
       margin: 28px 0 34px;
-
       font-size: 16px;
-
       line-height: 1.75;
-
       color: #606060;
     }
 
     .hero-actions {
       display: flex;
-
       align-items: center;
-
       gap: 14px;
-
       flex-wrap: wrap;
     }
 
     .home-button {
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 12px;
-
       min-height: 52px;
-
       padding: 0 23px;
-
       border-radius: 100px;
-
       text-decoration: none;
-
       font-size: 13px;
-
       font-weight: 600;
-
       transition:
         transform .25s ease,
         background .25s ease,
@@ -273,112 +236,63 @@
 
     .hero-art {
       position: relative;
-
       min-height: 650px;
-
       width: 100%;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
     }
 
-    /*
-      Large background circle
-    */
-
     .hero-circle {
       position: absolute;
-
       width: min(46vw, 650px);
-
       height: min(46vw, 650px);
-
       border-radius: 50%;
-
       background: #e7e2d8;
     }
 
-    /*
-      Enlarged circular photo.
-
-      No border.
-      No frame.
-      No shadow.
-    */
-
     .portrait {
       position: relative;
-
       z-index: 2;
-
       width: min(39vw, 520px);
-
       height: min(39vw, 520px);
-
       overflow: hidden;
-
       background: transparent;
-
       border-radius: 50%;
-
       border: none;
-
       box-shadow: none;
     }
 
     .portrait img {
       width: 100%;
-
       height: 100%;
-
       display: block;
-
       border-radius: 50%;
-
       object-fit: cover;
-
       object-position: center;
-
-      /*
-        Keeps the photo zoomed out.
-      */
       transform: scale(.86);
     }
 
     .portrait-placeholder {
       width: 100%;
-
       height: 100%;
-
       display: none;
-
       flex-direction: column;
-
       justify-content: center;
-
       align-items: center;
-
       text-align: center;
-
       border-radius: 50%;
     }
 
     .portrait-placeholder strong {
       font-family: "Playfair Display", serif;
-
       font-size: 90px;
-
       font-weight: 500;
     }
 
     .portrait-placeholder span {
       font-size: 10px;
-
       letter-spacing: .15em;
-
       text-transform: uppercase;
     }
 
@@ -387,33 +301,19 @@
 
     .floating-number {
       position: absolute;
-
       z-index: 4;
-
       top: 8%;
-
       right: 2%;
-
       width: 92px;
-
       height: 92px;
-
       border-radius: 50%;
-
       background: var(--ink);
-
       color: white;
-
       display: flex;
-
       justify-content: center;
-
       align-items: center;
-
       font-family: "Playfair Display", serif;
-
       font-size: 25px;
-
       transform: rotate(8deg);
     }
 
@@ -422,42 +322,31 @@
 
     .marquee {
       overflow: hidden;
-
       border-top: 1px solid var(--line);
-
       border-bottom: 1px solid var(--line);
-
       padding: 17px 0;
-
       white-space: nowrap;
     }
 
     .marquee-track {
       display: inline-block;
-
       animation: marquee 24s linear infinite;
     }
 
     .marquee span {
       margin-right: 45px;
-
       font-size: 11px;
-
       letter-spacing: .18em;
-
       font-weight: 600;
-
       color: var(--muted);
     }
 
     .marquee .dot {
       color: var(--accent);
-
       font-size: 18px;
     }
 
     @keyframes marquee {
-
       from {
         transform: translateX(0);
       }
@@ -465,7 +354,6 @@
       to {
         transform: translateX(-50%);
       }
-
     }
 
 
@@ -473,126 +361,328 @@
 
     .creative-section {
       padding: 150px 5vw;
-
       background: #ebe9e2;
     }
 
     .creative-inner {
       width: min(1250px, 100%);
-
       margin: auto;
     }
 
     .creative-heading {
       display: flex;
-
       align-items: center;
-
       gap: 14px;
-
       margin-bottom: 35px;
     }
 
     .creative-heading p {
       margin: 0;
-
       font-size: 10px;
-
       font-weight: 700;
-
       letter-spacing: .2em;
-
       color: var(--muted);
     }
 
     .creative-line {
       width: 40px;
-
       height: 1px;
-
       background: var(--ink);
     }
 
     .creative-inner h2 {
       max-width: 1050px;
-
       margin: 0;
-
       font-family: "Playfair Display", serif;
-
       font-size: clamp(55px, 7vw, 100px);
-
       line-height: .98;
-
       font-weight: 500;
-
       letter-spacing: -.06em;
     }
 
     .creative-inner h2 em {
       font-style: italic;
-
       color: var(--accent);
     }
 
     .creative-bottom {
       margin-top: 60px;
-
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 80px;
-
       align-items: end;
-
       border-top: 1px solid rgba(23, 23, 23, .15);
-
       padding-top: 30px;
     }
 
     .creative-description {
       max-width: 540px;
-
       margin: 0;
-
       font-size: 16px;
-
       line-height: 1.8;
-
       color: #5f5f5f;
     }
 
     .creative-tags {
       display: flex;
-
       justify-content: flex-end;
-
       align-items: center;
-
       gap: 10px;
-
       flex-wrap: wrap;
     }
 
     .creative-tags span {
       display: inline-flex;
-
       align-items: center;
-
       padding: 10px 17px;
-
       border: 1px solid rgba(23, 23, 23, .18);
-
       border-radius: 100px;
-
       font-size: 11px;
-
       font-weight: 600;
-
       color: #555;
-
       background: rgba(255, 255, 255, .25);
+    }
+
+
+    /* ================= SELECTED WORK ================= */
+
+    .selected-work {
+      padding: 140px 5vw 150px;
+      background: var(--paper);
+    }
+
+    .selected-work-inner {
+      width: min(1250px, 100%);
+      margin: auto;
+    }
+
+    .selected-work-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 55px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .selected-work-heading-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .selected-work-heading-left span {
+      width: 40px;
+      height: 1px;
+      background: var(--ink);
+    }
+
+    .selected-work-heading-left p {
+      margin: 0;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--muted);
+    }
+
+    .selected-work-heading h2 {
+      margin: 18px 0 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(50px, 6vw, 78px);
+      line-height: .95;
+      font-weight: 500;
+      letter-spacing: -.05em;
+    }
+
+    .selected-work-heading h2 em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .selected-work-intro {
+      max-width: 330px;
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      grid-template-rows: auto auto;
+      gap: 24px;
+    }
+
+    .work-card {
+      position: relative;
+      min-height: 330px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 35px;
+      background: #deddd7;
+      text-decoration: none;
+      isolation: isolate;
+    }
+
+    .work-card.large {
+      grid-row: 1 / 3;
+      min-height: 685px;
+    }
+
+    .work-card:nth-child(2) {
+      background: #ebe9e2;
+    }
+
+    .work-card:nth-child(3) {
+      background: #d8d5ce;
+    }
+
+    .work-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.28),
+          transparent 55%
+        );
+    }
+
+    .work-card::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 280px;
+      height: 280px;
+      right: -70px;
+      top: -75px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.35);
+      transition: transform .6s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .work-card:hover::after {
+      transform: scale(1.25);
+    }
+
+    .work-card-number {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      color: rgba(23,23,23,.55);
+    }
+
+    .work-card-visual {
+      position: absolute;
+      inset: 45px 35px 125px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .work-shape {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: #171717;
+      opacity: .92;
+      transform: rotate(-8deg);
+      transition: transform .6s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .work-card:hover .work-shape {
+      transform: rotate(0deg) scale(1.06);
+    }
+
+    .work-card:nth-child(2) .work-shape {
+      width: 150px;
+      height: 205px;
+      border-radius: 45% 55% 42% 58%;
+      background: #c87952;
+      transform: rotate(12deg);
+    }
+
+    .work-card:nth-child(3) .work-shape {
+      width: 180px;
+      height: 130px;
+      border-radius: 8px;
+      background: #171717;
+      transform: rotate(-5deg);
+    }
+
+    .work-card:nth-child(3) .work-shape::after {
+      content: "";
+      display: block;
+      width: 75%;
+      height: 4px;
+      margin: 45px auto 0;
+      background: #c87952;
+      box-shadow:
+        0 18px 0 #c87952,
+        0 36px 0 #c87952;
+    }
+
+    .work-card-content {
+      position: relative;
+      z-index: 3;
+    }
+
+    .work-card-category {
+      margin-bottom: 9px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      color: rgba(23,23,23,.55);
+    }
+
+    .work-card h3 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 35px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -.04em;
+    }
+
+    .work-card p {
+      max-width: 410px;
+      margin: 13px 0 0;
+      color: rgba(23,23,23,.62);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .work-card-arrow {
+      position: absolute;
+      right: 28px;
+      bottom: 28px;
+      width: 43px;
+      height: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(23,23,23,.22);
+      border-radius: 50%;
+      font-size: 18px;
+      transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+    }
+
+    .work-card:hover .work-card-arrow {
+      transform: translate(4px, -4px);
+      background: var(--ink);
+      color: white;
     }
 
 
@@ -604,61 +694,41 @@
 
     .services-heading {
       max-width: 1250px;
-
       margin: 0 auto 45px;
-
       display: flex;
-
       align-items: end;
-
       justify-content: space-between;
-
       border-bottom: 1px solid var(--line);
-
       padding-bottom: 25px;
     }
 
     .services-heading h2 {
       margin: 0;
-
       font-family: "Playfair Display", serif;
-
       font-weight: 500;
-
       font-size: 45px;
-
       letter-spacing: -.04em;
     }
 
     .services-heading p {
       margin: 0;
-
       color: var(--muted);
-
       font-size: 12px;
     }
 
     .service-list {
       max-width: 1250px;
-
       margin: auto;
     }
 
     .service {
       display: grid;
-
       grid-template-columns: 90px 1fr 40px;
-
       gap: 25px;
-
       align-items: center;
-
       padding: 35px 5px;
-
       border-bottom: 1px solid var(--line);
-
       text-decoration: none;
-
       transition:
         padding .3s ease,
         background .3s ease;
@@ -666,45 +736,33 @@
 
     .service:hover {
       padding-left: 20px;
-
       padding-right: 20px;
-
       background: rgba(255, 255, 255, .45);
     }
 
     .service-number {
       font-size: 11px;
-
       color: var(--accent);
-
       font-weight: 700;
     }
 
     .service h3 {
       margin: 0 0 7px;
-
       font-family: "Playfair Display", serif;
-
       font-size: 32px;
-
       font-weight: 500;
     }
 
     .service p {
       margin: 0;
-
       max-width: 620px;
-
       color: var(--muted);
-
       font-size: 14px;
-
       line-height: 1.6;
     }
 
     .service-arrow {
       font-size: 22px;
-
       transition: transform .25s ease;
     }
 
@@ -717,37 +775,25 @@
 
     .statement {
       background: var(--ink);
-
       color: white;
-
       padding: 130px 5vw;
-
       text-align: center;
     }
 
     .statement small {
       font-size: 10px;
-
       letter-spacing: .2em;
-
       color: #aaa;
-
       font-weight: 700;
     }
 
     .statement h2 {
       max-width: 1000px;
-
       margin: 30px auto 40px;
-
       font-family: "Playfair Display", serif;
-
       font-size: clamp(45px, 6vw, 82px);
-
       line-height: 1;
-
       font-weight: 500;
-
       letter-spacing: -.05em;
     }
 
@@ -760,21 +806,15 @@
 
     .home-cta {
       padding: 130px 5vw;
-
       text-align: center;
     }
 
     .home-cta h2 {
       margin: 20px auto 35px;
-
       font-family: "Playfair Display", serif;
-
       font-size: clamp(48px, 6vw, 82px);
-
       line-height: .98;
-
       font-weight: 500;
-
       letter-spacing: -.05em;
     }
 
@@ -787,23 +827,14 @@
 
     footer {
       width: 90vw;
-
       max-width: 1400px;
-
       margin: auto;
-
       padding: 25px 0;
-
       border-top: 1px solid var(--line);
-
       display: flex;
-
       justify-content: space-between;
-
       gap: 20px;
-
       color: var(--muted);
-
       font-size: 11px;
     }
 
@@ -826,17 +857,13 @@
 
       .home-hero {
         width: 88vw;
-
         grid-template-columns: 1fr;
-
         padding: 60px 0;
-
         text-align: center;
       }
 
       .hero-content {
         max-width: 650px;
-
         margin: auto;
       }
 
@@ -846,7 +873,6 @@
 
       .hero-description {
         margin-left: auto;
-
         margin-right: auto;
       }
 
@@ -860,13 +886,11 @@
 
       .hero-circle {
         width: 500px;
-
         height: 500px;
       }
 
       .portrait {
         width: 430px;
-
         height: 430px;
       }
 
@@ -876,9 +900,7 @@
 
       .creative-bottom {
         grid-template-columns: 1fr;
-
         gap: 35px;
-
         margin-top: 45px;
       }
 
@@ -886,9 +908,29 @@
         justify-content: flex-start;
       }
 
+      .selected-work {
+        padding: 110px 6vw;
+      }
+
+      .selected-work-heading {
+        display: block;
+      }
+
+      .selected-work-intro {
+        margin-top: 25px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-card.large {
+        grid-row: auto;
+        min-height: 500px;
+      }
+
       .services-heading {
         display: block;
-
         text-align: center;
       }
 
@@ -905,13 +947,11 @@
 
       .nav {
         width: 88vw;
-
         padding: 22px 0;
       }
 
       .home-hero {
         width: 88vw;
-
         padding: 40px 0 60px;
       }
 
@@ -929,13 +969,11 @@
 
       .hero-circle {
         width: 350px;
-
         height: 350px;
       }
 
       .portrait {
         width: 320px;
-
         height: 320px;
       }
 
@@ -945,23 +983,18 @@
 
       .floating-number {
         width: 68px;
-
         height: 68px;
-
         font-size: 20px;
-
         right: 0;
       }
 
       .creative-section {
         padding: 90px 6vw;
-
         text-align: center;
       }
 
       .creative-heading {
         justify-content: center;
-
         margin-bottom: 25px;
       }
 
@@ -971,20 +1004,53 @@
 
       .creative-bottom {
         margin-top: 40px;
-
         text-align: center;
       }
 
       .creative-description {
         font-size: 15px;
-
         margin-left: auto;
-
         margin-right: auto;
       }
 
       .creative-tags {
         justify-content: center;
+      }
+
+      .selected-work {
+        padding: 90px 6vw;
+      }
+
+      .selected-work-heading h2 {
+        font-size: 50px;
+      }
+
+      .work-grid {
+        gap: 18px;
+      }
+
+      .work-card,
+      .work-card.large {
+        min-height: 430px;
+        padding: 27px;
+      }
+
+      .work-card-visual {
+        inset: 45px 25px 125px;
+      }
+
+      .work-card h3 {
+        font-size: 30px;
+      }
+
+      .work-card p {
+        max-width: 280px;
+        font-size: 11px;
+      }
+
+      .work-card-arrow {
+        right: 22px;
+        bottom: 22px;
       }
 
       .services-section {
@@ -997,11 +1063,8 @@
 
       .service {
         grid-template-columns: 45px 1fr 25px;
-
         gap: 12px;
-
         padding: 28px 0;
-
         text-align: left;
       }
 
@@ -1027,9 +1090,7 @@
 
       footer {
         width: 88vw;
-
         flex-direction: column;
-
         text-align: center;
       }
 
@@ -1092,27 +1153,22 @@
 
     <section class="home-hero">
 
-
       <div class="hero-content">
-
 
         <div class="hero-label">
           CREATIVE DESIGNER
         </div>
-
 
         <h1>
           Hi, I'm<br>
           <em>Millicent.</em>
         </h1>
 
-
         <p class="hero-description">
           A creative designer working across 3D modelling, illustration and
           infographics — creating visuals that communicate ideas with
           clarity and character.
         </p>
-
 
         <div class="hero-actions">
 
@@ -1124,7 +1180,6 @@
             <span>↗</span>
           </a>
 
-
           <a
             class="home-button light"
             href="about.html"
@@ -1134,7 +1189,6 @@
 
         </div>
 
-
       </div>
 
 
@@ -1143,7 +1197,6 @@
       <div class="hero-art">
 
         <div class="hero-circle"></div>
-
 
         <div class="portrait">
 
@@ -1155,7 +1208,6 @@
               this.nextElementSibling.style.display='flex';
             "
           >
-
 
           <div class="portrait-placeholder">
 
@@ -1171,14 +1223,11 @@
 
         </div>
 
-
         <div class="floating-number">
           MJ
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1234,12 +1283,10 @@
 
         </div>
 
-
         <h2>
           I turn ideas into
           <em>something you can see.</em>
         </h2>
-
 
         <div class="creative-bottom">
 
@@ -1248,7 +1295,6 @@
             objects in 3D to creating illustrations and transforming
             information into engaging visuals.
           </p>
-
 
           <div class="creative-tags">
 
@@ -1259,6 +1305,173 @@
             <span>Visual storytelling</span>
 
           </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SELECTED WORK ================= -->
+
+    <section class="selected-work">
+
+      <div class="selected-work-inner">
+
+        <div class="selected-work-heading">
+
+          <div>
+
+            <div class="selected-work-heading-left">
+
+              <span></span>
+
+              <p>
+                SELECTED WORK
+              </p>
+
+            </div>
+
+            <h2>
+              Explore my <em>work.</em>
+            </h2>
+
+          </div>
+
+          <p class="selected-work-intro">
+            A selection of creative work across 3D modelling,
+            illustration and infographics.
+          </p>
+
+        </div>
+
+
+        <div class="work-grid">
+
+
+          <!-- 3D MODELLING -->
+
+          <a
+            class="work-card large"
+            href="3d-modelling.html"
+          >
+
+            <span class="work-card-number">
+              01 / 03
+            </span>
+
+            <div class="work-card-visual">
+
+              <div class="work-shape"></div>
+
+            </div>
+
+            <div class="work-card-content">
+
+              <div class="work-card-category">
+                3D MODELLING
+              </div>
+
+              <h3>
+                3D Modelling
+              </h3>
+
+              <p>
+                Exploring form, shape, materials and lighting
+                to bring ideas into three dimensions.
+              </p>
+
+            </div>
+
+            <span class="work-card-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <!-- ILLUSTRATION -->
+
+          <a
+            class="work-card"
+            href="illustration.html"
+          >
+
+            <span class="work-card-number">
+              02 / 03
+            </span>
+
+            <div class="work-card-visual">
+
+              <div class="work-shape"></div>
+
+            </div>
+
+            <div class="work-card-content">
+
+              <div class="work-card-category">
+                ILLUSTRATION
+              </div>
+
+              <h3>
+                Illustration
+              </h3>
+
+              <p>
+                Creating expressive visuals through different
+                styles, shapes and ideas.
+              </p>
+
+            </div>
+
+            <span class="work-card-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <!-- INFOGRAPHICS -->
+
+          <a
+            class="work-card"
+            href="infographics.html"
+          >
+
+            <span class="work-card-number">
+              03 / 03
+            </span>
+
+            <div class="work-card-visual">
+
+              <div class="work-shape"></div>
+
+            </div>
+
+            <div class="work-card-content">
+
+              <div class="work-card-category">
+                INFOGRAPHICS
+              </div>
+
+              <h3>
+                Infographics
+              </h3>
+
+              <p>
+                Making information easier to understand through
+                thoughtful visual storytelling.
+              </p>
+
+            </div>
+
+            <span class="work-card-arrow">
+              ↗
+            </span>
+
+          </a>
+
 
         </div>
 
@@ -1387,13 +1600,11 @@
         DESIGN · PROCESS · EXPRESSION
       </small>
 
-
       <h2>
         Good design doesn't just
         <em>look good.</em>
         It communicates.
       </h2>
-
 
       <a
         class="home-button light"
@@ -1413,12 +1624,10 @@
         LET'S CREATE
       </div>
 
-
       <h2>
         Have an idea?<br>
         <em>Let’s bring it to life.</em>
       </h2>
-
 
       <a
         class="home-button dark"
@@ -1452,3 +1661,4 @@
 
 </body>
 </html>
+```
