@@ -11,7 +11,7 @@
 <title>About | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
@@ -23,6 +23,11 @@
   background: #f5f4ef;
   color: #171717;
 }
+
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .about-hero {
   width: min(1180px, 90vw);
@@ -57,13 +62,25 @@
   line-height: 1.9;
 }
 
+
+/* =========================================================
+   PORTRAIT + INTRODUCTION
+========================================================= */
+
 .about-introduction {
   width: min(1180px, 90vw);
   margin: 0 auto;
+
   display: grid;
-  grid-template-columns: minmax(300px, 460px) minmax(300px, 1fr);
+
+  grid-template-columns:
+    minmax(300px, 460px)
+    minmax(300px, 1fr);
+
   gap: clamp(55px, 9vw, 130px);
+
   align-items: center;
+
   padding-bottom: 125px;
 }
 
@@ -92,10 +109,15 @@
 
 .about-introduction-text h2 {
   margin: 0 0 28px;
+
   font-family: "Playfair Display", serif;
+
   font-size: clamp(38px, 5vw, 64px);
+
   line-height: .98;
+
   font-weight: 500;
+
   letter-spacing: -.055em;
 }
 
@@ -106,15 +128,25 @@
 
 .about-introduction-text p {
   margin: 0 0 20px;
+
   color: #6d6d6d;
+
   font-size: 14px;
+
   line-height: 1.9;
 }
+
+
+/* =========================================================
+   CREATIVE INTERESTS
+========================================================= */
 
 .about-interests {
   width: min(1180px, 90vw);
   margin: 0 auto;
+
   padding: 95px 0 120px;
+
   border-top: 1px solid #d5d4ce;
 }
 
@@ -125,10 +157,15 @@
 
 .about-interests-heading h2 {
   margin: 15px 0 0;
+
   font-family: "Playfair Display", serif;
+
   font-size: clamp(45px, 6vw, 76px);
+
   line-height: .94;
+
   font-weight: 500;
+
   letter-spacing: -.06em;
 }
 
@@ -143,13 +180,21 @@
 
 .interest {
   display: grid;
+
   grid-template-columns: 70px 1fr auto;
+
   align-items: center;
+
   gap: 30px;
+
   padding: 28px 0;
+
   border-bottom: 1px solid #d5d4ce;
+
   text-decoration: none;
+
   color: inherit;
+
   transition: padding .25s ease;
 }
 
@@ -160,21 +205,29 @@
 
 .interest-number {
   color: #c87952;
+
   font-size: 11px;
+
   font-weight: 700;
+
   letter-spacing: .12em;
 }
 
 .interest-name {
   font-family: "Playfair Display", serif;
+
   font-size: clamp(27px, 3vw, 40px);
+
   font-weight: 500;
 }
 
 .interest-detail {
   color: #777;
+
   font-size: 11px;
+
   text-transform: uppercase;
+
   letter-spacing: .1em;
 }
 
@@ -182,9 +235,15 @@
   font-size: 20px;
 }
 
+
+/* =========================================================
+   LARGE STATEMENT
+========================================================= */
+
 .about-statement {
   width: min(1180px, 90vw);
   margin: 0 auto;
+
   padding: 125px 0 135px;
 }
 
@@ -194,10 +253,15 @@
 
 .about-statement blockquote {
   margin: 0;
+
   font-family: "Playfair Display", serif;
+
   font-size: clamp(42px, 6vw, 78px);
+
   line-height: 1.02;
+
   letter-spacing: -.06em;
+
   font-weight: 500;
 }
 
@@ -208,27 +272,45 @@
 
 .about-statement-caption {
   margin-top: 35px;
+
   max-width: 430px;
+
   color: #777;
+
   font-size: 13px;
+
   line-height: 1.8;
 }
+
+
+/* =========================================================
+   PERSONAL
+========================================================= */
 
 .about-personal {
   width: min(1180px, 90vw);
   margin: 0 auto;
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 80px;
+
   padding-bottom: 130px;
 }
 
 .about-personal-heading h2 {
   margin: 15px 0 0;
+
   font-family: "Playfair Display", serif;
+
   font-size: clamp(42px, 5vw, 65px);
+
   line-height: .96;
+
   font-weight: 500;
+
   letter-spacing: -.055em;
 }
 
@@ -239,125 +321,113 @@
 
 .about-personal-text {
   align-self: end;
+
   max-width: 500px;
+
   color: #6f6f6f;
+
   font-size: 14px;
+
   line-height: 1.95;
 }
 
-.about-cta {
-  width: min(1180px, 90vw);
-  margin: 0 auto;
-  padding-bottom: 80px;
+
+/* =========================================================
+   NEXT IN THE PORTFOLIO
+========================================================= */
+
+.next-portfolio {
+  width: min(1200px, 90vw);
+  margin: 30px auto 130px;
 }
 
-.about-cta-inner {
-  padding: 80px 30px;
+.next-portfolio-inner {
+  padding: 90px 30px;
+
   background: #171717;
+
   color: white;
+
   text-align: center;
 }
 
-.about-cta-inner .eyebrow {
-  color: #aaa;
-}
-
-.about-cta-inner h2 {
-  max-width: 760px;
-  margin: 20px auto 32px;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(45px, 6vw, 75px);
-  line-height: .95;
-  font-weight: 500;
-  letter-spacing: -.06em;
-}
-
-.about-cta-inner h2 em {
-  color: #d49a7b;
-  font-style: italic;
-}
-
-.about-cta-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 22px;
-  border: 1px solid rgba(255,255,255,.7);
-  border-radius: 100px;
+.next-portfolio .eyebrow {
   color: white;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 600;
-  transition: all .25s ease;
 }
 
-.about-cta-button:hover {
+.next-portfolio h2 {
+  max-width: 700px;
+
+  margin: 20px auto 25px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 6vw, 75px);
+
+  line-height: .95;
+
+  font-weight: 500;
+
+  letter-spacing: -.05em;
+
+  color: white;
+}
+
+.next-portfolio p:not(.eyebrow) {
+  max-width: 600px;
+
+  margin: auto;
+
+  color: white;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.next-portfolio a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 35px;
+
+  padding: 14px 23px;
+
+  border: 1px solid white;
+
+  border-radius: 100px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+.next-portfolio a:hover {
   background: white;
+
   color: #171717;
 }
 
 
 /* =========================================================
-   NEXT IN PORTFOLIO
+   MOBILE
 ========================================================= */
-
-.next-portfolio {
-  width: min(1180px, 90vw);
-  margin: 0 auto;
-  padding: 95px 0 125px;
-  border-top: 1px solid #d5d4ce;
-}
-
-.next-portfolio-label {
-  margin: 0 0 18px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: #737373;
-}
-
-.next-portfolio-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  padding: 45px 0;
-  border-top: 1px solid #d5d4ce;
-  border-bottom: 1px solid #d5d4ce;
-  transition: padding .3s ease;
-}
-
-.next-portfolio-card:hover {
-  padding-left: 18px;
-  padding-right: 18px;
-}
-
-.next-portfolio-card h2 {
-  margin: 0 0 18px;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(48px, 7vw, 90px);
-  line-height: .95;
-  font-weight: 500;
-  letter-spacing: -.06em;
-}
-
-.next-portfolio-card p {
-  max-width: 620px;
-  margin: 0 0 25px;
-  color: #6f6f6f;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.next-portfolio-link {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .04em;
-}
 
 @media (max-width: 760px) {
 
   .about-hero {
-    padding: 70px 0;
+    padding: 70px 0 70px;
   }
 
   .about-hero h1 {
@@ -366,12 +436,15 @@
 
   .about-introduction {
     grid-template-columns: 1fr;
+
     gap: 50px;
+
     padding-bottom: 90px;
   }
 
   .about-photo {
     max-width: 500px;
+
     margin: 0 auto;
   }
 
@@ -381,6 +454,7 @@
 
   .interest {
     grid-template-columns: 45px 1fr auto;
+
     gap: 15px;
   }
 
@@ -394,20 +468,18 @@
 
   .about-personal {
     grid-template-columns: 1fr;
+
     gap: 35px;
+
     padding-bottom: 90px;
   }
 
-  .about-cta {
-    padding-bottom: 70px;
-  }
-
-  .about-cta-inner {
-    padding: 65px 20px;
-  }
-
   .next-portfolio {
-    padding: 75px 0 90px;
+    margin-bottom: 80px;
+  }
+
+  .next-portfolio-inner {
+    padding: 65px 20px;
   }
 
 }
@@ -431,17 +503,29 @@
   <nav>
 
 ```
-<a href="index.html">Home</a>
+<a href="index.html">
+  Home
+</a>
 
-<a class="active" href="about.html">About</a>
+<a class="active" href="about.html">
+  About
+</a>
 
-<a href="3d-modelling.html">3D Modelling</a>
+<a href="3d-modelling.html">
+  3D Modelling
+</a>
 
-<a href="illustration.html">Illustration</a>
+<a href="illustration.html">
+  Illustration
+</a>
 
-<a href="infographics.html">Infographics</a>
+<a href="infographics.html">
+  Infographics
+</a>
 
-<a class="nav-contact" href="contact.html">Contact</a>
+<a class="nav-contact" href="contact.html">
+  Contact
+</a>
 ```
 
   </nav>
@@ -537,7 +621,9 @@
 ```
 <a class="interest" href="illustration.html">
 
-  <span class="interest-number">01</span>
+  <span class="interest-number">
+    01
+  </span>
 
   <span class="interest-name">
     Illustration
@@ -553,9 +639,12 @@
 
 </a>
 
+
 <a class="interest" href="3d-modelling.html">
 
-  <span class="interest-number">02</span>
+  <span class="interest-number">
+    02
+  </span>
 
   <span class="interest-name">
     3D Modelling
@@ -571,9 +660,12 @@
 
 </a>
 
+
 <a class="interest" href="infographics.html">
 
-  <span class="interest-number">03</span>
+  <span class="interest-number">
+    03
+  </span>
 
   <span class="interest-name">
     Infographics
@@ -658,42 +750,15 @@
 
 </section>
 
-<section class="about-cta">
+<section class="next-portfolio">
 
-  <div class="about-cta-inner">
+  <div class="next-portfolio-inner">
 
 ```
 <p class="eyebrow">
-  KEEP EXPLORING
+  NEXT IN THE PORTFOLIO
 </p>
 
-<h2>
-  See what I've
-  <em>made.</em>
-</h2>
-
-<a
-  class="about-cta-button"
-  href="illustration.html">
-  Explore the work ↗
-</a>
-```
-
-  </div>
-
-</section>
-
-<section class="next-portfolio">
-
-  <p class="next-portfolio-label">
-    NEXT IN THE PORTFOLIO
-  </p>
-
-<a
- class="next-portfolio-card"
- href="3d-modelling.html">
-
-```
 <h2>
   3D Modelling
 </h2>
@@ -703,12 +768,12 @@
   to bring ideas into three dimensions.
 </p>
 
-<span class="next-portfolio-link">
+<a href="3d-modelling.html">
   Explore 3D Modelling ↗
-</span>
+</a>
 ```
 
-  </a>
+  </div>
 
 </section>
 
