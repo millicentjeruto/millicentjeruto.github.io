@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -347,6 +348,7 @@
     }
 
     @keyframes marquee {
+
       from {
         transform: translateX(0);
       }
@@ -354,93 +356,7 @@
       to {
         transform: translateX(-50%);
       }
-    }
 
-
-    /* ================= CREATIVE STATEMENT ================= */
-
-    .creative-section {
-      padding: 150px 5vw;
-      background: #ebe9e2;
-    }
-
-    .creative-inner {
-      width: min(1250px, 100%);
-      margin: auto;
-    }
-
-    .creative-heading {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 35px;
-    }
-
-    .creative-heading p {
-      margin: 0;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .2em;
-      color: var(--muted);
-    }
-
-    .creative-line {
-      width: 40px;
-      height: 1px;
-      background: var(--ink);
-    }
-
-    .creative-inner h2 {
-      max-width: 1050px;
-      margin: 0;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(55px, 7vw, 100px);
-      line-height: .98;
-      font-weight: 500;
-      letter-spacing: -.06em;
-    }
-
-    .creative-inner h2 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .creative-bottom {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: end;
-      border-top: 1px solid rgba(23, 23, 23, .15);
-      padding-top: 30px;
-    }
-
-    .creative-description {
-      max-width: 540px;
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.8;
-      color: #5f5f5f;
-    }
-
-    .creative-tags {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .creative-tags span {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 17px;
-      border: 1px solid rgba(23, 23, 23, .18);
-      border-radius: 100px;
-      font-size: 11px;
-      font-weight: 600;
-      color: #555;
-      background: rgba(255, 255, 255, .25);
     }
 
 
@@ -466,7 +382,7 @@
     }
 
     .work-header h2 {
-      margin: 0;
+      margin: 15px 0 0;
       font-family: "Playfair Display", serif;
       font-size: clamp(48px, 6vw, 78px);
       line-height: .95;
@@ -485,6 +401,13 @@
       color: var(--muted);
       font-size: 12px;
       line-height: 1.7;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--muted);
     }
 
     .work-grid {
@@ -583,60 +506,11 @@
     }
 
 
-    /* ================= STATEMENT ================= */
-
-    .statement {
-      background: var(--ink);
-      color: white;
-      padding: 130px 5vw;
-      text-align: center;
-    }
-
-    .statement small {
-      font-size: 10px;
-      letter-spacing: .2em;
-      color: #aaa;
-      font-weight: 700;
-    }
-
-    .statement h2 {
-      max-width: 1000px;
-      margin: 30px auto 40px;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(45px, 6vw, 82px);
-      line-height: 1;
-      font-weight: 500;
-      letter-spacing: -.05em;
-    }
-
-    .statement h2 em {
-      color: #d79b7d;
-      font-style: italic;
-    }
-
-    .statement .home-button.light {
-      border-color: rgba(255,255,255,.45);
-      color: white;
-    }
-
-    .statement .home-button.light:hover {
-      background: white;
-      color: var(--ink);
-    }
-
-
     /* ================= CTA ================= */
 
     .home-cta {
       padding: 130px 5vw;
       text-align: center;
-    }
-
-    .section-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .2em;
-      color: var(--muted);
     }
 
     .home-cta h2 {
@@ -725,20 +599,6 @@
         height: 430px;
       }
 
-      .creative-section {
-        padding: 110px 6vw;
-      }
-
-      .creative-bottom {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        margin-top: 45px;
-      }
-
-      .creative-tags {
-        justify-content: flex-start;
-      }
-
       .work-section {
         padding: 110px 6vw;
       }
@@ -810,35 +670,6 @@
         right: 0;
       }
 
-      .creative-section {
-        padding: 90px 6vw;
-        text-align: center;
-      }
-
-      .creative-heading {
-        justify-content: center;
-        margin-bottom: 25px;
-      }
-
-      .creative-inner h2 {
-        font-size: 50px;
-      }
-
-      .creative-bottom {
-        margin-top: 40px;
-        text-align: center;
-      }
-
-      .creative-description {
-        font-size: 15px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .creative-tags {
-        justify-content: center;
-      }
-
       .work-section {
         padding: 90px 6vw;
       }
@@ -854,14 +685,6 @@
 
       .work-card h3 {
         font-size: 36px;
-      }
-
-      .statement {
-        padding: 90px 6vw;
-      }
-
-      .statement h2 {
-        font-size: 48px;
       }
 
       .home-cta {
@@ -1047,52 +870,6 @@
     </div>
 
 
-    <!-- ================= CREATIVE APPROACH ================= -->
-
-    <section class="creative-section">
-
-      <div class="creative-inner">
-
-        <div class="creative-heading">
-
-          <span class="creative-line"></span>
-
-          <p>
-            MY CREATIVE APPROACH
-          </p>
-
-        </div>
-
-        <h2>
-          I turn ideas into
-          <em>something you can see.</em>
-        </h2>
-
-        <div class="creative-bottom">
-
-          <p class="creative-description">
-            I enjoy exploring different forms of visual design, from building
-            objects in 3D to creating illustrations and transforming
-            information into engaging visuals.
-          </p>
-
-          <div class="creative-tags">
-
-            <span>3D</span>
-
-            <span>Illustration</span>
-
-            <span>Visual storytelling</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
     <!-- ================= SELECTED WORK ================= -->
 
     <section class="work-section">
@@ -1236,30 +1013,6 @@
     </section>
 
 
-    <!-- ================= STATEMENT ================= -->
-
-    <section class="statement">
-
-      <small>
-        DESIGN · PROCESS · EXPRESSION
-      </small>
-
-      <h2>
-        Good design doesn't just
-        <em>look good.</em>
-        It communicates.
-      </h2>
-
-      <a
-        class="home-button light"
-        href="infographics.html"
-      >
-        See the work ↗
-      </a>
-
-    </section>
-
-
     <!-- ================= CTA ================= -->
 
     <section class="home-cta">
@@ -1305,3 +1058,4 @@
 
 </body>
 </html>
+```
