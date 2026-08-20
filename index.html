@@ -1,7 +1,5 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +50,6 @@
     a {
       color: inherit;
     }
-
 
     /* ================= NAVIGATION ================= */
 
@@ -125,7 +122,6 @@
       font-size: 25px;
       cursor: pointer;
     }
-
 
     /* ================= HERO ================= */
 
@@ -232,7 +228,6 @@
       background: white;
     }
 
-
     /* ================= HERO IMAGE ================= */
 
     .hero-art {
@@ -297,7 +292,6 @@
       text-transform: uppercase;
     }
 
-
     /* ================= FLOATING MJ ================= */
 
     .floating-number {
@@ -317,7 +311,6 @@
       font-size: 25px;
       transform: rotate(8deg);
     }
-
 
     /* ================= MARQUEE ================= */
 
@@ -348,7 +341,6 @@
     }
 
     @keyframes marquee {
-
       from {
         transform: translateX(0);
       }
@@ -356,51 +348,97 @@
       to {
         transform: translateX(-50%);
       }
-
     }
-
 
     /* ================= SELECTED WORK ================= */
 
-    .work-section {
-      padding: 130px 5vw 140px;
+    .services-section {
+      padding: 130px 5vw;
     }
 
-    .work-inner {
-      width: min(1250px, 100%);
-      margin: auto;
-    }
-
-    .work-header {
+    .services-heading {
+      max-width: 1250px;
+      margin: 0 auto 45px;
       display: flex;
       align-items: end;
       justify-content: space-between;
-      gap: 40px;
-      margin-bottom: 55px;
-      padding-bottom: 25px;
       border-bottom: 1px solid var(--line);
+      padding-bottom: 25px;
     }
 
-    .work-header h2 {
-      margin: 15px 0 0;
+    .services-heading h2 {
+      margin: 0;
       font-family: "Playfair Display", serif;
-      font-size: clamp(48px, 6vw, 78px);
-      line-height: .95;
       font-weight: 500;
-      letter-spacing: -.05em;
+      font-size: 45px;
+      letter-spacing: -.04em;
     }
 
-    .work-header h2 em {
-      color: var(--accent);
-      font-style: italic;
-    }
-
-    .work-header p {
-      max-width: 350px;
+    .services-heading p {
       margin: 0;
       color: var(--muted);
       font-size: 12px;
-      line-height: 1.7;
+    }
+
+    .service-list {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 90px 1fr 40px;
+      gap: 25px;
+      align-items: center;
+      padding: 35px 5px;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      transition:
+        padding .3s ease,
+        background .3s ease;
+    }
+
+    .service:hover {
+      padding-left: 20px;
+      padding-right: 20px;
+      background: rgba(255, 255, 255, .45);
+    }
+
+    .service-number {
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .service h3 {
+      margin: 0 0 7px;
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .service p {
+      margin: 0;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .service-arrow {
+      font-size: 22px;
+      transition: transform .25s ease;
+    }
+
+    .service:hover .service-arrow {
+      transform: translate(5px, -5px);
+    }
+
+    /* ================= CTA ================= */
+
+    .home-cta {
+      padding: 130px 5vw;
+      text-align: center;
     }
 
     .section-label {
@@ -408,109 +446,6 @@
       font-weight: 700;
       letter-spacing: .2em;
       color: var(--muted);
-    }
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .work-card {
-      position: relative;
-      min-height: 430px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-      background: #ebe9e2;
-      text-decoration: none;
-      transition:
-        transform .35s ease,
-        background .35s ease;
-    }
-
-    .work-card:hover {
-      transform: translateY(-7px);
-      background: #e4e1d9;
-    }
-
-    .work-card:nth-child(2) {
-      background: #deddd7;
-    }
-
-    .work-card:nth-child(3) {
-      background: #e7e2d8;
-    }
-
-    .work-number {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .15em;
-      color: var(--accent);
-    }
-
-    .work-card-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .work-card-label {
-      display: block;
-      margin-bottom: 13px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .16em;
-      color: #666;
-    }
-
-    .work-card h3 {
-      margin: 0 0 14px;
-      font-family: "Playfair Display", serif;
-      font-size: 42px;
-      line-height: .95;
-      font-weight: 500;
-      letter-spacing: -.04em;
-    }
-
-    .work-card p {
-      max-width: 310px;
-      margin: 0;
-      color: #666;
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    .work-arrow {
-      position: absolute;
-      right: 28px;
-      bottom: 28px;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: var(--ink);
-      color: white;
-      font-size: 18px;
-      transition:
-        transform .3s ease,
-        background .3s ease;
-    }
-
-    .work-card:hover .work-arrow {
-      transform: translate(4px, -4px);
-      background: var(--accent);
-    }
-
-
-    /* ================= CTA ================= */
-
-    .home-cta {
-      padding: 130px 5vw;
-      text-align: center;
     }
 
     .home-cta h2 {
@@ -524,9 +459,7 @@
 
     .home-cta h2 em {
       color: var(--accent);
-      font-style: italic;
     }
-
 
     /* ================= FOOTER ================= */
 
@@ -542,7 +475,6 @@
       color: var(--muted);
       font-size: 11px;
     }
-
 
     /* ================= TABLET ================= */
 
@@ -599,29 +531,16 @@
         height: 430px;
       }
 
-      .work-section {
-        padding: 110px 6vw;
-      }
-
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .work-card {
-        min-height: 360px;
-      }
-
-      .work-header {
+      .services-heading {
         display: block;
         text-align: center;
       }
 
-      .work-header p {
-        margin: 20px auto 0;
+      .services-heading p {
+        margin-top: 10px;
       }
 
     }
-
 
     /* ================= MOBILE ================= */
 
@@ -670,21 +589,27 @@
         right: 0;
       }
 
-      .work-section {
+      .services-section {
         padding: 90px 6vw;
       }
 
-      .work-header h2 {
-        font-size: 50px;
+      .services-heading h2 {
+        font-size: 40px;
       }
 
-      .work-card {
-        min-height: 340px;
-        padding: 25px;
+      .service {
+        grid-template-columns: 45px 1fr 25px;
+        gap: 12px;
+        padding: 28px 0;
+        text-align: left;
       }
 
-      .work-card h3 {
-        font-size: 36px;
+      .service h3 {
+        font-size: 25px;
+      }
+
+      .service p {
+        font-size: 13px;
       }
 
       .home-cta {
@@ -702,9 +627,7 @@
   </style>
 </head>
 
-
 <body>
-
 
   <!-- ================= NAVIGATION ================= -->
 
@@ -748,9 +671,7 @@
 
   </header>
 
-
   <main>
-
 
     <!-- ================= HERO ================= -->
 
@@ -794,7 +715,6 @@
 
       </div>
 
-
       <!-- ================= PROFILE IMAGE ================= -->
 
       <div class="hero-art">
@@ -834,7 +754,6 @@
 
     </section>
 
-
     <!-- ================= MARQUEE ================= -->
 
     <div class="marquee">
@@ -869,149 +788,111 @@
 
     </div>
 
-
     <!-- ================= SELECTED WORK ================= -->
 
-    <section class="work-section">
+    <section class="services-section">
 
-      <div class="work-inner">
+      <div class="services-heading">
 
-        <div class="work-header">
+        <h2>
+          Selected work
+        </h2>
+
+        <p>
+          Explore my work →
+        </p>
+
+      </div>
+
+      <div class="service-list">
+
+        <a
+          class="service"
+          href="3d-modelling.html"
+        >
+
+          <span class="service-number">
+            01 / 03
+          </span>
 
           <div>
 
-            <p class="section-label">
-              SELECTED WORK
-            </p>
+            <h3>
+              3D Modelling
+            </h3>
 
-            <h2>
-              Explore my <em>work.</em>
-            </h2>
+            <p>
+              Exploring form, shape, materials and lighting to bring ideas
+              into three dimensions.
+            </p>
 
           </div>
 
-          <p>
-            A selection of creative work across 3D modelling,
-            illustration and infographics.
-          </p>
+          <span class="service-arrow">
+            ↗
+          </span>
 
-        </div>
+        </a>
 
+        <a
+          class="service"
+          href="illustration.html"
+        >
 
-        <div class="work-grid">
+          <span class="service-number">
+            02 / 03
+          </span>
 
+          <div>
 
-          <!-- 3D MODELLING -->
+            <h3>
+              Illustration
+            </h3>
 
-          <a
-            class="work-card"
-            href="3d-modelling.html"
-          >
+            <p>
+              Creating expressive visuals through different styles, shapes
+              and ideas.
+            </p>
 
-            <span class="work-number">
-              01 / 03
-            </span>
+          </div>
 
-            <div class="work-card-content">
+          <span class="service-arrow">
+            ↗
+          </span>
 
-              <span class="work-card-label">
-                3D MODELLING
-              </span>
+        </a>
 
-              <h3>
-                3D Modelling
-              </h3>
+        <a
+          class="service"
+          href="infographics.html"
+        >
 
-              <p>
-                Exploring form, shape, materials and lighting
-                to bring ideas into three dimensions.
-              </p>
+          <span class="service-number">
+            03 / 03
+          </span>
 
-            </div>
+          <div>
 
-            <span class="work-arrow">
-              ↗
-            </span>
+            <h3>
+              Infographics
+            </h3>
 
-          </a>
+            <p>
+              Making information easier to understand through thoughtful
+              visual storytelling.
+            </p>
 
+          </div>
 
-          <!-- ILLUSTRATION -->
+          <span class="service-arrow">
+            ↗
+          </span>
 
-          <a
-            class="work-card"
-            href="illustration.html"
-          >
-
-            <span class="work-number">
-              02 / 03
-            </span>
-
-            <div class="work-card-content">
-
-              <span class="work-card-label">
-                ILLUSTRATION
-              </span>
-
-              <h3>
-                Illustration
-              </h3>
-
-              <p>
-                Creating expressive visuals through different
-                styles, shapes and ideas.
-              </p>
-
-            </div>
-
-            <span class="work-arrow">
-              ↗
-            </span>
-
-          </a>
-
-
-          <!-- INFOGRAPHICS -->
-
-          <a
-            class="work-card"
-            href="infographics.html"
-          >
-
-            <span class="work-number">
-              03 / 03
-            </span>
-
-            <div class="work-card-content">
-
-              <span class="work-card-label">
-                INFOGRAPHICS
-              </span>
-
-              <h3>
-                Infographics
-              </h3>
-
-              <p>
-                Making information easier to understand through
-                thoughtful visual storytelling.
-              </p>
-
-            </div>
-
-            <span class="work-arrow">
-              ↗
-            </span>
-
-          </a>
-
-
-        </div>
+        </a>
 
       </div>
 
     </section>
-
 
     <!-- ================= CTA ================= -->
 
@@ -1035,9 +916,7 @@
 
     </section>
 
-
   </main>
-
 
   <!-- ================= FOOTER ================= -->
 
@@ -1053,9 +932,7 @@
 
   </footer>
 
-
   <script src="script.js"></script>
 
 </body>
 </html>
-```
