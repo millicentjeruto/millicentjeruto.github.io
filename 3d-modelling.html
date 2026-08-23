@@ -20,170 +20,82 @@ rel="stylesheet">
 
 <style>
 
-/* =====================================================
-   PAGE
-===================================================== */
-
 .model-page {
   background: #f5f4ef;
   color: #171717;
 }
 
-
-/* =====================================================
-   HERO
-===================================================== */
-
 .model-hero {
   width: min(1200px, 90vw);
   margin: auto;
-
   padding: 105px 0 90px;
-
   text-align: center;
 }
 
 .model-hero h1 {
   margin: 20px 0 0;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(65px, 9vw, 120px);
-
   line-height: .9;
-
   font-weight: 500;
-
   letter-spacing: -.06em;
 }
 
 .model-hero h1 em {
   color: #c87952;
-
   font-style: italic;
 }
 
 .model-hero > p:last-child {
   max-width: 650px;
-
   margin: 30px auto 0;
-
   color: #707070;
-
   font-size: 14px;
-
   line-height: 1.8;
 }
 
-
-/* =====================================================
-   FEATURE SECTION
-===================================================== */
-
 .model-feature {
   width: min(1200px, 90vw);
-
   margin: auto;
-
   padding: 0 0 120px;
 }
 
-
-/* =====================================================
-   3D IMAGE GALLERY
-===================================================== */
-
 .model-visual {
   position: relative;
-
   overflow: hidden;
-
   background: #dddcd5;
-}
-
-.model-label {
-  position: absolute;
-
-  top: 25px;
-  left: 25px;
-
-  z-index: 10;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  color: #292929;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .16em;
-}
-
-.model-label span {
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #c87952;
 }
 
 .model-status {
   position: absolute;
-
   right: 25px;
   bottom: 25px;
-
   z-index: 10;
-
   padding: 10px 15px;
-
   border: 1px solid rgba(0,0,0,.15);
-
   border-radius: 100px;
-
   background: rgba(255,255,255,.55);
-
   backdrop-filter: blur(8px);
-
   font-size: 10px;
-
   font-weight: 700;
-
   letter-spacing: .1em;
 }
 
 .model-gallery {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
-
   padding: 0;
 }
 
 .model-gallery-item {
   position: relative;
-
   width: 100%;
-
   padding: 0;
-
   border: none;
-
   background: transparent;
-
   cursor: pointer;
-
   overflow: hidden;
-
   text-align: left;
 }
 
@@ -193,15 +105,10 @@ rel="stylesheet">
 
 .model-gallery-item img {
   display: block;
-
   width: 100%;
-
   height: auto;
-
   max-width: 100%;
-
   object-fit: contain;
-
   transition:
     transform .6s cubic-bezier(.2,.7,.2,1),
     filter .4s ease;
@@ -209,65 +116,43 @@ rel="stylesheet">
 
 .model-gallery-item:hover img {
   transform: scale(1.018);
-
   filter: brightness(.84);
 }
 
 .model-image-number {
   position: absolute;
-
   top: 18px;
   left: 18px;
-
   z-index: 3;
-
   width: 36px;
   height: 36px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: rgba(255,255,255,.95);
-
   color: #171717;
-
   font-size: 10px;
-
   font-weight: 700;
-
   box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
 .model-image-overlay {
   position: absolute;
-
   inset: 0;
-
   z-index: 2;
-
   display: flex;
-
   align-items: flex-end;
-
   justify-content: flex-end;
-
   padding: 18px;
-
   background:
     linear-gradient(
       to top,
       rgba(0,0,0,.42),
       transparent 45%
     );
-
   opacity: 0;
-
   transition: opacity .35s ease;
-
   pointer-events: none;
 }
 
@@ -278,46 +163,26 @@ rel="stylesheet">
 .model-image-arrow {
   width: 42px;
   height: 42px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: white;
-
   color: #171717;
-
   font-size: 18px;
 }
 
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
-
 .model-lightbox {
   position: fixed;
-
   inset: 0;
-
   z-index: 1000;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   padding: 30px;
-
   background: rgba(0,0,0,.94);
-
   opacity: 0;
-
   visibility: hidden;
-
   transition:
     opacity .3s ease,
     visibility .3s ease;
@@ -325,124 +190,79 @@ rel="stylesheet">
 
 .model-lightbox.open {
   opacity: 1;
-
   visibility: visible;
 }
 
 .model-lightbox img {
   display: block;
-
   max-width: 92vw;
-
   max-height: 88vh;
-
   width: auto;
-
   height: auto;
-
   object-fit: contain;
 }
 
 .model-lightbox-close {
   position: absolute;
-
   top: 25px;
   right: 30px;
-
   width: 45px;
   height: 45px;
-
   border: 1px solid rgba(255,255,255,.35);
-
   border-radius: 50%;
-
   background: transparent;
-
   color: white;
-
   font-size: 28px;
-
   cursor: pointer;
 }
 
-
-/* =====================================================
-   NEXT IN PORTFOLIO
-===================================================== */
-
 .portfolio-next {
   width: min(1200px, 90vw);
-
   margin: auto;
-
   padding: 20px 0 130px;
 }
 
 .portfolio-next-inner {
   padding: 90px 30px;
-
   background: #171717;
-
   color: white;
-
   text-align: center;
 }
 
 .portfolio-next h2 {
   margin: 20px 0 25px;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(48px, 6vw, 75px);
-
   line-height: .95;
-
   font-weight: 500;
-
   letter-spacing: -.05em;
 }
 
 .portfolio-next h2 em {
   color: #d79b7d;
-
   font-style: italic;
 }
 
 .portfolio-next p {
   max-width: 520px;
-
   margin: auto;
-
   color: rgba(255,255,255,.68);
-
   font-size: 13px;
-
   line-height: 1.8;
 }
 
 .portfolio-next a {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   margin-top: 35px;
-
   padding: 14px 23px;
-
   border: 1px solid white;
-
   border-radius: 100px;
-
   color: white;
-
   text-decoration: none;
-
   font-size: 12px;
-
   font-weight: 600;
-
   transition:
     background .25s ease,
     color .25s ease;
@@ -450,14 +270,8 @@ rel="stylesheet">
 
 .portfolio-next a:hover {
   background: white;
-
   color: #171717;
 }
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
 
 @media (max-width: 700px) {
 
@@ -471,7 +285,6 @@ rel="stylesheet">
 
   .model-gallery {
     grid-template-columns: 1fr;
-
     gap: 22px;
   }
 
@@ -567,11 +380,6 @@ rel="stylesheet">
 
 
   <div class="model-visual">
-
-    <div class="model-label">
-      <span></span>
-      3D STUDIES
-    </div>
 
 
     <div class="model-gallery">
