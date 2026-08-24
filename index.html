@@ -153,27 +153,35 @@
       display: flex;
       align-items: center;
       gap: 12px;
+
       margin-bottom: 30px;
 
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .18em;
+
       color: var(--muted);
     }
 
     .hero-label::before {
       content: "";
+
       width: 35px;
       height: 1px;
+
       background: var(--ink);
     }
 
     .home-hero h1 {
       font-family: "Playfair Display", serif;
+
       font-size: clamp(58px, 7vw, 100px);
+
       line-height: .95;
       letter-spacing: -.06em;
+
       font-weight: 500;
+
       margin: 0;
     }
 
@@ -184,10 +192,12 @@
 
     .hero-description {
       max-width: 500px;
+
       margin: 28px 0 34px;
 
       font-size: 16px;
       line-height: 1.75;
+
       color: #606060;
     }
 
@@ -208,6 +218,7 @@
       padding: 0 23px;
 
       border-radius: 100px;
+
       text-decoration: none;
 
       font-size: 13px;
@@ -246,6 +257,7 @@
 
     .hero-art {
       position: relative;
+
       min-height: 650px;
       width: 100%;
 
@@ -261,6 +273,7 @@
       height: min(46vw, 650px);
 
       border-radius: 50%;
+
       background: #e7e2d8;
     }
 
@@ -272,6 +285,7 @@
       height: min(39vw, 520px);
 
       overflow: hidden;
+
       background: transparent;
 
       border-radius: 50%;
@@ -304,6 +318,7 @@
       align-items: center;
 
       text-align: center;
+
       border-radius: 50%;
     }
 
@@ -351,23 +366,35 @@
     /* ================= MARQUEE ================= */
 
     .marquee {
+      width: 100%;
+
       overflow: hidden;
 
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
 
       padding: 17px 0;
-
-      white-space: nowrap;
     }
 
     .marquee-track {
-      display: inline-block;
+      display: flex;
+      width: max-content;
+
       animation: marquee 24s linear infinite;
+
+      will-change: transform;
+    }
+
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
     }
 
     .marquee span {
       margin-right: 45px;
+
+      white-space: nowrap;
 
       font-size: 11px;
       letter-spacing: .18em;
@@ -407,7 +434,9 @@
 
     .selected-work-heading {
       margin-bottom: 45px;
+
       border-bottom: 1px solid var(--line);
+
       padding-bottom: 25px;
     }
 
@@ -417,16 +446,21 @@
       font-family: "Playfair Display", serif;
 
       font-size: clamp(48px, 6vw, 72px);
+
       line-height: .95;
+
       font-weight: 500;
+
       letter-spacing: -.05em;
     }
 
     .selected-work-intro {
       margin: 18px 0 0;
+
       max-width: 520px;
 
       font-size: 16px;
+
       line-height: 1.75;
 
       color: #606060;
@@ -434,7 +468,9 @@
 
     .selected-work-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 20px;
     }
 
@@ -442,6 +478,7 @@
       position: relative;
 
       min-height: 330px;
+
       padding: 30px;
 
       display: flex;
@@ -453,6 +490,7 @@
       border: 1px solid var(--line);
 
       text-decoration: none;
+
       overflow: hidden;
 
       transition:
@@ -465,6 +503,7 @@
       transform: translateY(-8px);
 
       background: var(--ink);
+
       color: white;
     }
 
@@ -473,6 +512,7 @@
       z-index: 2;
 
       display: flex;
+
       justify-content: space-between;
       align-items: flex-start;
     }
@@ -481,12 +521,15 @@
       color: var(--accent);
 
       font-size: 11px;
+
       font-weight: 700;
+
       letter-spacing: .15em;
     }
 
     .work-arrow {
       font-size: 24px;
+
       transition: transform .3s ease;
     }
 
@@ -505,18 +548,23 @@
       font-family: "Playfair Display", serif;
 
       font-size: clamp(30px, 3vw, 42px);
+
       line-height: 1;
+
       font-weight: 500;
+
       letter-spacing: -.04em;
     }
 
     .work-card p {
       max-width: 330px;
+
       margin: 0;
 
       color: var(--muted);
 
       font-size: 13px;
+
       line-height: 1.7;
 
       transition: color .35s ease;
@@ -531,6 +579,7 @@
 
     .home-cta {
       padding: 130px 5vw;
+
       text-align: center;
     }
 
@@ -540,8 +589,11 @@
       font-family: "Playfair Display", serif;
 
       font-size: clamp(48px, 6vw, 82px);
+
       line-height: .98;
+
       font-weight: 500;
+
       letter-spacing: -.05em;
     }
 
@@ -554,18 +606,23 @@
 
     footer {
       width: 90vw;
+
       max-width: 1400px;
 
       margin: auto;
+
       padding: 25px 0;
 
       border-top: 1px solid var(--line);
 
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
 
       color: var(--muted);
+
       font-size: 11px;
     }
 
@@ -576,6 +633,7 @@
 
       .nav {
         width: 100%;
+
         padding-left: 6%;
         padding-right: 6%;
       }
@@ -600,6 +658,7 @@
 
       .hero-content {
         max-width: 650px;
+
         margin: auto;
       }
 
@@ -660,11 +719,13 @@
 
       .nav {
         width: 100%;
+
         padding: 22px 6%;
       }
 
       .home-hero {
         width: 88vw;
+
         padding: 40px 0 60px;
       }
 
@@ -703,6 +764,10 @@
         right: 0;
       }
 
+      .marquee span {
+        margin-right: 32px;
+      }
+
       .selected-work {
         padding: 90px 6vw;
       }
@@ -725,6 +790,7 @@
 
       .work-card {
         min-height: 250px;
+
         padding: 25px;
       }
 
@@ -886,35 +952,48 @@
     </section>
 
 
-    <!-- ================= MARQUEE ================= -->
+    <!-- ================= CONTINUOUS MARQUEE ================= -->
 
     <div class="marquee">
 
       <div class="marquee-track">
 
-        <span>3D MODELLING</span>
-        <span class="dot">✦</span>
+        <!-- FIRST COPY -->
 
-        <span>ILLUSTRATION</span>
-        <span class="dot">✦</span>
+        <div class="marquee-group">
 
-        <span>INFOGRAPHICS</span>
-        <span class="dot">✦</span>
+          <span>3D MODELLING</span>
+          <span class="dot">✦</span>
 
-        <span>VISUAL STORYTELLING</span>
-        <span class="dot">✦</span>
+          <span>ILLUSTRATION</span>
+          <span class="dot">✦</span>
 
-        <span>3D MODELLING</span>
-        <span class="dot">✦</span>
+          <span>INFOGRAPHICS</span>
+          <span class="dot">✦</span>
 
-        <span>ILLUSTRATION</span>
-        <span class="dot">✦</span>
+          <span>VISUAL STORYTELLING</span>
+          <span class="dot">✦</span>
 
-        <span>INFOGRAPHICS</span>
-        <span class="dot">✦</span>
+        </div>
 
-        <span>VISUAL STORYTELLING</span>
-        <span class="dot">✦</span>
+
+        <!-- IDENTICAL SECOND COPY FOR SEAMLESS LOOP -->
+
+        <div class="marquee-group" aria-hidden="true">
+
+          <span>3D MODELLING</span>
+          <span class="dot">✦</span>
+
+          <span>ILLUSTRATION</span>
+          <span class="dot">✦</span>
+
+          <span>INFOGRAPHICS</span>
+          <span class="dot">✦</span>
+
+          <span>VISUAL STORYTELLING</span>
+          <span class="dot">✦</span>
+
+        </div>
 
       </div>
 
@@ -962,6 +1041,7 @@
 
             </div>
 
+
             <div class="work-card-bottom">
 
               <h3>
@@ -997,6 +1077,7 @@
 
             </div>
 
+
             <div class="work-card-bottom">
 
               <h3>
@@ -1031,6 +1112,7 @@
               </span>
 
             </div>
+
 
             <div class="work-card-bottom">
 
@@ -1098,4 +1180,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
