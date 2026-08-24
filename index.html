@@ -344,9 +344,7 @@
 
     .selected-work-heading {
       margin-bottom: 45px;
-
       border-bottom: 1px solid var(--line);
-
       padding-bottom: 25px;
     }
 
@@ -356,17 +354,13 @@
       font-family: "Playfair Display", serif;
 
       font-size: clamp(48px, 6vw, 72px);
-
       line-height: .95;
-
       font-weight: 500;
-
       letter-spacing: -.05em;
     }
 
     .selected-work-intro {
       margin: 18px 0 0;
-
       max-width: 520px;
 
       font-size: 16px;
@@ -377,27 +371,22 @@
 
     .selected-work-grid {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       gap: 20px;
     }
+
+
+    /* ================= WORK CARDS ================= */
 
     .work-card {
       position: relative;
 
       min-height: 330px;
-
       padding: 30px;
 
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
-      background-color: #ebe9e2;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
 
       border: 1px solid var(--line);
 
@@ -405,63 +394,85 @@
 
       overflow: hidden;
 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       transition:
         transform .35s ease,
         color .35s ease;
     }
 
-
-    /* ================= WORK CARD BACKGROUNDS ================= */
-
-    .work-card:nth-child(1) {
+    .work-card-3d {
       background-image: url("3d3.jpg");
     }
 
-    .work-card:nth-child(2) {
+    .work-card-illustration {
       background-image: url("2.png");
     }
 
-    .work-card:nth-child(3) {
+    .work-card-infographics {
       background-image: url("info 4.png");
     }
 
 
-    /* Light overlay for text readability */
+    /* ================= BOTTOM GRADIENT BLUR ================= */
 
-    .work-card::before {
+    .work-card::after {
       content: "";
 
       position: absolute;
-      inset: 0;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 52%;
 
       z-index: 1;
 
-      background: rgba(245, 244, 239, .68);
+      background: linear-gradient(
+        to bottom,
+        rgba(245, 244, 239, 0) 0%,
+        rgba(245, 244, 239, .25) 24%,
+        rgba(245, 244, 239, .68) 58%,
+        rgba(245, 244, 239, .96) 100%
+      );
 
-      transition: background .35s ease;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0,0,0,.35) 22%,
+        black 52%,
+        black 100%
+      );
+
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0,0,0,.35) 22%,
+        black 52%,
+        black 100%
+      );
+
+      pointer-events: none;
+
+      transition:
+        background .35s ease,
+        backdrop-filter .35s ease;
     }
 
 
-    .work-card:hover {
-      transform: translateY(-8px);
-
-      color: white;
-    }
-
-
-    /* Darken image slightly when hovering */
-
-    .work-card:hover::before {
-      background: rgba(23, 23, 23, .72);
-    }
-
+    /* ================= CARD TOP ================= */
 
     .work-card-top {
       position: relative;
-      z-index: 2;
+      z-index: 3;
 
       display: flex;
-
       justify-content: space-between;
       align-items: flex-start;
     }
@@ -470,25 +481,26 @@
       color: var(--accent);
 
       font-size: 11px;
-
       font-weight: 700;
-
       letter-spacing: .15em;
     }
 
     .work-arrow {
+      color: var(--ink);
+
       font-size: 24px;
 
-      transition: transform .3s ease;
+      transition:
+        transform .3s ease,
+        color .3s ease;
     }
 
-    .work-card:hover .work-arrow {
-      transform: translate(5px, -5px);
-    }
+
+    /* ================= CARD TEXT ================= */
 
     .work-card-bottom {
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
     .work-card h3 {
@@ -503,6 +515,8 @@
       font-weight: 500;
 
       letter-spacing: -.04em;
+
+      color: var(--ink);
     }
 
     .work-card p {
@@ -510,7 +524,7 @@
 
       margin: 0;
 
-      color: var(--muted);
+      color: #4f4f4f;
 
       font-size: 13px;
 
@@ -519,8 +533,28 @@
       transition: color .35s ease;
     }
 
-    .work-card:hover p {
-      color: #bdbdbd;
+
+    /* ================= HOVER ================= */
+
+    .work-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .work-card:hover .work-arrow {
+      transform: translate(5px, -5px);
+    }
+
+    .work-card:hover::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(245, 244, 239, 0) 0%,
+        rgba(245, 244, 239, .32) 24%,
+        rgba(245, 244, 239, .76) 58%,
+        rgba(245, 244, 239, .98) 100%
+      );
+
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
     }
 
 
@@ -528,7 +562,6 @@
 
     .home-cta {
       padding: 130px 5vw;
-
       text-align: center;
     }
 
@@ -555,19 +588,15 @@
 
     footer {
       width: 90vw;
-
       max-width: 1400px;
 
       margin: auto;
-
       padding: 25px 0;
 
       border-top: 1px solid var(--line);
 
       display: flex;
-
       justify-content: space-between;
-
       gap: 20px;
 
       color: var(--muted);
@@ -592,7 +621,6 @@
 
       .hero-content {
         max-width: 650px;
-
         margin: auto;
       }
 
@@ -653,7 +681,6 @@
 
       .home-hero {
         width: 88vw;
-
         padding: 40px 0 60px;
       }
 
@@ -718,8 +745,11 @@
 
       .work-card {
         min-height: 250px;
-
         padding: 25px;
+      }
+
+      .work-card::after {
+        height: 58%;
       }
 
       .work-card h3 {
@@ -902,7 +932,6 @@
 
         </div>
 
-
         <div class="marquee-group" aria-hidden="true">
 
           <span>3D MODELLING</span>
@@ -919,7 +948,6 @@
 
         </div>
 
-
         <div class="marquee-group" aria-hidden="true">
 
           <span>3D MODELLING</span>
@@ -935,7 +963,6 @@
           <span class="dot">✦</span>
 
         </div>
-
 
         <div class="marquee-group" aria-hidden="true">
 
@@ -983,7 +1010,7 @@
           <!-- 3D MODELLING -->
 
           <a
-            class="work-card"
+            class="work-card work-card-3d"
             href="3d-modelling.html"
           >
 
@@ -1018,7 +1045,7 @@
           <!-- ILLUSTRATION -->
 
           <a
-            class="work-card"
+            class="work-card work-card-illustration"
             href="illustration.html"
           >
 
@@ -1053,7 +1080,7 @@
           <!-- INFOGRAPHICS -->
 
           <a
-            class="work-card"
+            class="work-card work-card-infographics"
             href="infographics.html"
           >
 
@@ -1135,4 +1162,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
