@@ -5,16 +5,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Infographics portfolio by Millicent Jeruto.">
+<meta
+  name="description"
+  content="Infographics portfolio by Millicent Jeruto."
+>
 
 <title>Infographics | Millicent Jeruto</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+  rel="stylesheet"
+>
 
 <link rel="stylesheet" href="style.css">
 
@@ -25,6 +29,11 @@ rel="stylesheet">
   color: #171717;
 }
 
+
+/* =====================================================
+   HERO
+===================================================== */
+
 .info-hero {
   width: min(1200px, 90vw);
   margin: auto;
@@ -34,17 +43,23 @@ rel="stylesheet">
 
 .info-hero h1 {
   margin: 20px 0 0;
+
   font-family: "Playfair Display", serif;
+
   font-size: clamp(65px, 9vw, 120px);
   line-height: .9;
+
   font-weight: 500;
   letter-spacing: -.06em;
 }
 
 .info-hero > p:last-child {
   max-width: 650px;
+
   margin: 30px auto 0;
+
   color: #707070;
+
   font-size: 14px;
   line-height: 1.8;
 }
@@ -56,33 +71,48 @@ rel="stylesheet">
 
 .info-gallery-section {
   width: min(1200px, 90vw);
+
   margin: auto;
+
   padding: 0 0 120px;
 }
 
 .info-gallery {
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 28px;
 }
 
 .info-gallery-item {
   position: relative;
+
   width: 100%;
+
   padding: 0;
+
   border: none;
+
   background: transparent;
+
   cursor: pointer;
+
   overflow: hidden;
+
   text-align: left;
 }
 
 .info-gallery-item img {
   display: block;
+
   width: 100%;
   height: auto;
+
   max-width: 100%;
+
   object-fit: contain;
+
   transition:
     transform .6s cubic-bezier(.2,.7,.2,1),
     filter .4s ease;
@@ -90,43 +120,62 @@ rel="stylesheet">
 
 .info-gallery-item:hover img {
   transform: scale(1.018);
+
   filter: brightness(.84);
 }
 
 .info-image-number {
   position: absolute;
+
   top: 18px;
   left: 18px;
+
   z-index: 3;
+
   width: 36px;
   height: 36px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 50%;
+
   background: rgba(255,255,255,.95);
+
   color: #171717;
+
   font-size: 10px;
   font-weight: 700;
+
   box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
 .info-image-overlay {
   position: absolute;
+
   inset: 0;
+
   z-index: 2;
+
   display: flex;
+
   align-items: flex-end;
   justify-content: flex-end;
+
   padding: 18px;
+
   background:
     linear-gradient(
       to top,
       rgba(0,0,0,.42),
       transparent 45%
     );
+
   opacity: 0;
+
   transition: opacity .35s ease;
+
   pointer-events: none;
 }
 
@@ -137,26 +186,45 @@ rel="stylesheet">
 .info-image-arrow {
   width: 42px;
   height: 42px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 50%;
+
   background: white;
+
   color: #171717;
+
   font-size: 18px;
 }
 
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
 .info-lightbox {
   position: fixed;
+
   inset: 0;
+
   z-index: 1000;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   padding: 30px;
+
   background: rgba(0,0,0,.94);
+
   opacity: 0;
+
   visibility: hidden;
+
   transition:
     opacity .3s ease,
     visibility .3s ease;
@@ -164,32 +232,152 @@ rel="stylesheet">
 
 .info-lightbox.open {
   opacity: 1;
+
   visibility: visible;
 }
 
 .info-lightbox img {
   display: block;
+
   max-width: 92vw;
   max-height: 88vh;
+
   width: auto;
   height: auto;
+
   object-fit: contain;
 }
 
 .info-lightbox-close {
   position: absolute;
+
   top: 25px;
   right: 30px;
+
   width: 45px;
   height: 45px;
+
   border: 1px solid rgba(255,255,255,.35);
+
   border-radius: 50%;
+
   background: transparent;
+
   color: white;
+
   font-size: 28px;
+
   cursor: pointer;
 }
 
+
+/* =====================================================
+   BLACK CTA
+===================================================== */
+
+.info-coming {
+  width: min(1030px, 88vw);
+
+  margin: 0 auto 120px;
+}
+
+.info-coming-inner {
+  width: 100%;
+
+  padding: 80px 40px;
+
+  background: #171717;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.info-coming .eyebrow {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .18em;
+}
+
+.info-coming h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 5vw, 68px);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -.04em;
+}
+
+.info-coming h2 em {
+  color: #c87952;
+
+  font-style: italic;
+}
+
+.info-coming-description {
+  max-width: 610px;
+
+  margin: 25px auto 32px;
+
+  color: #d2d2d2;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.info-coming a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding: 0 22px;
+
+  border: 1px solid rgba(255,255,255,.9);
+
+  border-radius: 100px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.info-coming a:hover {
+  background: #ffffff;
+
+  color: #171717;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 700px) {
 
@@ -203,15 +391,30 @@ rel="stylesheet">
 
   .info-gallery {
     grid-template-columns: 1fr;
+
     gap: 22px;
   }
 
-  .info-coming {
+  .info-gallery-section {
     padding-bottom: 80px;
   }
 
+  .info-coming {
+    width: 88vw;
+
+    margin-bottom: 80px;
+  }
+
   .info-coming-inner {
-    padding: 65px 20px;
+    padding: 65px 25px;
+  }
+
+  .info-coming h2 {
+    font-size: 45px;
+  }
+
+  .info-coming-description {
+    font-size: 13px;
   }
 
 }
@@ -224,31 +427,52 @@ rel="stylesheet">
 <body class="infographic-page">
 
 
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
 <header class="nav">
 
   <a class="brand" href="index.html">
     MJ<span>.</span>
   </a>
 
-  <button class="menu-toggle" aria-label="Open menu">
+  <button
+    class="menu-toggle"
+    aria-label="Open menu"
+  >
     ☰
   </button>
 
   <nav>
 
-    <a href="index.html">Home</a>
+    <a href="index.html">
+      Home
+    </a>
 
-    <a href="about.html">About</a>
+    <a href="about.html">
+      About
+    </a>
 
-    <a href="3d-modelling.html">3D Modelling</a>
+    <a href="3d-modelling.html">
+      3D Modelling
+    </a>
 
-    <a href="illustration.html">Illustration</a>
+    <a href="illustration.html">
+      Illustration
+    </a>
 
-    <a class="active" href="infographics.html">
+    <a
+      class="active"
+      href="infographics.html"
+    >
       Infographics
     </a>
 
-    <a class="nav-contact" href="contact.html">
+    <a
+      class="nav-contact"
+      href="contact.html"
+    >
       Contact
     </a>
 
@@ -259,6 +483,10 @@ rel="stylesheet">
 
 <main>
 
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="info-hero">
 
@@ -279,236 +507,300 @@ rel="stylesheet">
 </section>
 
 
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
 <section class="info-gallery-section">
 
   <div class="info-gallery">
 
 
+    <!-- 01 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 1.png"
-      aria-label="Open infographic project 1">
+      aria-label="Open infographic project 1"
+    >
 
       <img
         src="info 1.png"
-        alt="Infographic project 1">
+        alt="Infographic project 1"
+      >
 
       <span class="info-image-number">
         01
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 02 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 10.png"
-      aria-label="Open infographic project 2">
+      aria-label="Open infographic project 2"
+    >
 
       <img
         src="info 10.png"
-        alt="Infographic project 2">
+        alt="Infographic project 2"
+      >
 
       <span class="info-image-number">
         02
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 03 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 11.png"
-      aria-label="Open infographic project 3">
+      aria-label="Open infographic project 3"
+    >
 
       <img
         src="info 11.png"
-        alt="Infographic project 3">
+        alt="Infographic project 3"
+      >
 
       <span class="info-image-number">
         03
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 04 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 2.png"
-      aria-label="Open infographic project 4">
+      aria-label="Open infographic project 4"
+    >
 
       <img
         src="info 2.png"
-        alt="Infographic project 4">
+        alt="Infographic project 4"
+      >
 
       <span class="info-image-number">
         04
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 05 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 3.png"
-      aria-label="Open infographic project 5">
+      aria-label="Open infographic project 5"
+    >
 
       <img
         src="info 3.png"
-        alt="Infographic project 5">
+        alt="Infographic project 5"
+      >
 
       <span class="info-image-number">
         05
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 06 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 4.png"
-      aria-label="Open infographic project 6">
+      aria-label="Open infographic project 6"
+    >
 
       <img
         src="info 4.png"
-        alt="Infographic project 6">
+        alt="Infographic project 6"
+      >
 
       <span class="info-image-number">
         06
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 07 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 5.png"
-      aria-label="Open infographic project 7">
+      aria-label="Open infographic project 7"
+    >
 
       <img
         src="info 5.png"
-        alt="Infographic project 7">
+        alt="Infographic project 7"
+      >
 
       <span class="info-image-number">
         07
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 08 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 6.png"
-      aria-label="Open infographic project 8">
+      aria-label="Open infographic project 8"
+    >
 
       <img
         src="info 6.png"
-        alt="Infographic project 8">
+        alt="Infographic project 8"
+      >
 
       <span class="info-image-number">
         08
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 09 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 7.png"
-      aria-label="Open infographic project 9">
+      aria-label="Open infographic project 9"
+    >
 
       <img
         src="info 7.png"
-        alt="Infographic project 9">
+        alt="Infographic project 9"
+      >
 
       <span class="info-image-number">
         09
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
 
 
+    <!-- 10 -->
+
     <button
       class="info-gallery-item"
       type="button"
       data-full="info 8.png"
-      aria-label="Open infographic project 10">
+      aria-label="Open infographic project 10"
+    >
 
       <img
         src="info 8.png"
-        alt="Infographic project 10">
+        alt="Infographic project 10"
+      >
 
       <span class="info-image-number">
         10
       </span>
 
       <span class="info-image-overlay">
+
         <span class="info-image-arrow">
           ↗
         </span>
+
       </span>
 
     </button>
@@ -519,7 +811,9 @@ rel="stylesheet">
 </section>
 
 
-<!-- BLACK CTA -->
+<!-- =====================================================
+     BLACK CTA
+===================================================== -->
 
 <section class="info-coming">
 
@@ -534,6 +828,12 @@ rel="stylesheet">
       <em>meaningful.</em>
     </h2>
 
+    <p class="info-coming-description">
+      Have a project, idea or collaboration in mind?
+      Let’s create something thoughtful, clear and visually
+      engaging together.
+    </p>
+
     <a href="contact.html">
       Get in touch ↗
     </a>
@@ -546,18 +846,33 @@ rel="stylesheet">
 </main>
 
 
-<div class="info-lightbox" aria-hidden="true">
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+  class="info-lightbox"
+  aria-hidden="true"
+>
 
   <button
     class="info-lightbox-close"
-    aria-label="Close image">
+    aria-label="Close image"
+  >
     ×
   </button>
 
-  <img src="" alt="">
+  <img
+    src=""
+    alt=""
+  >
 
 </div>
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -573,6 +888,7 @@ rel="stylesheet">
 
 
 <script src="script.js"></script>
+
 
 <script>
 
@@ -608,7 +924,8 @@ infoGalleryItems.forEach(item => {
       "false"
     );
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow =
+      "hidden";
 
   });
 
