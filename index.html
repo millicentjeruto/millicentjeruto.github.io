@@ -394,7 +394,10 @@
       flex-direction: column;
       justify-content: space-between;
 
-      background: #ebe9e2;
+      background-color: #ebe9e2;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
       border: 1px solid var(--line);
 
@@ -404,17 +407,54 @@
 
       transition:
         transform .35s ease,
-        background .35s ease,
         color .35s ease;
     }
+
+
+    /* ================= WORK CARD BACKGROUNDS ================= */
+
+    .work-card:nth-child(1) {
+      background-image: url("3d3.jpg");
+    }
+
+    .work-card:nth-child(2) {
+      background-image: url("2.png");
+    }
+
+    .work-card:nth-child(3) {
+      background-image: url("info 4.png");
+    }
+
+
+    /* Light overlay for text readability */
+
+    .work-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      z-index: 1;
+
+      background: rgba(245, 244, 239, .68);
+
+      transition: background .35s ease;
+    }
+
 
     .work-card:hover {
       transform: translateY(-8px);
 
-      background: var(--ink);
-
       color: white;
     }
+
+
+    /* Darken image slightly when hovering */
+
+    .work-card:hover::before {
+      background: rgba(23, 23, 23, .72);
+    }
+
 
     .work-card-top {
       position: relative;
@@ -1095,5 +1135,4 @@
   <script src="script.js"></script>
 
 </body>
-
 </html>
