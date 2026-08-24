@@ -59,21 +59,20 @@
       position: relative;
       z-index: 20;
 
-      width: 90vw;
-      max-width: 1400px;
-
-      margin: auto;
-      padding: 26px 0;
+      width: 100%;
+      margin: 0;
+      padding: 16px 6%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      background: var(--paper);
+      background: #f4f5f5;
+      border-bottom: 1px solid var(--line);
     }
 
     .brand {
-      font-size: 25px;
+      font-size: 21px;
       font-weight: 700;
       letter-spacing: -1px;
       text-decoration: none;
@@ -108,13 +107,13 @@
       right: 0;
       bottom: -8px;
       height: 1px;
-      background: var(--ink);
+      background: var(--accent);
     }
 
     .nav .nav-contact {
-      padding: 11px 18px;
+      padding: 12px 18px;
       border: 1px solid var(--ink);
-      border-radius: 100px;
+      border-radius: 0;
     }
 
     .nav .nav-contact::after {
@@ -134,19 +133,13 @@
 
     .home-hero {
       min-height: calc(100vh - 85px);
-
       width: min(1400px, 90vw);
-
       margin: 0 auto;
-
       padding: 45px 0 70px;
 
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 50px;
-
       align-items: center;
     }
 
@@ -160,36 +153,26 @@
       display: flex;
       align-items: center;
       gap: 12px;
-
       margin-bottom: 30px;
-
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .18em;
-
       color: var(--muted);
     }
 
     .hero-label::before {
       content: "";
-
       width: 35px;
       height: 1px;
-
       background: var(--ink);
     }
 
     .home-hero h1 {
       font-family: "Playfair Display", serif;
-
       font-size: clamp(58px, 7vw, 100px);
-
       line-height: .95;
-
       letter-spacing: -.06em;
-
       font-weight: 500;
-
       margin: 0;
     }
 
@@ -200,45 +183,29 @@
 
     .hero-description {
       max-width: 500px;
-
       margin: 28px 0 34px;
-
       font-size: 16px;
-
       line-height: 1.75;
-
       color: #606060;
     }
 
     .hero-actions {
       display: flex;
-
       align-items: center;
-
       gap: 14px;
-
       flex-wrap: wrap;
     }
 
     .home-button {
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 12px;
-
       min-height: 52px;
-
       padding: 0 23px;
-
       border-radius: 100px;
-
       text-decoration: none;
-
       font-size: 13px;
-
       font-weight: 600;
 
       transition:
@@ -274,97 +241,63 @@
 
     .hero-art {
       position: relative;
-
       min-height: 650px;
-
       width: 100%;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
     }
 
     .hero-circle {
       position: absolute;
-
       width: min(46vw, 650px);
-
       height: min(46vw, 650px);
-
       border-radius: 50%;
-
       background: #e7e2d8;
     }
 
     .portrait {
       position: relative;
-
       z-index: 2;
-
       width: min(39vw, 520px);
-
       height: min(39vw, 520px);
-
       overflow: hidden;
-
       background: transparent;
-
       border-radius: 50%;
-
       border: none;
-
       box-shadow: none;
     }
 
     .portrait img {
       width: 100%;
-
       height: 100%;
-
       display: block;
-
       border-radius: 50%;
-
       object-fit: cover;
-
       object-position: center;
-
       transform: scale(.86);
     }
 
     .portrait-placeholder {
       width: 100%;
-
       height: 100%;
-
       display: none;
-
       flex-direction: column;
-
       justify-content: center;
-
       align-items: center;
-
       text-align: center;
-
       border-radius: 50%;
     }
 
     .portrait-placeholder strong {
       font-family: "Playfair Display", serif;
-
       font-size: 90px;
-
       font-weight: 500;
     }
 
     .portrait-placeholder span {
       font-size: 10px;
-
       letter-spacing: .15em;
-
       text-transform: uppercase;
     }
 
@@ -373,31 +306,22 @@
 
     .floating-number {
       position: absolute;
-
       z-index: 4;
-
       top: 8%;
-
       right: 2%;
 
       width: 92px;
-
       height: 92px;
 
       border-radius: 50%;
-
       background: var(--ink);
-
       color: white;
 
       display: flex;
-
       justify-content: center;
-
       align-items: center;
 
       font-family: "Playfair Display", serif;
-
       font-size: 25px;
 
       transform: rotate(8deg);
@@ -408,42 +332,31 @@
 
     .marquee {
       overflow: hidden;
-
       border-top: 1px solid var(--line);
-
       border-bottom: 1px solid var(--line);
-
       padding: 17px 0;
-
       white-space: nowrap;
     }
 
     .marquee-track {
       display: inline-block;
-
       animation: marquee 24s linear infinite;
     }
 
     .marquee span {
       margin-right: 45px;
-
       font-size: 11px;
-
       letter-spacing: .18em;
-
       font-weight: 600;
-
       color: var(--muted);
     }
 
     .marquee .dot {
       color: var(--accent);
-
       font-size: 18px;
     }
 
     @keyframes marquee {
-
       from {
         transform: translateX(0);
       }
@@ -451,7 +364,6 @@
       to {
         transform: translateX(-50%);
       }
-
     }
 
 
@@ -467,71 +379,47 @@
     }
 
     .selected-work-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 30px;
-
       margin-bottom: 45px;
-
       border-bottom: 1px solid var(--line);
-
       padding-bottom: 25px;
     }
 
     .selected-work-heading h2 {
       margin: 0;
-
       font-family: "Playfair Display", serif;
-
       font-size: clamp(48px, 6vw, 72px);
-
       line-height: .95;
-
       font-weight: 500;
-
       letter-spacing: -.05em;
     }
 
-    .selected-work-heading p {
-      margin: 0;
+    .selected-work-intro {
+      margin: 18px 0 0;
+      max-width: 520px;
 
-      max-width: 300px;
-
-      color: var(--muted);
-
-      font-size: 12px;
-
+      font-size: 14px;
       line-height: 1.7;
+      color: var(--muted);
     }
 
     .selected-work-grid {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       gap: 20px;
     }
 
     .work-card {
       position: relative;
-
       min-height: 330px;
-
       padding: 30px;
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: space-between;
 
       background: #ebe9e2;
-
       border: 1px solid var(--line);
-
       text-decoration: none;
-
       overflow: hidden;
 
       transition:
@@ -542,36 +430,27 @@
 
     .work-card:hover {
       transform: translateY(-8px);
-
       background: var(--ink);
-
       color: white;
     }
 
     .work-card-top {
       position: relative;
       z-index: 2;
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: flex-start;
     }
 
     .work-number {
       color: var(--accent);
-
       font-size: 11px;
-
       font-weight: 700;
-
       letter-spacing: .15em;
     }
 
     .work-arrow {
       font-size: 24px;
-
       transition: transform .3s ease;
     }
 
@@ -586,29 +465,19 @@
 
     .work-card h3 {
       margin: 0 0 12px;
-
       font-family: "Playfair Display", serif;
-
       font-size: clamp(30px, 3vw, 42px);
-
       line-height: 1;
-
       font-weight: 500;
-
       letter-spacing: -.04em;
     }
 
     .work-card p {
       max-width: 330px;
-
       margin: 0;
-
       color: var(--muted);
-
       font-size: 13px;
-
       line-height: 1.7;
-
       transition: color .35s ease;
     }
 
@@ -621,21 +490,15 @@
 
     .home-cta {
       padding: 130px 5vw;
-
       text-align: center;
     }
 
     .home-cta h2 {
       margin: 20px auto 35px;
-
       font-family: "Playfair Display", serif;
-
       font-size: clamp(48px, 6vw, 82px);
-
       line-height: .98;
-
       font-weight: 500;
-
       letter-spacing: -.05em;
     }
 
@@ -648,23 +511,17 @@
 
     footer {
       width: 90vw;
-
       max-width: 1400px;
-
       margin: auto;
-
       padding: 25px 0;
 
       border-top: 1px solid var(--line);
 
       display: flex;
-
       justify-content: space-between;
-
       gap: 20px;
 
       color: var(--muted);
-
       font-size: 11px;
     }
 
@@ -674,7 +531,9 @@
     @media (max-width: 900px) {
 
       .nav {
-        width: 88vw;
+        width: 100%;
+        padding-left: 6%;
+        padding-right: 6%;
       }
 
       .nav nav {
@@ -687,17 +546,13 @@
 
       .home-hero {
         width: 88vw;
-
         grid-template-columns: 1fr;
-
         padding: 60px 0;
-
         text-align: center;
       }
 
       .hero-content {
         max-width: 650px;
-
         margin: auto;
       }
 
@@ -707,7 +562,6 @@
 
       .hero-description {
         margin-left: auto;
-
         margin-right: auto;
       }
 
@@ -721,13 +575,11 @@
 
       .hero-circle {
         width: 500px;
-
         height: 500px;
       }
 
       .portrait {
         width: 430px;
-
         height: 430px;
       }
 
@@ -744,13 +596,12 @@
       }
 
       .selected-work-heading {
-        display: block;
-
         text-align: center;
       }
 
-      .selected-work-heading p {
-        margin: 15px auto 0;
+      .selected-work-intro {
+        margin-left: auto;
+        margin-right: auto;
       }
 
     }
@@ -761,14 +612,12 @@
     @media (max-width: 600px) {
 
       .nav {
-        width: 88vw;
-
-        padding: 22px 0;
+        width: 100%;
+        padding: 22px 6%;
       }
 
       .home-hero {
         width: 88vw;
-
         padding: 40px 0 60px;
       }
 
@@ -786,13 +635,11 @@
 
       .hero-circle {
         width: 350px;
-
         height: 350px;
       }
 
       .portrait {
         width: 320px;
-
         height: 320px;
       }
 
@@ -802,11 +649,8 @@
 
       .floating-number {
         width: 68px;
-
         height: 68px;
-
         font-size: 20px;
-
         right: 0;
       }
 
@@ -822,8 +666,8 @@
         font-size: 48px;
       }
 
-      .selected-work-heading p {
-        font-size: 13px;
+      .selected-work-intro {
+        font-size: 14px;
       }
 
       .selected-work-grid {
@@ -832,7 +676,6 @@
 
       .work-card {
         min-height: 250px;
-
         padding: 25px;
       }
 
@@ -850,9 +693,7 @@
 
       footer {
         width: 88vw;
-
         flex-direction: column;
-
         text-align: center;
       }
 
@@ -1041,9 +882,8 @@
             Selected Work
           </h2>
 
-          <p>
-            A selection of creative work across 3D modelling,
-            illustration and infographics.
+          <p class="selected-work-intro">
+            Here’s a sample of my work. More projects are available upon request.
           </p>
 
         </div>
