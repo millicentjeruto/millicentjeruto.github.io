@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -300,6 +299,151 @@ rel="stylesheet">
 
 
 /* =====================================================
+   INFOGRAPHICS GALLERY
+===================================================== */
+
+.info-gallery-section {
+  width: min(1200px, 90vw);
+  margin: auto;
+  padding: 0 0 120px;
+}
+
+.info-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.info-gallery-item {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: left;
+}
+
+.info-gallery-item.featured {
+  grid-column: 1 / -1;
+}
+
+.info-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition:
+    transform .6s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.info-gallery-item:hover img {
+  transform: scale(1.018);
+  filter: brightness(.84);
+}
+
+.info-image-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.95);
+  color: #171717;
+  font-size: 10px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.info-image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 18px;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.42),
+      transparent 45%
+    );
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.info-gallery-item:hover .info-image-overlay {
+  opacity: 1;
+}
+
+.info-image-arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: #171717;
+  font-size: 18px;
+}
+
+.info-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(0,0,0,.94);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.info-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.info-lightbox img {
+  display: block;
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.info-lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* =====================================================
    BOTTOM CTA
 ===================================================== */
 
@@ -406,6 +550,16 @@ rel="stylesheet">
 
   .info-area:last-child {
     border-bottom: none;
+  }
+
+  .info-gallery {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .info-gallery-item,
+  .info-gallery-item.featured {
+    grid-column: 1;
   }
 
   .info-coming {
@@ -557,76 +711,244 @@ rel="stylesheet">
 </section>
 
 
-<section class="info-areas">
+<!-- =====================================================
+     INFOGRAPHICS GALLERY
+===================================================== -->
 
-  <div class="info-areas-header">
+<section class="info-gallery-section">
 
-    <p class="eyebrow">
-      AREAS OF EXPLORATION
-    </p>
-
-    <h2>
-      Ideas become clearer<br>
-      when they're <em>visual.</em>
-    </h2>
-
-  </div>
+  <div class="info-gallery">
 
 
-  <div class="info-area-grid">
+    <button
+      class="info-gallery-item featured"
+      type="button"
+      data-full="info 1.png"
+      aria-label="Open infographic project 1">
 
-    <article class="info-area">
+      <img
+        src="info 1.png"
+        alt="Infographic project 1">
 
-      <span class="info-area-number">
+      <span class="info-image-number">
         01
       </span>
 
-      <h3>
-        Information
-      </h3>
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
 
-      <p>
-        Organising information into clear visual
-        structures that are easy to follow and understand.
-      </p>
-
-    </article>
+    </button>
 
 
-    <article class="info-area">
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 10.png"
+      aria-label="Open infographic project 2">
 
-      <span class="info-area-number">
+      <img
+        src="info 10.png"
+        alt="Infographic project 2">
+
+      <span class="info-image-number">
         02
       </span>
 
-      <h3>
-        Illustration
-      </h3>
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
 
-      <p>
-        Using visual elements to explain subjects,
-        concepts and processes in a more engaging way.
-      </p>
-
-    </article>
+    </button>
 
 
-    <article class="info-area">
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 11.png"
+      aria-label="Open infographic project 3">
 
-      <span class="info-area-number">
+      <img
+        src="info 11.png"
+        alt="Infographic project 3">
+
+      <span class="info-image-number">
         03
       </span>
 
-      <h3>
-        Storytelling
-      </h3>
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
 
-      <p>
-        Creating a visual flow that helps information
-        communicate an idea from beginning to end.
-      </p>
+    </button>
 
-    </article>
+
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 2.png"
+      aria-label="Open infographic project 4">
+
+      <img
+        src="info 2.png"
+        alt="Infographic project 4">
+
+      <span class="info-image-number">
+        04
+      </span>
+
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 3.png"
+      aria-label="Open infographic project 5">
+
+      <img
+        src="info 3.png"
+        alt="Infographic project 5">
+
+      <span class="info-image-number">
+        05
+      </span>
+
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 4.png"
+      aria-label="Open infographic project 6">
+
+      <img
+        src="info 4.png"
+        alt="Infographic project 6">
+
+      <span class="info-image-number">
+        06
+      </span>
+
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 5.png"
+      aria-label="Open infographic project 7">
+
+      <img
+        src="info 5.png"
+        alt="Infographic project 7">
+
+      <span class="info-image-number">
+        07
+      </span>
+
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 6.png"
+      aria-label="Open infographic project 8">
+
+      <img
+        src="info 6.png"
+        alt="Infographic project 8">
+
+      <span class="info-image-number">
+        08
+      </span>
+
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 7.png"
+      aria-label="Open infographic project 9">
+
+      <img
+        src="info 7.png"
+        alt="Infographic project 9">
+
+      <span class="info-image-number">
+        09
+      </span>
+
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
+
+    <button
+      class="info-gallery-item"
+      type="button"
+      data-full="info 8.png"
+      aria-label="Open infographic project 10">
+
+      <img
+        src="info 8.png"
+        alt="Infographic project 10">
+
+      <span class="info-image-number">
+        10
+      </span>
+
+      <span class="info-image-overlay">
+        <span class="info-image-arrow">
+          ↗
+        </span>
+      </span>
+
+    </button>
+
 
   </div>
 
@@ -660,6 +982,19 @@ rel="stylesheet">
 </main>
 
 
+<div class="info-lightbox" aria-hidden="true">
+
+  <button
+    class="info-lightbox-close"
+    aria-label="Close image">
+    ×
+  </button>
+
+  <img src="" alt="">
+
+</div>
+
+
 <footer>
 
   <span>
@@ -675,7 +1010,99 @@ rel="stylesheet">
 
 <script src="script.js"></script>
 
+<script>
+
+const infoGalleryItems =
+  document.querySelectorAll(".info-gallery-item");
+
+const infoLightbox =
+  document.querySelector(".info-lightbox");
+
+const infoLightboxImage =
+  infoLightbox.querySelector("img");
+
+const infoCloseButton =
+  document.querySelector(".info-lightbox-close");
+
+
+infoGalleryItems.forEach(item => {
+
+  item.addEventListener("click", () => {
+
+    const image =
+      item.getAttribute("data-full");
+
+    infoLightboxImage.src = image;
+
+    infoLightboxImage.alt =
+      item.querySelector("img").alt;
+
+    infoLightbox.classList.add("open");
+
+    infoLightbox.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    document.body.style.overflow = "hidden";
+
+  });
+
+});
+
+
+function closeInfoLightbox() {
+
+  infoLightbox.classList.remove("open");
+
+  infoLightbox.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  infoLightboxImage.src = "";
+
+  document.body.style.overflow = "";
+
+}
+
+
+infoCloseButton.addEventListener(
+  "click",
+  closeInfoLightbox
+);
+
+
+infoLightbox.addEventListener(
+  "click",
+  event => {
+
+    if (event.target === infoLightbox) {
+      closeInfoLightbox();
+    }
+
+  }
+);
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape" &&
+      infoLightbox.classList.contains("open")
+    ) {
+
+      closeInfoLightbox();
+
+    }
+
+  }
+);
+
+</script>
+
 </body>
 
 </html>
-```
