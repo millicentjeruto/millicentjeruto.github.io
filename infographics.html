@@ -325,8 +325,18 @@ rel="stylesheet">
   text-align: left;
 }
 
+/* Image 1 stays the same size as the other images and is centered */
 .info-gallery-item.featured {
+  grid-column: auto;
+  width: 100%;
+  justify-self: center;
+}
+
+/* Image 10 stays the same size as the other images and is centered */
+.info-gallery-item:nth-child(10) {
   grid-column: 1 / -1;
+  width: 50%;
+  justify-self: center;
 }
 
 .info-gallery-item img {
@@ -560,6 +570,14 @@ rel="stylesheet">
   .info-gallery-item,
   .info-gallery-item.featured {
     grid-column: 1;
+    width: 100%;
+  }
+
+  /* Image 10 is centered on mobile as well */
+  .info-gallery-item:nth-child(10) {
+    grid-column: 1;
+    width: 100%;
+    justify-self: center;
   }
 
   .info-coming {
